@@ -7,10 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
-#import "BasicTableViewController.h"
 
 
-@interface MerchantViewController : BasicTableViewController {
+@interface MerchantViewController : BasicViewController {
+
 
 }
 

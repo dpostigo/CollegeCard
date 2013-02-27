@@ -44,13 +44,31 @@
 @synthesize stats = _stats;
 
 
+- (CCPlaceCocoafish *) merchantPlace {
+    return [self.customFields objectForKey: @"major"];
+}
+
+
+- (BOOL) isMerchant {
+    return [[self.customFields objectForKey: @"isMerchant"] boolValue];
+}
+
+
 - (NSString *) firstName {
     if (_firstName == nil) return @"Joe";
     return _firstName;
 }
 
+
+
+
 - (NSString *) displayName {
     return [NSString stringWithFormat: @"%@ %@", _firstName, _lastName];
+}
+
+
+- (NSString *) placeId {
+    return [self.customFields objectForKey: @"placeId"];
 }
 
 
@@ -58,13 +76,16 @@
     return [self.customFields objectForKey: @"college"];
 }
 
+
 - (NSString *) birthDate {
     return [self.customFields objectForKey: @"birthDate"];
 }
 
+
 - (NSString *) gender {
     return [self.customFields objectForKey: @"gender"];
 }
+
 
 - (NSString *) graduationDate {
     NSString *string = [self.customFields objectForKey: @"graduationDate"];
@@ -76,8 +97,6 @@
 - (NSString *) major {
     return [self.customFields objectForKey: @"major"];
 }
-
-
 
 
 - (id) initWithJsonResponse: (NSDictionary *) jsonResponse {

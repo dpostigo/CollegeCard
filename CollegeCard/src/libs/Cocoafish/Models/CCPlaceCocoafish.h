@@ -37,5 +37,6 @@
 @property (nonatomic, retain, readonly) NSString *website;
 @property (nonatomic, retain, readonly) NSString *twitter;
 @property (nonatomic, retain, readonly) CLLocation *location;
+- (NSString *) fullAddress;
 
 @end

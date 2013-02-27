@@ -5,8 +5,11 @@
 //
 
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "HomeViewController.h"
 #import "UIColor+Utils.h"
+#import "CCPhoto.h"
+#import "BasicTextFieldCell.h"
 
 
 @implementation HomeViewController {
@@ -15,19 +18,14 @@
 
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
-
     [self.navigationItem setHidesBackButton: YES];
     [self.navigationController setNavigationBarHidden: NO animated: YES];
 }
 
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
-}
-
-
 - (void) loadView {
     [super loadView];
+    [self userPictureUpdated];
 
     placesButton.borderColor = [UIColor colorWithWhite: 0.9 alpha: 1.0];
     placesButton.topColor = [UIColor whiteColor];
@@ -40,6 +38,8 @@
     if ([_model.currentUser.major isEqualToString: NO_MAJOR_KEY]) {
     }
     majorLabel.text = _model.currentUser.major;
+
+    [self sizeTableToFit];
 }
 
 
@@ -48,5 +48,83 @@
 
 
 - (IBAction) handleCheckin: (id) sender {
+}
+
+
+
+
+#pragma mark UITableView
+
+- (void) prepareDataSource {
+    TableSection *tableSection;
+    tableSection = [[TableSection alloc] initWithTitle: @""];
+    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: USERVIEW_KEY detailTextLabel: _model.currentUser.email cellIdentifier: @"UserCell"]];
+    [dataSource addObject: tableSection];
+}
+
+
+- (CGFloat) heightForRowAtIndexPath: (NSIndexPath *) indexPath {
+    if (indexPath.row == 0) return 88;
+    return [super heightForRowAtIndexPath: indexPath];
+}
+
+
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
+
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
+
+    cell.textLabel.text = rowObject.textLabel;
+    cell.detailTextLabel.text = rowObject.detailTextLabel;
+    cell.textField.placeholder = rowObject.detailTextLabel;
+    cell.selectedBackgroundView = [[UIView alloc] init];
+
+    [self subscribeTextField: cell.textField];
+
+    if ([rowObject.textLabel isEqualToString: USERVIEW_KEY]) {
+
+        cell.textLabel.text = _model.currentUser.displayName;
+
+        if ([_model.currentUser.college isEqualToString: NO_COLLEGE_KEY]) {
+            cell.textField.placeholder = _model.currentUser.college;
+        } else {
+            cell.textField.text = _model.currentUser.college;
+        }
+
+        if ([_model.currentUser.major isEqualToString: NO_MAJOR_KEY]) {
+            cell.detailTextField.placeholder = _model.currentUser.major;
+        } else {
+            cell.detailTextField.text = _model.currentUser.major;
+        }
+
+        NSString *string = _model.currentUser.photo.smallURL;
+
+        NSLog(@"string = %@", string);
+        if (string) {
+            [cell.imageView setImageWithURL: [NSURL URLWithString: string]];
+        }
+
+        return;
+    }
+}
+
+
+- (void) didSelectRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
+    [super didSelectRowObject: rowObject inSection: tableSection];
+
+    if ([rowObject.textLabel isEqualToString: USERVIEW_KEY]) {
+
+        [self performSegueWithIdentifier: @"ProfileSegue" sender: self];
+    }
+}
+
+
+#pragma mark Callbacks
+
+- (void) userPictureUpdated {
+    NSString *string = _model.currentUser.photo.smallURL;
+    if (string) {
+        [imageView setImageWithURL: [NSURL URLWithString: string]];
+    }
 }
 @end

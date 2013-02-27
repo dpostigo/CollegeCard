@@ -26,6 +26,7 @@
 @property(nonatomic, strong) NSMutableArray *delegates;
 @property(nonatomic, strong) NSMutableArray *textFields;
 - (IBAction) dismissModal;
+- (void) animateTextField: (UITextField *) textField up: (BOOL) up;
 - (BOOL) allTextFieldsValid;
 - (NSArray *) invalidTextFields;
 - (NSArray *) invalidTextFieldTypes;
@@ -34,5 +35,6 @@
 - (void) textFieldDidReturn: (UITextField *) aTextField;
 - (void) textFieldEndedEditing: (UITextField *) aTextField;
 - (void) textFieldDidChange: (UITextField *) aTextField;
+- (void) resignAllTextFields;
 
 @end

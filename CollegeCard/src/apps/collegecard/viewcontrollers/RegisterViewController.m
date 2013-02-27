@@ -13,9 +13,17 @@
 #import "CCRequest.h"
 
 
-
-
 @implementation RegisterViewController {
+}
+
+
+- (id) initWithCoder: (NSCoder *) aDecoder {
+    self = [super initWithCoder: aDecoder];
+    if (self) {
+        self.rowSpacing = 10;
+    }
+
+    return self;
 }
 
 
@@ -27,7 +35,7 @@
 
 - (void) viewWillDisappear: (BOOL) animated {
     [super viewWillDisappear: animated];
-    [self.navigationController setNavigationBarHidden: YES animated: YES];
+    //    [self.navigationController setNavigationBarHidden: YES animated: YES];
 }
 
 
@@ -49,7 +57,6 @@
     NSString *userPassword;
     NSString *firstName;
     NSString *lastName;
-
     BOOL shouldDebug = NO;
 
     if (DEBUG && shouldDebug) {
@@ -64,12 +71,10 @@
         if (self.allTextFieldsValid) {
 
             TableSection *tableSection = [dataSource objectAtIndex: 0];
-
             TableRowObject *rowObject1 = [tableSection.rows objectAtIndex: 0];
             TableRowObject *rowObject2 = [tableSection.rows objectAtIndex: 1];
             TableRowObject *rowObject3 = [tableSection.rows objectAtIndex: 2];
             TableRowObject *rowObject4 = [tableSection.rows objectAtIndex: 3];
-
 
             email = rowObject1.content;
             firstName = rowObject2.content;
@@ -132,12 +137,12 @@
 
 
 
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
 
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-    BasicTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier: @"RegisterCell" forIndexPath: indexPath];
 
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
+
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
     cell.textField.placeholder = rowObject.textLabel;
     if ([cell.textField isKindOfClass: [TableTextField class]]) {
         TableTextField *textField = (TableTextField *) cell.textField;
@@ -151,10 +156,7 @@
     }
 
     [self subscribeTextField: cell.textField];
-    return cell;
 }
-
-
 
 
 - (void) textFieldEndedEditing: (UITextField *) aTextField {
@@ -165,6 +167,5 @@
         textField.rowObject.content = textField.text;
     }
 }
-
 
 @end

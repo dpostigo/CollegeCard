@@ -30,6 +30,8 @@
 
 - (void) requestDoneWithResponse: (CCResponse *) response {
     [super requestDoneWithResponse: response];
+
+    [_model notifyDelegates: @selector(checkinSucceeded) object: nil];
 }
 
 @end

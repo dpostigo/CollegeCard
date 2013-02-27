@@ -7,6 +7,7 @@
 
 #import "BasicViewController.h"
 #import "DeviceUtils.h"
+#import "UIImage+Utils.h"
 
 
 @implementation BasicViewController {
@@ -17,22 +18,17 @@
 @synthesize activityView;
 
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
+- (void) loadView {
+    [super loadView];
 
     self.view.backgroundColor = [UIColor blackColor];
+
     if (backgroundView == nil) {
-
+        //        NSString *string = [DeviceUtils isPad] ? @"background-texture-ipad.png": @"background-texture.png";
         NSString *string = @"background-texture.png";
-        if ([DeviceUtils isPad]) string = @"background-texture-ipad.png";
 
-        NSLog(@"string = %@", string);
-        UIImageView *background = [[UIImageView alloc] initWithImage: [UIImage imageNamed: string]];
-
-        backgroundView = [[UIView alloc] init];
-        [backgroundView addSubview: background];
-        background.alpha = 0.3;
-
+        self.backgroundView = [[UIView alloc] init];
+        [backgroundView addSubview: [[UIImageView alloc] initWithImage: [UIImage newImageFromResource: string]]];
         [self.view insertSubview: backgroundView atIndex: 0];
     }
 }

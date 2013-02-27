@@ -4,9 +4,9 @@
 @implementation CBBezier
 
 
-@synthesize borderColor;
 @synthesize topColor;
 @synthesize bottomColor;
+@synthesize borderColor;
 @synthesize innerGlow;
 
 

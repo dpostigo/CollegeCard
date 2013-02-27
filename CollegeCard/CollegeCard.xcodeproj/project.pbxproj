@@ -81,11 +81,16 @@
 		036AADD816DAA81B0047787D /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AADCC16DAA81B0047787D /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		036AADD916DAA81B0047787D /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AADCE16DAA81B0047787D /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		036AADDB16DAE8160047787D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 036AADDA16DAE8160047787D /* SVProgressHUD.bundle */; };
+		03BFD22216DD4CA3003EF942 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BFD22116DD4CA3003EF942 /* ImageIO.framework */; };
+		03BFD22616DD4CD6003EF942 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03BFD22516DD4CD6003EF942 /* SDWebImage.framework */; };
 		7CA440192B0A7950748D8562 /* TableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443885867D0C34E87EDC2 /* TableSection.m */; };
 		7CA44049EE9BFB94A682E02D /* CBBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44B83C9625739E5801164 /* CBBezier.m */; };
+		7CA440580278B1DF75A22BBA /* EventRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4406EAA03B6D784E3DD86 /* EventRowObject.m */; };
 		7CA440660E0B3D28691F807F /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4496D0B68A0789B5B5A09 /* BasicViewController.m */; };
 		7CA440776EC534B3540FB8EC /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */; };
+		7CA4408F3901D299F849486E /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D4C1CF09244B7E5C72A /* DDProgressView.m */; };
 		7CA440A28FB73E05CDC829BE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448574AF8BE349AF03462 /* Model.m */; };
+		7CA44112A63B57648EF3DFAA /* BasicUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44405FFF55ED8F91C54A1 /* BasicUserView.m */; };
 		7CA4413430C5B9A0C3423749 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44366B9372884524EF7CC /* TextField.m */; };
 		7CA4415333EE37AF50E23CB4 /* PlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4470D750F54B735EB9069 /* PlacesViewController.m */; };
 		7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA44A597255E591874F395D /* libTestFlight.a */; };
@@ -94,40 +99,63 @@
 		7CA442374C32546476DFAD5D /* AccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C07296BA7C78A040544 /* AccountSettingsViewController.m */; };
 		7CA442384B02FE3099D9EC38 /* BasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F3F461767BDDAE3F94A /* BasicTableViewController.m */; };
 		7CA442AB65302809C195BB62 /* LogoutOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4484BA98EB75D3FE16265 /* LogoutOperation.m */; };
+		7CA442C2A69D51CE9442B367 /* SearchPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443E731360D439D572421 /* SearchPlacesViewController.m */; };
+		7CA442C89D46C6B63DEF0015 /* WhiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44974ACEEF53C8B5D6AC0 /* WhiteButton.m */; };
 		7CA443014BEA5D89AEFB068F /* RegisterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448B5CC67F941F1D17891 /* RegisterOperation.m */; };
 		7CA443496B3C357AE83C283A /* BasicTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E71ACC0F97E497754FB /* BasicTableViewDelegate.m */; };
+		7CA44353C4B43CD83F19563C /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AA565C4EAC032D5B676 /* ProfileViewController.m */; };
 		7CA443F109AB24A84BB1D44F /* TableSection+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443CB8C7D7099476154CB /* TableSection+Utils.m */; };
+		7CA443F51110F083C5C1E3DB /* TempEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44117E9398AD081D87D0D /* TempEvent.m */; };
+		7CA443FF9B4B62F048A46234 /* GetMerchantEventsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E4152D073930413E76F /* GetMerchantEventsOperation.m */; };
 		7CA444022E26EE4192DA4BC0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44410109DFC1470A30628 /* HomeViewController.m */; };
 		7CA4440A343B1402518E4DC4 /* BasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C54A3156CA9E9116E42 /* BasicView.m */; };
+		7CA4440BDE1EB0617559CD8A /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4494397E7C4C74EB1C299 /* MerchantViewController.m */; };
+		7CA444316CBAF04458A8A828 /* JMSimpleDateConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44CBBAF180F0226A29B31 /* JMSimpleDateConstants.m */; };
 		7CA4443BBF568F6D845E21D7 /* CheckinOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA447D867FD3974B378AD5E /* CheckinOperation.m */; };
 		7CA444EFC09F4ACD21C2075D /* BasicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA440002B6DADB5E265A341 /* BasicLibrary.m */; };
+		7CA444F9421A650D2D23B0D7 /* MerchantDashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F2DE40E876EDAC5DB7C /* MerchantDashboardViewController.m */; };
 		7CA44519B3C749AF9C2046B5 /* PlaceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44940019B21F3FF94A208 /* PlaceOperation.m */; };
 		7CA44537DEE8A9950427165E /* BasicWhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4433A0FA41C93F4844D28 /* BasicWhiteView.m */; };
-		7CA445D53C60B891F2C8A73C /* MerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44EBA5F61489BCCA793FE /* MerchantViewController.m */; };
+		7CA4453A58239AB1BE536084 /* PictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44B34E8C9A17745E9A1A2 /* PictureOperation.m */; };
+		7CA445D53C60B891F2C8A73C /* MerchantSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44EBA5F61489BCCA793FE /* MerchantSignupViewController.m */; };
+		7CA445E2E0A0CAA0D6BE7745 /* BlankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44889327986C0BA1C214F /* BlankCell.m */; };
 		7CA445E89EC0F085969A283E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F258F8243633DA77010 /* AppDelegate.m */; };
 		7CA446257FEAE8828432678A /* PlaceRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44ED42324D67577C142EB /* PlaceRowObject.m */; };
+		7CA446308942F9E590494927 /* GetPlaceOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4446FDF0462351DB4AA3D /* GetPlaceOperation.m */; };
 		7CA4465236468311312E3531 /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442245856DAC52B447A9C /* PlaceViewController.m */; };
+		7CA446576C606D4FC551BD27 /* CreateEventOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D898DFE5CF36B7D805B /* CreateEventOperation.m */; };
 		7CA44670C23CDF3C97BDAA3C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA445F5901972E103F7A002 /* SVProgressHUD.m */; };
+		7CA4469574BC2D65534A4314 /* MerchantDealsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4477FDF84E1A108E99C08 /* MerchantDealsViewController.m */; };
 		7CA446CA022B7D5CDDB9E42B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4465814C76E7F8B5EE546 /* SettingsViewController.m */; };
 		7CA446E3C6889D340B7AB338 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA446F74DC6F0DED51197AA /* NSString+Utils.m */; };
+		7CA446EDC9A98C81FCC8065B /* BasicPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D711237F1DF0DFF6D4C /* BasicPlaceViewController.m */; };
 		7CA44706642EB0E20FBED075 /* BasicTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D990255FC24C0C26BA4 /* BasicTextFieldCell.m */; };
 		7CA447A5308915D7E620B4A0 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */; };
 		7CA447E55072F53631092019 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44242FFA0F445F4795389 /* RegisterViewController.m */; };
+		7CA447EEAE89DF8ECA2D2A60 /* BlueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442CC1BF130BB8F91EDB9 /* BlueButton.m */; };
+		7CA4480DE9A28D9A4D1041C5 /* NSDate+JMSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F38F71D47D70BC0A6E9 /* NSDate+JMSimpleDate.m */; };
 		7CA4482FDE62A01D41B9E656 /* VeryBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */; };
 		7CA448C9F7EB2B2C3AA90A82 /* BasicTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA444C3D731900EC484EA78 /* BasicTableCell.m */; };
+		7CA448E3C333EEAEBD5C2FC6 /* DPProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443AD83961A1F2DA94B64 /* DPProgressHUD.m */; };
 		7CA449C460D3216894B855D8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA44EB689EED3F4D79410A6 /* MainStoryboard.storyboard */; };
 		7CA449C562885FA5C7F7951C /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA4444C5BFBA90896DF870C /* MainStoryboard-iPad.storyboard */; };
 		7CA449E33C8CB7CBAA890814 /* TableRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA441243D188A39629EDF1B /* TableRowObject.m */; };
 		7CA44B1B3467798FF75BC435 /* CBLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */; };
 		7CA44B45B7FBABEB067E6F87 /* DeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E5CD22294ADC80722B9 /* DeviceUtils.m */; };
+		7CA44B4DAAA61326E450BC6D /* HouseholdButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44964858EBABB02B2EFBD /* HouseholdButton.m */; };
 		7CA44B68FA082059C08087A8 /* LoginOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E9426E462E997FBFE8B /* LoginOperation.m */; };
 		7CA44B90FCA361AC57AD81D5 /* CheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4481B0D96F736D71DFCCC /* CheckinViewController.m */; };
 		7CA44C00905D843B480CF68E /* TextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA441A540039FF0F11CEF6F /* TextFieldDelegate.m */; };
+		7CA44C08C6A058B123962636 /* NSDateFormatter+JMSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44031A328924E59D3FF39 /* NSDateFormatter+JMSimpleDate.m */; };
+		7CA44C59E7B8C2E72B414069 /* UpdateUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA445282C10B7E22EDA83A5 /* UpdateUserOperation.m */; };
 		7CA44C6EF4B28A0788831D5D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4404DB9D93B3A1BD4B117 /* LoginViewController.m */; };
+		7CA44C9F33940A9FE7EDCC39 /* EventEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4469CFCDD6DBFE0DB6678 /* EventEditViewController.m */; };
 		7CA44CB1B6E51F2798A83F69 /* BasicCocoafishOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44A6D4993EAD2120E2043 /* BasicCocoafishOperation.m */; };
 		7CA44CF597E0645C36A29596 /* SearchPlacesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44907B8C087693EADBF9C /* SearchPlacesOperation.m */; };
+		7CA44D31E7A9E665FFF93A9D /* JMSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA441B2DE76DAC48201AA5B /* JMSimpleDate.m */; };
 		7CA44E1961E49C8E043CA613 /* BasicOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */; };
 		7CA44EE395A2AA60A31497A0 /* BasicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C33806448F4A0C2A111 /* BasicModel.m */; };
+		7CA44FEEABD3FE179D741D2A /* UIImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448B3A022A004B953DD9B /* UIImage+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -268,24 +296,35 @@
 		036AADCD16DAA81B0047787D /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		036AADCE16DAA81B0047787D /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		036AADDA16DAE8160047787D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = src/libs/SVProgressHUD/SVProgressHUD.bundle; sourceTree = SOURCE_ROOT; };
+		03BFD22116DD4CA3003EF942 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		03BFD22516DD4CD6003EF942 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = src/libs/SDWebImage/SDWebImage.framework; sourceTree = SOURCE_ROOT; };
 		7CA440002B6DADB5E265A341 /* BasicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicLibrary.m; path = src/models/BasicLibrary.m; sourceTree = "<group>"; };
 		7CA4401F133C559E83C09AA9 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = src/apps/collegecard/viewcontrollers/HomeViewController.h; sourceTree = "<group>"; };
+		7CA44031A328924E59D3FF39 /* NSDateFormatter+JMSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+JMSimpleDate.m"; path = "src/libs/JMSimpleDate/NSDateFormatter+JMSimpleDate.m"; sourceTree = "<group>"; };
+		7CA4403AF9409F9864D10546 /* MerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantViewController.h; path = src/apps/collegecard/viewcontrollers/MerchantViewController.h; sourceTree = "<group>"; };
+		7CA440429AA1391CC632D31D /* JMSimpleDateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSimpleDateConstants.h; path = src/libs/JMSimpleDate/JMSimpleDateConstants.h; sourceTree = "<group>"; };
 		7CA440480D69E9D3C0BDECCD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = src/apps/collegecard/viewcontrollers/LoginViewController.h; sourceTree = "<group>"; };
 		7CA4404DB9D93B3A1BD4B117 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/apps/collegecard/viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		7CA4406B019B0BD845E0F8C8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = src/apps/collegecard/models/User.m; sourceTree = "<group>"; };
+		7CA4406EAA03B6D784E3DD86 /* EventRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventRowObject.m; path = src/apps/collegecard/models/EventRowObject.m; sourceTree = "<group>"; };
 		7CA440F33E03E57F6331B834 /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceViewController.h; path = src/apps/collegecard/viewcontrollers/PlaceViewController.h; sourceTree = "<group>"; };
+		7CA44117E9398AD081D87D0D /* TempEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TempEvent.m; path = src/apps/collegecard/models/TempEvent.m; sourceTree = "<group>"; };
 		7CA441243D188A39629EDF1B /* TableRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableRowObject.m; path = src/data/table/TableRowObject.m; sourceTree = "<group>"; };
 		7CA44141612378CC15BDA0E2 /* BasicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicLibrary.h; path = src/models/BasicLibrary.h; sourceTree = "<group>"; };
 		7CA44159B985B8C4EBEC8593 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestFlight.h; path = src/libs/TestFlight/TestFlight.h; sourceTree = "<group>"; };
 		7CA441950B3952CDD22B1EC8 /* BasicTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableViewDelegate.h; path = src/viewcontrollers/BasicTableViewDelegate.h; sourceTree = "<group>"; };
 		7CA441A540039FF0F11CEF6F /* TextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldDelegate.m; path = src/controls/TextFieldDelegate.m; sourceTree = "<group>"; };
+		7CA441B2DE76DAC48201AA5B /* JMSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSimpleDate.m; path = src/libs/JMSimpleDate/JMSimpleDate.m; sourceTree = "<group>"; };
+		7CA44217E007E5165ECF98E4 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Utils.h"; path = "src/utils/UIImage+Utils.h"; sourceTree = "<group>"; };
 		7CA442245856DAC52B447A9C /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceViewController.m; path = src/apps/collegecard/viewcontrollers/PlaceViewController.m; sourceTree = "<group>"; };
 		7CA44226A09BD391F61F0DA9 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextField.h; path = src/controls/TextField.h; sourceTree = "<group>"; };
 		7CA44242FFA0F445F4795389 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = src/apps/collegecard/viewcontrollers/RegisterViewController.m; sourceTree = "<group>"; };
 		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
+		7CA442CC1BF130BB8F91EDB9 /* BlueButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueButton.m; path = src/apps/collegecard/controls/BlueButton.m; sourceTree = "<group>"; };
 		7CA442CE323E0019D3AD8335 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = src/apps/collegecard/models/User.h; sourceTree = "<group>"; };
 		7CA442EC7C7AD9DB2AFF63CB /* PlaceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceOperation.h; path = src/apps/collegecard/operations/PlaceOperation.h; sourceTree = "<group>"; };
 		7CA443086D97736F8586FCEB /* CheckinOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckinOperation.h; path = src/apps/collegecard/operations/CheckinOperation.h; sourceTree = "<group>"; };
+		7CA44320B03071E0D60608A0 /* HouseholdButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HouseholdButton.h; path = src/controls/buttons/HouseholdButton.h; sourceTree = "<group>"; };
 		7CA4433A0FA41C93F4844D28 /* BasicWhiteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicWhiteView.m; path = src/views/BasicWhiteView.m; sourceTree = "<group>"; };
 		7CA4433DD07FFA7E0F1D288B /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utils.h"; path = "src/utils/NSString+Utils.h"; sourceTree = "<group>"; };
 		7CA44366B9372884524EF7CC /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextField.m; path = src/controls/TextField.m; sourceTree = "<group>"; };
@@ -293,75 +332,119 @@
 		7CA443885867D0C34E87EDC2 /* TableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableSection.m; path = src/data/table/TableSection.m; sourceTree = "<group>"; };
 		7CA4439A885886BE98C4DD24 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppConstants.h; path = src/apps/collegecard/models/AppConstants.h; sourceTree = "<group>"; };
 		7CA443AC3E50A6F9E00C0AA9 /* BasicOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicOperation.h; path = src/operations/BasicOperation.h; sourceTree = "<group>"; };
+		7CA443AD83961A1F2DA94B64 /* DPProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPProgressHUD.m; path = src/libs/DPProgressHUD/DPProgressHUD.m; sourceTree = "<group>"; };
 		7CA443CB8C7D7099476154CB /* TableSection+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "TableSection+Utils.m"; path = "src/utils/TableSection+Utils.m"; sourceTree = "<group>"; };
 		7CA443D58A4C0D3058225416 /* LoginOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginOperation.h; path = src/apps/collegecard/operations/LoginOperation.h; sourceTree = "<group>"; };
+		7CA443E731360D439D572421 /* SearchPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPlacesViewController.m; path = src/apps/collegecard/viewcontrollers/SearchPlacesViewController.m; sourceTree = "<group>"; };
 		7CA443FC450B88D9D70E2B02 /* CheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckinViewController.h; path = src/apps/collegecard/viewcontrollers/CheckinViewController.h; sourceTree = "<group>"; };
 		7CA443FCB9248264E1DBA6D9 /* TableTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableTextField.h; path = src/controls/TableTextField.h; sourceTree = "<group>"; };
+		7CA44405FFF55ED8F91C54A1 /* BasicUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicUserView.m; path = src/apps/collegecard/views/BasicUserView.m; sourceTree = "<group>"; };
 		7CA44410109DFC1470A30628 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = src/apps/collegecard/viewcontrollers/HomeViewController.m; sourceTree = "<group>"; };
 		7CA4444C5BFBA90896DF870C /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard-iPad.storyboard"; path = "src/xibs/MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
+		7CA4446FDF0462351DB4AA3D /* GetPlaceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetPlaceOperation.m; path = src/apps/collegecard/operations/GetPlaceOperation.m; sourceTree = "<group>"; };
 		7CA44484B988A212F810F07F /* VeryBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VeryBasicViewController.h; path = src/viewcontrollers/VeryBasicViewController.h; sourceTree = "<group>"; };
 		7CA44486D1753BEC2E9F8DCD /* PlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlacesViewController.h; path = src/apps/collegecard/viewcontrollers/PlacesViewController.h; sourceTree = "<group>"; };
+		7CA4448A31885C134171E8A4 /* JMSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMSimpleDate.h; path = src/libs/JMSimpleDate/JMSimpleDate.h; sourceTree = "<group>"; };
+		7CA444BFE04E5E775423E7AB /* UpdateUserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateUserOperation.h; path = src/apps/collegecard/operations/UpdateUserOperation.h; sourceTree = "<group>"; };
 		7CA444C3D731900EC484EA78 /* BasicTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableCell.m; path = src/data/table/BasicTableCell.m; sourceTree = "<group>"; };
+		7CA444F722B03D966E4B962B /* EventEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventEditViewController.h; path = src/apps/collegecard/viewcontrollers/EventEditViewController.h; sourceTree = "<group>"; };
 		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
+		7CA4451A19CA6C9FF89B3982 /* EventRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventRowObject.h; path = src/apps/collegecard/models/EventRowObject.h; sourceTree = "<group>"; };
+		7CA445282C10B7E22EDA83A5 /* UpdateUserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateUserOperation.m; path = src/apps/collegecard/operations/UpdateUserOperation.m; sourceTree = "<group>"; };
 		7CA44545C11265ACCBD8B54C /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicViewController.h; path = src/apps/collegecard/viewcontrollers/BasicViewController.h; sourceTree = "<group>"; };
+		7CA44553561171C6FE5E3566 /* BlueButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlueButton.h; path = src/apps/collegecard/controls/BlueButton.h; sourceTree = "<group>"; };
+		7CA4455997962E4BC2339DEC /* GetMerchantEventsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetMerchantEventsOperation.h; path = src/apps/collegecard/operations/GetMerchantEventsOperation.h; sourceTree = "<group>"; };
 		7CA445F5901972E103F7A002 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = src/libs/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
 		7CA445FA6B9AC7A570AC7D2F /* CBLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBLayer.h; path = src/libs/CBButtons/CBLayer.h; sourceTree = "<group>"; };
+		7CA445FDFCD9752ABC9CFA5D /* JMSimpleDate-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JMSimpleDate-Prefix.pch"; path = "src/libs/JMSimpleDate/JMSimpleDate-Prefix.pch"; sourceTree = "<group>"; };
 		7CA44653BD3F4332D5702A3D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = src/libs/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		7CA4465814C76E7F8B5EE546 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = src/apps/collegecard/viewcontrollers/SettingsViewController.m; sourceTree = "<group>"; };
 		7CA446926218C11435558B6D /* UIColor+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Utils.h"; path = "src/utils/UIColor+Utils.h"; sourceTree = "<group>"; };
+		7CA4469CFCDD6DBFE0DB6678 /* EventEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventEditViewController.m; path = src/apps/collegecard/viewcontrollers/EventEditViewController.m; sourceTree = "<group>"; };
+		7CA446D7968738AC54E421EA /* GetPlaceOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetPlaceOperation.h; path = src/apps/collegecard/operations/GetPlaceOperation.h; sourceTree = "<group>"; };
+		7CA446D89F457BD254A66911 /* PictureOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureOperation.h; path = src/apps/collegecard/operations/PictureOperation.h; sourceTree = "<group>"; };
 		7CA446F74DC6F0DED51197AA /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "src/utils/NSString+Utils.m"; sourceTree = "<group>"; };
 		7CA447074B1C70C66B3CA83E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = src/apps/collegecard/viewcontrollers/SettingsViewController.h; sourceTree = "<group>"; };
 		7CA4470D750F54B735EB9069 /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlacesViewController.m; path = src/apps/collegecard/viewcontrollers/PlacesViewController.m; sourceTree = "<group>"; };
+		7CA4472EF27BC450D6093BDE /* BasicPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlaceViewController.h; path = src/apps/collegecard/viewcontrollers/BasicPlaceViewController.h; sourceTree = "<group>"; };
 		7CA4474098CEE3AD9A992597 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = src/utils/DeviceUtils.h; sourceTree = "<group>"; };
+		7CA4477FDF84E1A108E99C08 /* MerchantDealsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantDealsViewController.m; path = src/apps/collegecard/viewcontrollers/MerchantDealsViewController.m; sourceTree = "<group>"; };
+		7CA44789A05554BF04587B2A /* MerchantDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantDashboardViewController.h; path = src/apps/collegecard/viewcontrollers/MerchantDashboardViewController.h; sourceTree = "<group>"; };
 		7CA447A58B4C676EC55F1107 /* RegisterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterOperation.h; path = src/apps/collegecard/operations/RegisterOperation.h; sourceTree = "<group>"; };
 		7CA447D867FD3974B378AD5E /* CheckinOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckinOperation.m; path = src/apps/collegecard/operations/CheckinOperation.m; sourceTree = "<group>"; };
 		7CA4480B6C062AFBAD0322E3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/apps/collegecard/app/AppDelegate.h; sourceTree = "<group>"; };
 		7CA4481B0D96F736D71DFCCC /* CheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckinViewController.m; path = src/apps/collegecard/viewcontrollers/CheckinViewController.m; sourceTree = "<group>"; };
 		7CA4484BA98EB75D3FE16265 /* LogoutOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogoutOperation.m; path = src/apps/collegecard/operations/LogoutOperation.m; sourceTree = "<group>"; };
 		7CA448574AF8BE349AF03462 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Model.m; path = src/apps/collegecard/models/Model.m; sourceTree = "<group>"; };
+		7CA44889327986C0BA1C214F /* BlankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlankCell.m; path = src/data/table/BlankCell.m; sourceTree = "<group>"; };
+		7CA4489F8F9030D20E75F069 /* DPProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPProgressHUD.h; path = src/libs/DPProgressHUD/DPProgressHUD.h; sourceTree = "<group>"; };
+		7CA448B3A022A004B953DD9B /* UIImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Utils.m"; path = "src/utils/UIImage+Utils.m"; sourceTree = "<group>"; };
 		7CA448B5CC67F941F1D17891 /* RegisterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterOperation.m; path = src/apps/collegecard/operations/RegisterOperation.m; sourceTree = "<group>"; };
 		7CA44907B8C087693EADBF9C /* SearchPlacesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchPlacesOperation.m; path = src/apps/collegecard/operations/SearchPlacesOperation.m; sourceTree = "<group>"; };
+		7CA4492EDF2AC859397A5BF0 /* SearchPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPlacesViewController.h; path = src/apps/collegecard/viewcontrollers/SearchPlacesViewController.h; sourceTree = "<group>"; };
 		7CA4493BD6ACF6FEA66A39F9 /* CBLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBLayer.m; path = src/libs/CBButtons/CBLayer.m; sourceTree = "<group>"; };
 		7CA44940019B21F3FF94A208 /* PlaceOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceOperation.m; path = src/apps/collegecard/operations/PlaceOperation.m; sourceTree = "<group>"; };
+		7CA4494397E7C4C74EB1C299 /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantViewController.m; path = src/apps/collegecard/viewcontrollers/MerchantViewController.m; sourceTree = "<group>"; };
 		7CA4494D3E181E85EE9E648B /* TableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableSection.h; path = src/data/table/TableSection.h; sourceTree = "<group>"; };
+		7CA44964858EBABB02B2EFBD /* HouseholdButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HouseholdButton.m; path = src/controls/buttons/HouseholdButton.m; sourceTree = "<group>"; };
 		7CA4496D0B68A0789B5B5A09 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicViewController.m; path = src/apps/collegecard/viewcontrollers/BasicViewController.m; sourceTree = "<group>"; };
+		7CA44974ACEEF53C8B5D6AC0 /* WhiteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhiteButton.m; path = src/controls/buttons/WhiteButton.m; sourceTree = "<group>"; };
 		7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Utils.m"; path = "src/utils/UIColor+Utils.m"; sourceTree = "<group>"; };
 		7CA449EE772C7F17F359916A /* BasicWhiteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicWhiteView.h; path = src/views/BasicWhiteView.h; sourceTree = "<group>"; };
 		7CA449F14A5EF5B86A0EECCC /* TextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextFieldDelegate.h; path = src/controls/TextFieldDelegate.h; sourceTree = "<group>"; };
+		7CA44A03E6C9DB49F2119895 /* TempEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempEvent.h; path = src/apps/collegecard/models/TempEvent.h; sourceTree = "<group>"; };
 		7CA44A597255E591874F395D /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = src/toolkit/TestFlight/libTestFlight.a; sourceTree = "<group>"; };
 		7CA44A6D4993EAD2120E2043 /* BasicCocoafishOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicCocoafishOperation.m; path = src/apps/collegecard/operations/BasicCocoafishOperation.m; sourceTree = "<group>"; };
 		7CA44A7C50814D3C720CAA29 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = src/apps/collegecard/viewcontrollers/RegisterViewController.h; sourceTree = "<group>"; };
-		7CA44B22E92698361AECEC69 /* MerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantViewController.h; path = src/apps/collegecard/viewcontrollers/MerchantViewController.h; sourceTree = "<group>"; };
+		7CA44AA565C4EAC032D5B676 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = src/apps/collegecard/viewcontrollers/ProfileViewController.m; sourceTree = "<group>"; };
+		7CA44AB06595C9F070B46DB8 /* NSDate+JMSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JMSimpleDate.h"; path = "src/libs/JMSimpleDate/NSDate+JMSimpleDate.h"; sourceTree = "<group>"; };
+		7CA44B22E92698361AECEC69 /* MerchantSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantSignupViewController.h; path = src/apps/collegecard/viewcontrollers/MerchantSignupViewController.h; sourceTree = "<group>"; };
+		7CA44B232C384F60B70BE2F4 /* WhiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhiteButton.h; path = src/controls/buttons/WhiteButton.h; sourceTree = "<group>"; };
+		7CA44B34E8C9A17745E9A1A2 /* PictureOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureOperation.m; path = src/apps/collegecard/operations/PictureOperation.m; sourceTree = "<group>"; };
 		7CA44B3DE26C1DEE428D1B20 /* BasicTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableCell.h; path = src/data/table/BasicTableCell.h; sourceTree = "<group>"; };
 		7CA44B83C9625739E5801164 /* CBBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBBezier.m; path = src/libs/CBButtons/CBBezier.m; sourceTree = "<group>"; };
 		7CA44BDA30F1BBE3F1C5A218 /* BasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicView.h; path = src/views/BasicView.h; sourceTree = "<group>"; };
 		7CA44BE3182C0B3CDEBCBCE4 /* BasicTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTextFieldCell.h; path = src/data/table/BasicTextFieldCell.h; sourceTree = "<group>"; };
 		7CA44C07296BA7C78A040544 /* AccountSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountSettingsViewController.m; path = src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m; sourceTree = "<group>"; };
 		7CA44C09DCF860C4FB66A235 /* LogoutOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogoutOperation.h; path = src/apps/collegecard/operations/LogoutOperation.h; sourceTree = "<group>"; };
+		7CA44C22E4315E869B4C83E7 /* MerchantDealsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantDealsViewController.h; path = src/apps/collegecard/viewcontrollers/MerchantDealsViewController.h; sourceTree = "<group>"; };
 		7CA44C33806448F4A0C2A111 /* BasicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicModel.m; path = src/models/BasicModel.m; sourceTree = "<group>"; };
 		7CA44C54A3156CA9E9116E42 /* BasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicView.m; path = src/views/BasicView.m; sourceTree = "<group>"; };
 		7CA44C83CA045D8093CFA301 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Model.h; path = src/apps/collegecard/models/Model.h; sourceTree = "<group>"; };
+		7CA44CBBAF180F0226A29B31 /* JMSimpleDateConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSimpleDateConstants.m; path = src/libs/JMSimpleDate/JMSimpleDateConstants.m; sourceTree = "<group>"; };
+		7CA44CDAB6A44DC10E3740B2 /* CreateEventOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateEventOperation.h; path = src/apps/collegecard/operations/CreateEventOperation.h; sourceTree = "<group>"; };
 		7CA44CF15118424C659DB5F8 /* SearchPlacesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchPlacesOperation.h; path = src/apps/collegecard/operations/SearchPlacesOperation.h; sourceTree = "<group>"; };
+		7CA44CF599509E4DE35CA9B7 /* BasicUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicUserView.h; path = src/apps/collegecard/views/BasicUserView.h; sourceTree = "<group>"; };
+		7CA44D4C1CF09244B7E5C72A /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDProgressView.m; path = src/libs/DDProgressView/DDProgressView.m; sourceTree = "<group>"; };
+		7CA44D711237F1DF0DFF6D4C /* BasicPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlaceViewController.m; path = src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m; sourceTree = "<group>"; };
 		7CA44D835A7695116853F8CA /* TableSection+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TableSection+Utils.h"; path = "src/utils/TableSection+Utils.h"; sourceTree = "<group>"; };
+		7CA44D898DFE5CF36B7D805B /* CreateEventOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventOperation.m; path = src/apps/collegecard/operations/CreateEventOperation.m; sourceTree = "<group>"; };
 		7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VeryBasicViewController.m; path = src/viewcontrollers/VeryBasicViewController.m; sourceTree = "<group>"; };
 		7CA44D9280A6543CEB6971FA /* CBBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBezier.h; path = src/libs/CBButtons/CBBezier.h; sourceTree = "<group>"; };
 		7CA44D990255FC24C0C26BA4 /* BasicTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTextFieldCell.m; path = src/data/table/BasicTextFieldCell.m; sourceTree = "<group>"; };
 		7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "src/utils/UIView+Utils.m"; sourceTree = "<group>"; };
+		7CA44E1FC1B458C764C8F94D /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = src/apps/collegecard/viewcontrollers/ProfileViewController.h; sourceTree = "<group>"; };
 		7CA44E22DFBBF1B356051076 /* PlaceRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceRowObject.h; path = src/apps/collegecard/models/PlaceRowObject.h; sourceTree = "<group>"; };
 		7CA44E3AFBE664B62182F504 /* TableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableTextField.m; path = src/controls/TableTextField.m; sourceTree = "<group>"; };
+		7CA44E4152D073930413E76F /* GetMerchantEventsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetMerchantEventsOperation.m; path = src/apps/collegecard/operations/GetMerchantEventsOperation.m; sourceTree = "<group>"; };
 		7CA44E4F53F56ADB9F79116F /* AccountSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountSettingsViewController.h; path = src/apps/collegecard/viewcontrollers/AccountSettingsViewController.h; sourceTree = "<group>"; };
 		7CA44E5CD22294ADC80722B9 /* DeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceUtils.m; path = src/utils/DeviceUtils.m; sourceTree = "<group>"; };
 		7CA44E71ACC0F97E497754FB /* BasicTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableViewDelegate.m; path = src/viewcontrollers/BasicTableViewDelegate.m; sourceTree = "<group>"; };
 		7CA44E9426E462E997FBFE8B /* LoginOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginOperation.m; path = src/apps/collegecard/operations/LoginOperation.m; sourceTree = "<group>"; };
 		7CA44EB388E5E4741838A51D /* TableRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableRowObject.h; path = src/data/table/TableRowObject.h; sourceTree = "<group>"; };
 		7CA44EB689EED3F4D79410A6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = src/xibs/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		7CA44EBA5F61489BCCA793FE /* MerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantViewController.m; path = src/apps/collegecard/viewcontrollers/MerchantViewController.m; sourceTree = "<group>"; };
+		7CA44EBA5F61489BCCA793FE /* MerchantSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantSignupViewController.m; path = src/apps/collegecard/viewcontrollers/MerchantSignupViewController.m; sourceTree = "<group>"; };
 		7CA44ED42324D67577C142EB /* PlaceRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceRowObject.m; path = src/apps/collegecard/models/PlaceRowObject.m; sourceTree = "<group>"; };
+		7CA44EFDBC5CF7B3EA8A9C86 /* NSDateFormatter+JMSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+JMSimpleDate.h"; path = "src/libs/JMSimpleDate/NSDateFormatter+JMSimpleDate.h"; sourceTree = "<group>"; };
 		7CA44F258F8243633DA77010 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/apps/collegecard/app/AppDelegate.m; sourceTree = "<group>"; };
+		7CA44F2DE40E876EDAC5DB7C /* MerchantDashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantDashboardViewController.m; path = src/apps/collegecard/viewcontrollers/MerchantDashboardViewController.m; sourceTree = "<group>"; };
+		7CA44F38F71D47D70BC0A6E9 /* NSDate+JMSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+JMSimpleDate.m"; path = "src/libs/JMSimpleDate/NSDate+JMSimpleDate.m"; sourceTree = "<group>"; };
 		7CA44F3F461767BDDAE3F94A /* BasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableViewController.m; path = src/viewcontrollers/BasicTableViewController.m; sourceTree = "<group>"; };
 		7CA44F4C3BAB96C5940B8B7A /* BasicOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicOperation.m; path = src/operations/BasicOperation.m; sourceTree = "<group>"; };
+		7CA44F7B6C5252D756EE217D /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDProgressView.h; path = src/libs/DDProgressView/DDProgressView.h; sourceTree = "<group>"; };
 		7CA44FA2ADB5A5670C6083ED /* BasicCocoafishOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicCocoafishOperation.h; path = src/apps/collegecard/operations/BasicCocoafishOperation.h; sourceTree = "<group>"; };
 		7CA44FF335C72883090B9606 /* BasicTableViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableViewControllerProtocol.h; path = src/viewcontrollers/BasicTableViewControllerProtocol.h; sourceTree = "<group>"; };
+		7CA44FF6D532B0BD5ACAE0DE /* BlankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlankCell.h; path = src/data/table/BlankCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +452,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BFD22216DD4CA3003EF942 /* ImageIO.framework in Frameworks */,
+				0346ACC5166EB0E000A00BC4 /* CoreGraphics.framework in Frameworks */,
 				036AADB516DAA7970047787D /* AssetsLibrary.framework in Frameworks */,
 				036AADB316DAA7410047787D /* YAJL.framework in Frameworks */,
 				036AAD6716DAA5BE0047787D /* Accounts.framework in Frameworks */,
@@ -383,8 +468,8 @@
 				0348A7E31679497B00BDC6A3 /* QuartzCore.framework in Frameworks */,
 				0346ACC1166EB0E000A00BC4 /* UIKit.framework in Frameworks */,
 				0346ACC3166EB0E000A00BC4 /* Foundation.framework in Frameworks */,
-				0346ACC5166EB0E000A00BC4 /* CoreGraphics.framework in Frameworks */,
 				7CA4415ADF7573D4378B298C /* libTestFlight.a in Frameworks */,
+				03BFD22616DD4CD6003EF942 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,8 +562,8 @@
 				7CA44C09DCF860C4FB66A235 /* LogoutOperation.h */,
 				7CA4406B019B0BD845E0F8C8 /* User.m */,
 				7CA442CE323E0019D3AD8335 /* User.h */,
-				7CA44EBA5F61489BCCA793FE /* MerchantViewController.m */,
-				7CA44B22E92698361AECEC69 /* MerchantViewController.h */,
+				7CA44EBA5F61489BCCA793FE /* MerchantSignupViewController.m */,
+				7CA44B22E92698361AECEC69 /* MerchantSignupViewController.h */,
 				7CA44940019B21F3FF94A208 /* PlaceOperation.m */,
 				7CA442EC7C7AD9DB2AFF63CB /* PlaceOperation.h */,
 				7CA4481B0D96F736D71DFCCC /* CheckinViewController.m */,
@@ -493,6 +578,59 @@
 				7CA44E22DFBBF1B356051076 /* PlaceRowObject.h */,
 				7CA447D867FD3974B378AD5E /* CheckinOperation.m */,
 				7CA443086D97736F8586FCEB /* CheckinOperation.h */,
+				7CA443AD83961A1F2DA94B64 /* DPProgressHUD.m */,
+				7CA4489F8F9030D20E75F069 /* DPProgressHUD.h */,
+				7CA44974ACEEF53C8B5D6AC0 /* WhiteButton.m */,
+				7CA44B232C384F60B70BE2F4 /* WhiteButton.h */,
+				7CA4494397E7C4C74EB1C299 /* MerchantViewController.m */,
+				7CA4403AF9409F9864D10546 /* MerchantViewController.h */,
+				7CA44AA565C4EAC032D5B676 /* ProfileViewController.m */,
+				7CA44E1FC1B458C764C8F94D /* ProfileViewController.h */,
+				7CA44405FFF55ED8F91C54A1 /* BasicUserView.m */,
+				7CA44CF599509E4DE35CA9B7 /* BasicUserView.h */,
+				7CA44B34E8C9A17745E9A1A2 /* PictureOperation.m */,
+				7CA446D89F457BD254A66911 /* PictureOperation.h */,
+				7CA44F2DE40E876EDAC5DB7C /* MerchantDashboardViewController.m */,
+				7CA44789A05554BF04587B2A /* MerchantDashboardViewController.h */,
+				7CA442CC1BF130BB8F91EDB9 /* BlueButton.m */,
+				7CA44553561171C6FE5E3566 /* BlueButton.h */,
+				7CA44320B03071E0D60608A0 /* HouseholdButton.h */,
+				7CA44964858EBABB02B2EFBD /* HouseholdButton.m */,
+				7CA443E731360D439D572421 /* SearchPlacesViewController.m */,
+				7CA4492EDF2AC859397A5BF0 /* SearchPlacesViewController.h */,
+				7CA44D711237F1DF0DFF6D4C /* BasicPlaceViewController.m */,
+				7CA4472EF27BC450D6093BDE /* BasicPlaceViewController.h */,
+				7CA4477FDF84E1A108E99C08 /* MerchantDealsViewController.m */,
+				7CA44C22E4315E869B4C83E7 /* MerchantDealsViewController.h */,
+				7CA44F7B6C5252D756EE217D /* DDProgressView.h */,
+				7CA44D4C1CF09244B7E5C72A /* DDProgressView.m */,
+				7CA44889327986C0BA1C214F /* BlankCell.m */,
+				7CA44FF6D532B0BD5ACAE0DE /* BlankCell.h */,
+				7CA44217E007E5165ECF98E4 /* UIImage+Utils.h */,
+				7CA448B3A022A004B953DD9B /* UIImage+Utils.m */,
+				7CA445282C10B7E22EDA83A5 /* UpdateUserOperation.m */,
+				7CA444BFE04E5E775423E7AB /* UpdateUserOperation.h */,
+				7CA4446FDF0462351DB4AA3D /* GetPlaceOperation.m */,
+				7CA446D7968738AC54E421EA /* GetPlaceOperation.h */,
+				7CA44E4152D073930413E76F /* GetMerchantEventsOperation.m */,
+				7CA4455997962E4BC2339DEC /* GetMerchantEventsOperation.h */,
+				7CA4406EAA03B6D784E3DD86 /* EventRowObject.m */,
+				7CA4451A19CA6C9FF89B3982 /* EventRowObject.h */,
+				7CA44D898DFE5CF36B7D805B /* CreateEventOperation.m */,
+				7CA44CDAB6A44DC10E3740B2 /* CreateEventOperation.h */,
+				7CA44117E9398AD081D87D0D /* TempEvent.m */,
+				7CA44A03E6C9DB49F2119895 /* TempEvent.h */,
+				7CA4469CFCDD6DBFE0DB6678 /* EventEditViewController.m */,
+				7CA444F722B03D966E4B962B /* EventEditViewController.h */,
+				7CA445FDFCD9752ABC9CFA5D /* JMSimpleDate-Prefix.pch */,
+				7CA4448A31885C134171E8A4 /* JMSimpleDate.h */,
+				7CA441B2DE76DAC48201AA5B /* JMSimpleDate.m */,
+				7CA440429AA1391CC632D31D /* JMSimpleDateConstants.h */,
+				7CA44CBBAF180F0226A29B31 /* JMSimpleDateConstants.m */,
+				7CA44AB06595C9F070B46DB8 /* NSDate+JMSimpleDate.h */,
+				7CA44F38F71D47D70BC0A6E9 /* NSDate+JMSimpleDate.m */,
+				7CA44EFDBC5CF7B3EA8A9C86 /* NSDateFormatter+JMSimpleDate.h */,
+				7CA44031A328924E59D3FF39 /* NSDateFormatter+JMSimpleDate.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -507,6 +645,7 @@
 		0346ACBF166EB0E000A00BC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03BFD22116DD4CA3003EF942 /* ImageIO.framework */,
 				036AADB416DAA7970047787D /* AssetsLibrary.framework */,
 				036AADB216DAA7410047787D /* YAJL.framework */,
 				036AAD6416DAA5BE0047787D /* Accounts.framework */,
@@ -538,6 +677,7 @@
 		0346ACC7166EB0E000A00BC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03BFD22516DD4CD6003EF942 /* SDWebImage.framework */,
 				036AADDA16DAE8160047787D /* SVProgressHUD.bundle */,
 				036AADB616DAA81B0047787D /* FBConnect */,
 				036AAD6E16DAA6140047787D /* ASIHTTPRequest */,
@@ -911,7 +1051,7 @@
 				7CA44CB1B6E51F2798A83F69 /* BasicCocoafishOperation.m in Sources */,
 				7CA442AB65302809C195BB62 /* LogoutOperation.m in Sources */,
 				7CA44192DC768DD257E3EA89 /* User.m in Sources */,
-				7CA445D53C60B891F2C8A73C /* MerchantViewController.m in Sources */,
+				7CA445D53C60B891F2C8A73C /* MerchantSignupViewController.m in Sources */,
 				7CA44519B3C749AF9C2046B5 /* PlaceOperation.m in Sources */,
 				7CA44B90FCA361AC57AD81D5 /* CheckinViewController.m in Sources */,
 				7CA44CF597E0645C36A29596 /* SearchPlacesOperation.m in Sources */,
@@ -919,6 +1059,32 @@
 				7CA4465236468311312E3531 /* PlaceViewController.m in Sources */,
 				7CA446257FEAE8828432678A /* PlaceRowObject.m in Sources */,
 				7CA4443BBF568F6D845E21D7 /* CheckinOperation.m in Sources */,
+				7CA448E3C333EEAEBD5C2FC6 /* DPProgressHUD.m in Sources */,
+				7CA442C89D46C6B63DEF0015 /* WhiteButton.m in Sources */,
+				7CA4440BDE1EB0617559CD8A /* MerchantViewController.m in Sources */,
+				7CA44353C4B43CD83F19563C /* ProfileViewController.m in Sources */,
+				7CA44112A63B57648EF3DFAA /* BasicUserView.m in Sources */,
+				7CA4453A58239AB1BE536084 /* PictureOperation.m in Sources */,
+				7CA444F9421A650D2D23B0D7 /* MerchantDashboardViewController.m in Sources */,
+				7CA447EEAE89DF8ECA2D2A60 /* BlueButton.m in Sources */,
+				7CA44B4DAAA61326E450BC6D /* HouseholdButton.m in Sources */,
+				7CA442C2A69D51CE9442B367 /* SearchPlacesViewController.m in Sources */,
+				7CA446EDC9A98C81FCC8065B /* BasicPlaceViewController.m in Sources */,
+				7CA4469574BC2D65534A4314 /* MerchantDealsViewController.m in Sources */,
+				7CA4408F3901D299F849486E /* DDProgressView.m in Sources */,
+				7CA445E2E0A0CAA0D6BE7745 /* BlankCell.m in Sources */,
+				7CA44FEEABD3FE179D741D2A /* UIImage+Utils.m in Sources */,
+				7CA44C59E7B8C2E72B414069 /* UpdateUserOperation.m in Sources */,
+				7CA446308942F9E590494927 /* GetPlaceOperation.m in Sources */,
+				7CA443FF9B4B62F048A46234 /* GetMerchantEventsOperation.m in Sources */,
+				7CA440580278B1DF75A22BBA /* EventRowObject.m in Sources */,
+				7CA446576C606D4FC551BD27 /* CreateEventOperation.m in Sources */,
+				7CA443F51110F083C5C1E3DB /* TempEvent.m in Sources */,
+				7CA44C9F33940A9FE7EDCC39 /* EventEditViewController.m in Sources */,
+				7CA44D31E7A9E665FFF93A9D /* JMSimpleDate.m in Sources */,
+				7CA444316CBAF04458A8A828 /* JMSimpleDateConstants.m in Sources */,
+				7CA4480DE9A28D9A4D1041C5 /* NSDate+JMSimpleDate.m in Sources */,
+				7CA44C08C6A058B123962636 /* NSDateFormatter+JMSimpleDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,11 +1157,15 @@
 		0346ACDB166EB0E000A00BC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Daniela Postigo (KLYVK5PYR7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Daniela Postigo (KLYVK5PYR7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/libs/Frameworks\"",
 					/Documents/FacebookSDK,
 					"\"$(SRCROOT)/src/libs/Cocoafish\"",
+					"\"$(SRCROOT)/../../../Downloads/Chrome\"",
+					"\"$(SRCROOT)/src/libs/SDWebImage\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/CollegeCard-Prefix.pch";
@@ -1012,7 +1182,9 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = CollegeCard;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "58CCB235-BB9C-470E-A05E-EC13D7AA3BE0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58CCB235-BB9C-470E-A05E-EC13D7AA3BE0";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1020,15 +1192,22 @@
 		0346ACDC166EB0E000A00BC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Daniela Postigo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Daniela Postigo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/libs/Frameworks\"",
 					/Documents/FacebookSDK,
 					"\"$(SRCROOT)/src/libs/Cocoafish\"",
+					"\"$(SRCROOT)/../../../Downloads/Chrome\"",
+					"\"$(SRCROOT)/src/libs/SDWebImage\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/CollegeCard-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "TESTFLIGHT_ENABLED=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TESTFLIGHT_ENABLED=1",
+					"DEBUG=0",
+				);
 				INFOPLIST_FILE = "BasicProject/CollegeCard-Info.plist";
 				LIBRARY_SEARCH_PATHS = "\"${PROJECT_DIR}/src/libs/TestFlight\"/**";
 				OTHER_LDFLAGS = (
@@ -1037,7 +1216,9 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = CollegeCard;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "8C7714CB-59B0-4026-A430-5008F69B0B79";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C7714CB-59B0-4026-A430-5008F69B0B79";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1073,6 +1254,8 @@
 					"\"$(SRCROOT)/libs/Frameworks\"",
 					/Documents/FacebookSDK,
 					"\"$(SRCROOT)/src/libs/Cocoafish\"",
+					"\"$(SRCROOT)/../../../Downloads/Chrome\"",
+					"\"$(SRCROOT)/src/libs/SDWebImage\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BasicProject/CollegeCard-Prefix.pch";
@@ -1084,7 +1267,7 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = CollegeCard;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = AppStore;

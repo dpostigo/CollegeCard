@@ -17,13 +17,31 @@
 @implementation AppDelegate
 
 
+- (void) customizeAppearance {
+
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], UITextAttributeTextColor, [UIFont fontWithName: @"HelveticaNeue-Regular" size: 10.0], UITextAttributeFont, nil]];
+
+    NSMutableDictionary *fontDict = [[NSMutableDictionary alloc] init];
+    [fontDict setObject: [UIColor whiteColor] forKey: UITextAttributeTextColor];
+    [fontDict setObject: [UIFont fontWithName: @"Rockwell" size: 20.0] forKey: UITextAttributeFont];
+    [[UINavigationBar appearance] setTitleTextAttributes: fontDict];
+
+    NSMutableDictionary *smallFont = [[NSMutableDictionary alloc] init];
+    [smallFont setObject: [UIColor whiteColor] forKey: UITextAttributeTextColor];
+    [smallFont setObject: [UIFont fontWithName: @"HelveticaNeue-Bold" size: 11.0] forKey: UITextAttributeFont];
+    [[UIBarButtonItem appearance] setTitleTextAttributes: smallFont forState: UIControlStateNormal];
+}
+
+
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {
 
 #ifdef TESTFLIGHT_ENABLED
-    [TestFlight takeOff: TESTFLIGHT_TOKEN];
+    //    [TestFlight takeOff: TESTFLIGHT_TOKEN];
 #endif
 
     [Cocoafish initializeWithOauthConsumerKey: COCOAFISH_OAUTH_CONSUMER_KEY consumerSecret: COCOAFISH_OAUTH_CONSUMER_SECRET customAppIds: nil];
+//    [Cocoafish defaultCocoafish].loggingEnabled = NO;
+    [self customizeAppearance];
     return YES;
 }
 

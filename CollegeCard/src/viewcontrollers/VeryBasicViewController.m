@@ -26,8 +26,18 @@
 - (id) initWithNibName: (NSString *) nibNameOrNil bundle: (NSBundle *) nibBundleOrNil {
     self = [super initWithNibName: nibNameOrNil bundle: nibBundleOrNil];
     if (self) {
+        NSLog(@"%s", __PRETTY_FUNCTION__);
         _queue = [NSOperationQueue new];
         textFields = [[NSMutableArray alloc] init];
+    }
+
+    return self;
+}
+
+
+- (id) initWithCoder: (NSCoder *) aDecoder {
+    self = [super initWithCoder: aDecoder];
+    if (self) {
     }
 
     return self;
@@ -46,10 +56,9 @@
 }
 
 
-- (void) viewWillUnload {
-    [super viewWillUnload];
-    [_model unsubscribeDelegate: self];
-}
+//- (void) dealloc {
+////    [_model unsubscribeDelegate: self];
+//}
 
 
 - (void) viewDidLoad {
@@ -64,7 +73,7 @@
 
 
 - (void) subscribeTextField: (UITextField *) aTextField {
-    if (![textFields containsObject: aTextField]) {
+    if (aTextField != nil && ![textFields containsObject: aTextField]) {
         [textFields addObject: aTextField];
         aTextField.delegate = self;
         [aTextField addTarget: self action: @selector(textFieldDidChange:) forControlEvents: UIControlEventEditingChanged];
@@ -91,11 +100,27 @@
 }
 
 
+- (void) animateTextField: (UITextField *) textField up: (BOOL) up {
+    NSLog(@"textField.frame = %@", NSStringFromCGRect(textField.frame));
+
+    const int movementDistance = 80; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    if (textField.top > movementDistance) {
+
+        int movement = (up ? -movementDistance: movementDistance);
+
+        [UIView beginAnimations: @"anim" context: nil];
+        [UIView setAnimationBeginsFromCurrentState: YES];
+        [UIView setAnimationDuration: movementDuration];
+        self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+        [UIView commitAnimations];
+    }
+}
 
 
 
-#pragma mark TextFields
-
+#pragma mark TextFields -
+#pragma mark Convenience
 
 
 - (BOOL) allTextFieldsValid {
@@ -123,6 +148,13 @@
         }
     }
     return invalid;
+}
+
+
+- (void) resignAllTextFields {
+    for (UITextField *textField in self.textFields) {
+        [textField resignFirstResponder];
+    }
 }
 
 
@@ -162,21 +194,21 @@
 }
 
 
+#pragma mark UITextFieldDelegate
+
+- (void) textFieldDidBeginEditing: (UITextField *) textField {
+    [self animateTextField: textField up: YES];
+}
+
+
 - (void) textFieldDidEndEditing: (UITextField *) aTextField {
     [self textFieldEndedEditing: aTextField];
+    [self animateTextField: aTextField up: NO];
 }
 
 
 - (void) textFieldDidReturn: (UITextField *) aTextField {
     [self textFieldEndedEditing: aTextField];
-}
-
-
-- (void) textFieldEndedEditing: (UITextField *) aTextField {
-}
-
-
-- (void) textFieldDidChange: (UITextField *) aTextField {
 }
 
 
@@ -199,6 +231,16 @@
     }
 
     return YES;
+}
+
+
+#pragma mark Rewritten callbacks
+
+- (void) textFieldEndedEditing: (UITextField *) aTextField {
+}
+
+
+- (void) textFieldDidChange: (UITextField *) aTextField {
 }
 
 @end

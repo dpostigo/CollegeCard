@@ -38,13 +38,12 @@
 
 
 - (NSInteger) numberOfSectionsInTableView: (UITableView *) tableView {
-    return [dataSource count];
+    return [viewController numberOfSections];
 }
 
 
 - (NSInteger) tableView: (UITableView *) tableView numberOfRowsInSection: (NSInteger) section {
-    TableSection *tableSection = [dataSource objectAtIndex: section];
-    return [tableSection.rows count];
+    return [viewController numberOfRowsInSection: section];
 }
 
 
@@ -74,15 +73,13 @@
 
 
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-
 
     UITableViewCell *cell = nil;
     if ([viewController respondsToSelector: @selector(tableView:cellForRowAtIndexPath:)]) {
         cell = [viewController performSelector: @selector(tableView:cellForRowAtIndexPath:) withObject: tableView withObject: indexPath];
     } else {
-
+        TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
+        TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
         cell = [tableView dequeueReusableCellWithIdentifier: @"TableCell" forIndexPath: indexPath];
         cell.textLabel.text = rowObject.textLabel;
     }
@@ -91,11 +88,16 @@
 }
 
 
+- (CGFloat) tableView: (UITableView *) tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
+    return [viewController heightForRowAtIndexPath: indexPath];
+}
+
+
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
     TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
 
-//    [viewController didSelectRowAtIndexPath: indexPath];
+    //    [viewController didSelectRowAtIndexPath: indexPath];
     [viewController didSelectRowObject: rowObject inSection: tableSection];
 }
 

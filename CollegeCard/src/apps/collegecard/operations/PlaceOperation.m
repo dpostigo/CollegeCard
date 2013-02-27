@@ -6,6 +6,7 @@
 
 
 #import "PlaceOperation.h"
+#import "CCResponse.h"
 
 
 @implementation PlaceOperation {
@@ -16,13 +17,24 @@
 
 
 - (id) initWithParamDict: (NSMutableDictionary *) aParamDict {
-
-    self = [super initWithDelegate: nil httpMethod: @"POST" baseUrl: @"places/create.json" paramDict: paramDict];
+    self = [super initWithDelegate: nil httpMethod: @"POST" baseUrl: @"places/create.json" paramDict: aParamDict];
     if (self) {
         paramDict = aParamDict;
     }
 
     return self;
+}
+
+
+- (void) requestDoneWithResponse: (CCResponse *) response {
+    [super requestDoneWithResponse: response];
+
+    NSArray *places = [response getObjectsOfType: [CCPlaceCocoafish class]];
+    _model.currentPlace = [places objectAtIndex: 0];
+
+    if ([response.meta.status isEqualToString: @"ok"]) {
+        [_model notifyDelegates: @selector(merchantSignupSucceeded) object: nil];
+    }
 }
 
 @end

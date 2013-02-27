@@ -15,9 +15,7 @@
 
 
 - (void) create {
-
-    self.backgroundColor = [UIColor colorWithWhite: 0.98 alpha: 1.0];
-    self.backgroundColor = [UIColor colorWithString: @"f4f4f4"];
+    self.backgroundColor = [UIColor colorWithString: WHITE_STRING];
     self.clipsToBounds = NO;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
     self.layer.shadowOffset = CGSizeMake(0, 1);
@@ -26,13 +24,15 @@
     self.layer.masksToBounds = NO;
     self.layer.borderColor = [UIColor whiteColor].CGColor;
     self.layer.borderWidth = 1.0;
+    [self rasterize];
 }
 
-
-- (void) awakeFromNib {
-    [super awakeFromNib];
-    [self create];
-}
+//
+//- (void) awakeFromNib {
+//    [super awakeFromNib];
+//    NSLog(@"self = %@", self);
+//    [self create];
+//}
 
 
 - (id) initWithCoder: (NSCoder *) aDecoder {
@@ -48,13 +48,9 @@
 - (id) initWithFrame: (CGRect) frame {
     self = [super initWithFrame: frame];
     if (self) {
-
         [self create];
     }
-
     return self;
 }
-
-
 
 @end

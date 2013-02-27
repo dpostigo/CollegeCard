@@ -9,11 +9,14 @@
 #import "DDProgressView.h"
 
 
-#define kProgressBarHeight  18.0f
+#define kProgressBarHeight  12.0f
 #define kProgressBarWidth    126.0f
 
 
-@implementation DDProgressView
+@implementation DDProgressView {
+    float progressValue;
+    int progressDir;
+}
 
 
 @synthesize innerColor;
@@ -45,6 +48,25 @@
     innerColor, innerColor = nil ;
     outerColor, outerColor = nil ;
     emptyColor, emptyColor = nil ;
+}
+
+
+- (void) startAnimating {
+
+    progressDir = 1;
+
+
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval: 0.03f target: self selector: @selector(updateProgress) userInfo: nil repeats: YES];
+    [timer fire];
+}
+
+
+- (void) updateProgress {
+    progressValue += (0.01f * progressDir);
+    [self setProgress: progressValue];
+
+//    if (progressValue > 1 || progressValue < 0)
+//        progressDir *= -1;
 }
 
 

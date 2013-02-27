@@ -11,7 +11,6 @@
 #import "LogoutOperation.h"
 #import "TextField.h"
 #import "TableTextField.h"
-#import "RegisterOperation.h"
 #import "SVProgressHUD.h"
 #import "LoginOperation.h"
 
@@ -23,23 +22,28 @@
 @synthesize signUpButton;
 
 
+
+
 - (void) viewDidLoad {
     [super viewDidLoad];
 
     signUpButton.backgroundColor = [UIColor blueColor];
-
-    if (_model.isLoggedIn) {
-
-        NSLog(@"_model.currentUser = %@", _model.currentUser);
-        NSLog(@"_model.currentUser.email = %@", _model.currentUser.email);
-        [self performSegueWithIdentifier: @"LoginSegue" sender: self];
-    }
 }
 
 
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
     [self.navigationController setNavigationBarHidden: YES animated: YES];
+
+    if (_model.isLoggedIn) {
+        [self goToHome];
+    }
+}
+
+
+- (void) viewWillDisappear: (BOOL) animated {
+    [super viewWillDisappear: animated];
+    [self.navigationController setNavigationBarHidden: NO animated: YES];
 }
 
 
@@ -49,6 +53,7 @@
 
 
 - (void) loadView {
+    self.rowSpacing = 10.0;
     [super loadView];
 
     signUpButton.backgroundLayer.colors = (@[
@@ -62,6 +67,8 @@
 
 
 - (IBAction) handleLogin: (id) sender {
+
+    [self resignAllTextFields];
 
     NSString *email;
     NSString *userPassword;
@@ -82,9 +89,6 @@
         TableRowObject *rowObject1 = [tableSection.rows objectAtIndex: 1];
         email = rowObject.content;
         userPassword = rowObject1.content;
-
-        NSLog(@"rowObject = %@", rowObject);
-        NSLog(@"email = %@", email);
 
         [SVProgressHUD showWithStatus: @"Signing in ..."];
         [_queue addOperation: [[LoginOperation alloc] initWithEmail: email userPassword: userPassword]];
@@ -107,15 +111,16 @@
 }
 
 
-- (IBAction) handleSignup: (id) sender {
-
-    //    [self performSegueWithIdentifier: @"SignupSegue" sender: self];
-
+- (void) goToHome {
+    if (_model.currentUser.isMerchant) {
+        [self performSegueWithIdentifier: @"MerchantDashboardSegue" sender: self];
+    } else {
+        [self performSegueWithIdentifier: @"LoginSegue" sender: self];
+    }
 }
 
 
 - (void) prepareDataSource {
-
     TableSection *tableSection = [[TableSection alloc] initWithTitle: @""];
     [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: EMAIL_KEY]];
     [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: PASSWORD_KEY]];
@@ -125,12 +130,10 @@
 
 
 
+
 #pragma mark Callbacks
 
 - (void) registerSucceededWithUsername: (NSString *) username andPassword: (NSString *) password {
-
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSLog(@"username = %@", username);
     TableSection *tableSection = [dataSource objectAtIndex: 0];
     TableRowObject *rowObject = [tableSection.rows objectAtIndex: 0];
     rowObject.content = username;
@@ -158,37 +161,40 @@
 }
 
 
-- (void) goToHome {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    [self performSegueWithIdentifier: @"LoginSegue" sender: self];
-}
-
-
 - (void) loginFailedWithMessage: (NSString *) message {
 
     [SVProgressHUD showErrorWithStatus: message];
 }
 
 
-- (CGFloat) heightForFooterInSection: (NSInteger) section {
+
+
+
+#pragma mark UITableView
+//
+//- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
+//
+//    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
+//    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
+//    BasicTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier: @"LoginTableViewCell" forIndexPath: indexPath];
+//
+//
+//
+//    //    if (rowObject.content) {
+//    //        cell.textField.text = rowObject.content;
+//    //    }
+//
+//    return cell;
+//}
+
+
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
+
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    NSLog(@"footerView.height = %f", footerView.height);
-    return 0;
-}
-
-
-- (UIView *) viewForFooterInSection: (NSInteger) section {
-    return nil;
-}
-
-
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
-
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-    BasicTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier: @"LoginTableViewCell" forIndexPath: indexPath];
-
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
     cell.textField.placeholder = rowObject.textLabel;
+
     if ([cell.textField isKindOfClass: [TableTextField class]]) {
         TableTextField *textField = (TableTextField *) cell.textField;
         textField.rowObject = rowObject;
@@ -201,12 +207,6 @@
     }
 
     [self subscribeTextField: cell.textField];
-
-    //    if (rowObject.content) {
-    //        cell.textField.text = rowObject.content;
-    //    }
-
-    return cell;
 }
 
 
@@ -214,11 +214,8 @@
     [super textFieldEndedEditing: aTextField];
 
     if ([aTextField isKindOfClass: [TableTextField class]]) {
-
         TableTextField *textField = (TableTextField *) aTextField;
         textField.rowObject.content = textField.text;
-
-        NSLog(@"textField.text = %@", textField.text);
     }
 }
 

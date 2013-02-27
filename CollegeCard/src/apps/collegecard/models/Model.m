@@ -14,6 +14,8 @@
 
 
 @synthesize currentPlace;
+@synthesize merchantEvents;
+@synthesize currentEvent;
 
 
 + (Model *) sharedModel {
@@ -47,4 +49,6 @@
 - (CCUser *) currentUser {
     return [[Cocoafish defaultCocoafish] getCurrentUser];
 }
+
+
 @end

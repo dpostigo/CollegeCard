@@ -7,6 +7,7 @@
 
 #import "TableRowObject.h"
 
+
 @implementation TableRowObject
 
 
@@ -21,16 +22,29 @@
 @synthesize intContent;
 @synthesize floatContent;
 @synthesize stringContent;
+@synthesize cellIdentifier;
 
 
 - (id) init {
     self = [super init];
     if (self) {
-
     }
 
     return self;
 }
+
+
+- (id) initWithTextLabel: (NSString *) aTextLabel detailTextLabel: (NSString *) aDetailTextLabel cellIdentifier: (NSString *) aCellIdentifier {
+    self = [super init];
+    if (self) {
+        textLabel = aTextLabel;
+        detailTextLabel = aDetailTextLabel;
+        cellIdentifier = aCellIdentifier;
+    }
+
+    return self;
+}
+
 
 - (id) initWithTextLabel: (NSString *) aTextLabel detailTextLabel: (NSString *) aDetailTextLabel {
     self = [super init];
@@ -43,6 +57,7 @@
     return self;
 }
 
+
 - (id) initWithTextLabel: (NSString *) aTextLabel {
     self = [super init];
     if (self) {
@@ -52,6 +67,7 @@
     return self;
 }
 
+
 - (id) initWithContent: (id) aContent {
     self = [super init];
     if (self) {
@@ -60,8 +76,5 @@
 
     return self;
 }
-
-
-
 
 @end

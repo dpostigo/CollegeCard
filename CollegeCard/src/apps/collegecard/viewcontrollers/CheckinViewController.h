@@ -8,9 +8,10 @@
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
 #import "BasicTableViewController.h"
+#import "BasicPlaceViewController.h"
 
 
-@interface CheckinViewController : BasicTableViewController <CLLocationManagerDelegate> {
+@interface CheckinViewController : BasicPlaceViewController <CLLocationManagerDelegate> {
 
 }
 

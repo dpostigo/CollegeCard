@@ -14,6 +14,8 @@
 
 @synthesize __textLabel;
 @synthesize __detailTextLabel;
+@synthesize imageView;
+@synthesize button;
 
 
 - (UILabel *) detailTextLabel {

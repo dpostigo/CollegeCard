@@ -16,6 +16,7 @@
 
 
 @synthesize location;
+@synthesize placeName;
 
 
 - (id) initWithLocation: (CLLocation *) aLocation {
@@ -36,6 +37,18 @@
 }
 
 
+- (id) initWithPlaceName: (NSString *) aPlaceName {
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject: aPlaceName forKey: @"q"];
+
+    self = [super initWithDelegate: nil httpMethod: @"GET" baseUrl: @"places/search.json" paramDict: paramDict];
+    if (self) {
+        placeName = aPlaceName;
+    }
+    return self;
+}
+
+
 - (void) main {
     [super main];
 }
@@ -45,7 +58,6 @@
     [super requestDoneWithResponse: response];
 
     NSArray *places = [response getObjectsOfType: [CCPlaceCocoafish class]];
-
     [_model notifyDelegates: @selector(searchSucceededWithPlaces:) object: places];
 }
 

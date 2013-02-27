@@ -9,15 +9,20 @@
 #import "BasicModel.h"
 #import "CCUser.h"
 #import "CCPlaceCocoafish.h"
+#import "CCEvent.h"
 
 
 @interface Model : BasicModel {
 
+    CCEvent *currentEvent;
     CCPlaceCocoafish *currentPlace;
+    NSArray *merchantEvents;
 }
 
 
 @property(nonatomic, strong) CCPlaceCocoafish *currentPlace;
+@property(nonatomic, strong) NSArray *merchantEvents;
+@property(nonatomic, strong) CCEvent *currentEvent;
 + (Model *) sharedModel;
 - (BOOL) isLoggedIn;
 - (CCUser *) currentUser;

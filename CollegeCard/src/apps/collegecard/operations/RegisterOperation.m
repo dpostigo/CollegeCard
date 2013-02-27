@@ -12,17 +12,21 @@
 #define RESPONSE_EMAIL_TAKEN @"Email is already taken"
 
 
-
-
 @implementation RegisterOperation {
 }
 
 
 @synthesize email;
 @synthesize userPassword;
+@synthesize isMerchant;
 
 
-- (id) initWithEmail: (NSString *) anEmail password: (NSString *) aPassword firstName: (NSString *)firstName lastName: (NSString *) lastName {
+- (id) initWithEmail: (NSString *) anEmail password: (NSString *) aPassword firstName: (NSString *) firstName lastName: (NSString *) lastName {
+    return [self initWithEmail: anEmail password: aPassword firstName: firstName lastName: lastName isMerchant: NO];
+}
+
+
+- (id) initWithEmail: (NSString *) anEmail password: (NSString *) aPassword firstName: (NSString *) firstName lastName: (NSString *) lastName isMerchant: (BOOL) aIsMerchant {
 
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionaryWithCapacity: 5];
     [paramDict setObject: anEmail forKey: @"email"];
@@ -32,11 +36,12 @@
     [paramDict setObject: aPassword forKey: @"password_confirmation"];
 
     NSMutableDictionary *customFields = [[NSMutableDictionary alloc] init];
-    [customFields setObject: @"No affiliated college." forKey: @"college"];
+    [customFields setObject: NO_COLLEGE_KEY forKey: @"college"];
     [customFields setObject: @"Your graduate date" forKey: @"graduationDate"];
     [customFields setObject: @"Your birth date" forKey: @"birthDate"];
     [customFields setObject: NO_MAJOR_KEY forKey: @"major"];
     [customFields setObject: @"Your gender" forKey: @"gender"];
+    [customFields setObject: [NSNumber numberWithBool: aIsMerchant] forKey: @"isMerchant"];
     [paramDict setObject: customFields forKey: @"custom_fields"];
 
     self = [super initWithDelegate: nil httpMethod: @"POST" baseUrl: @"users/create.json" paramDict: paramDict];

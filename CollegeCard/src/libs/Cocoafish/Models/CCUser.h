@@ -24,7 +24,9 @@
 @property (nonatomic, retain) NSString *role;
 @property (nonatomic, retain) NSArray *externalAccounts;
 @property (nonatomic, retain) NSDictionary *stats;
+- (BOOL) isMerchant;
 - (NSString *) displayName;
+- (NSString *) placeId;
 - (NSString *) college;
 - (NSString *) birthDate;
 - (NSString *) gender;

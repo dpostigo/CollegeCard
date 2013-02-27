@@ -19,11 +19,15 @@
 
 @optional
 
+- (NSInteger) numberOfRowsInSection: (NSInteger) section;
+- (NSInteger) numberOfSections;
+
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath;
 - (UIView *) tableView: (UITableView *) tableView viewForFooterInSection: (NSInteger) section;
 - (NSString *) tableView: (UITableView *) tableView titleForHeaderInSection: (NSInteger) section;
 - (CGFloat) heightForFooterInSection: (NSInteger) section;
 - (CGFloat) heightForHeaderInSection: (NSInteger) section;
+- (CGFloat) heightForRowAtIndexPath: (NSIndexPath *) indexPath;
 
 - (UIView *) viewForFooterInSection: (NSInteger) section;
 - (UIView *) viewForHeaderInSection: (NSInteger) section;

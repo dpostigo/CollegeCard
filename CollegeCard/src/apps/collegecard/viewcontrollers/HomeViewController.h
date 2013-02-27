@@ -6,17 +6,19 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BasicViewController.h"
 #import "CBLayer.h"
 #import "CBBezier.h"
+#import "BasicTableViewController.h"
 
 
-@interface HomeViewController : BasicViewController {
+@interface HomeViewController : BasicTableViewController {
 
     IBOutlet CBBezier *placesButton;
     IBOutlet UILabel *nameLabel;
     IBOutlet UILabel *collegeLabel;
     IBOutlet UILabel *majorLabel;
+
+    IBOutlet UIImageView *imageView;
 
 }
 

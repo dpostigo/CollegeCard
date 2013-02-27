@@ -13,6 +13,7 @@
 #import "BasicTableCell.h"
 #import "UIColor+Utils.h"
 #import "LogoutOperation.h"
+#import "SVProgressHUD.h"
 
 
 #define LOGOUT_KEY @"Log out"
@@ -56,9 +57,6 @@
     TableSection *tableSection = [dataSource objectAtIndex: section];
     BasicTableCell *cell = [table dequeueReusableCellWithIdentifier: @"HeaderCell"];
 
-    //    BasicWhiteView *whiteView = [[BasicWhiteView alloc] initWithFrame: cell.bounds];
-    //    whiteView.backgroundColor = [UIColor colorWithString: @"e7913c"];
-
     [cell.textLabel makeWhiteView];
     cell.textLabel.backgroundColor = [UIColor colorWithString: @"e7913c"];
     cell.textLabel.layer.borderColor = [UIColor colorWithString: @"ffa44a"].CGColor;
@@ -81,8 +79,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"SettingsTableCell" forIndexPath: indexPath];
 
     cell.textLabel.text = rowObject.textLabel;
+    cell.backgroundView = [[BasicWhiteView alloc] init];
 
-    cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right.png"]];
+    cell.textLabel.textColor = [UIColor blackColor];
+
+    cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
     return cell;
 }
 
@@ -94,12 +95,25 @@
         [self performSegueWithIdentifier: @"AccountSegue" sender: self];
     } else if ([rowObject.textLabel isEqualToString: LOGOUT_KEY]) {
 
-        [_queue addOperation: [[LogoutOperation alloc] initWithDefault]];
-        [self.navigationController popToRootViewControllerAnimated: YES];
+        [self handleSignout: nil];
     } else if ([rowObject.textLabel isEqualToString: @"For Merchants"]) {
 
         [self performSegueWithIdentifier: @"MerchantSegue" sender: self];
     }
+}
+
+
+- (IBAction) handleSignout: (id) sender {
+    [SVProgressHUD showWithStatus: @"Signing out..."];
+    [_queue addOperation: [[LogoutOperation alloc] initWithDefault]];
+}
+
+#pragma mark Callbacks
+
+- (void) logoutSucceeded {
+
+    [SVProgressHUD dismiss];
+    [self.navigationController popToRootViewControllerAnimated: YES];
 }
 
 @end

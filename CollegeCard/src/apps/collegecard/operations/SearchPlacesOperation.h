@@ -13,12 +13,15 @@
 @interface SearchPlacesOperation : BasicCocoafishOperation {
 
 CLLocation *location;
+NSString *placeName;
 
 
 }
 
 
 @property(nonatomic, strong) CLLocation *location;
+@property(nonatomic, retain) NSString *placeName;
 - (id) initWithLocation: (CLLocation *) aLocation;
+- (id) initWithPlaceName: (NSString *) aPlaceName;
 
 @end

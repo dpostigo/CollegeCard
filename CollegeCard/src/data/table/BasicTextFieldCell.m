@@ -13,7 +13,6 @@
 
 
 @synthesize textField;
-
-
+@synthesize detailTextField;
 
 @end

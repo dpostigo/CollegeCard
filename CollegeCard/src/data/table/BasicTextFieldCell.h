@@ -12,9 +12,11 @@
 @interface BasicTextFieldCell : BasicTableCell {
 
     IBOutlet UITextField *textField;
+    IBOutlet UITextField *detailTextField;
 }
 
 
 @property(nonatomic, strong) UITextField *textField;
+@property(nonatomic, strong) UITextField *detailTextField;
 
 @end
