@@ -7,15 +7,21 @@
 
 #import "Model.h"
 #import "Cocoafish.h"
+#import "UIImage+Utils.h"
+#import "TTTTimeIntervalFormatter.h"
+#import "NSDate+JMSimpleDate.h"
 
 
 @implementation Model {
+    NSMutableDictionary *propertySlugs;
+    TTTTimeIntervalFormatter *intervalFormatter;
 }
 
 
 @synthesize currentPlace;
 @synthesize merchantEvents;
 @synthesize currentEvent;
+@synthesize dateFormatter;
 
 
 + (Model *) sharedModel {
@@ -34,6 +40,15 @@
 - (id) init {
     self = [super init];
     if (self) {
+
+        propertySlugs = [[NSMutableDictionary alloc] init];
+        [propertySlugs setObject: @"First Name" forKey: @"first_name"];
+        [propertySlugs setObject: @"Last Name" forKey: @"last_name"];
+        [propertySlugs setObject: @"Your School" forKey: @"college"];
+        [propertySlugs setObject: @"Graduation Date" forKey: @"graduationDate"];
+        [propertySlugs setObject: @"Major" forKey: @"major"];
+        [propertySlugs setObject: @"Birth Date" forKey: @"birthDate"];
+        [propertySlugs setObject: @"Gender" forKey: @"gender"];
     }
 
     return self;
@@ -50,5 +65,64 @@
     return [[Cocoafish defaultCocoafish] getCurrentUser];
 }
 
+
+- (NSDateFormatter *) dateFormatter {
+    if (!dateFormatter) {
+
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+        dateFormatter.dateFormat = @"EEEE, LLLL d, yyyy\nh:m a ";
+    }
+    return dateFormatter;
+}
+
+
+- (NSString *) timeStringForEvent: (CCEvent *) event {
+
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"h:m a";
+
+    NSString *endDayString = [self.timeIntervalFormatter simpleDayString: event.endTime];
+    NSString *endTimeString = [formatter stringFromDate: event.endTime];
+    NSString *endString = [NSString stringWithFormat: @"%@, %@", endDayString, endTimeString];
+
+    if (event.endTime.hasPassed) {
+        return [NSString stringWithFormat: @"Ended %@", endDayString];
+    }
+
+    else if (event.startTime.hasPassed) {
+        return [NSString stringWithFormat: @"Ends %@", endDayString];
+    }
+
+    else {
+        NSString *startDayString = [self.timeIntervalFormatter simpleDayString: event.startTime];
+        //        NSString *startTimeString = [formatter stringFromDate: event.startTime];
+
+        return [NSString stringWithFormat: @"Starts %@", startDayString];
+    }
+}
+
+
+- (TTTTimeIntervalFormatter *) timeIntervalFormatter {
+    if (intervalFormatter == nil) {
+        intervalFormatter = [[TTTTimeIntervalFormatter alloc] init];
+    }
+    return intervalFormatter;
+}
+
+
+- (UIImageView *) nextImageView {
+    return [[UIImageView alloc] initWithImage: [UIImage newImageFromResource: @"arrow-right-dark.png"]];
+}
+
+
+- (NSString *) slugForProperty: (NSString *) property {
+    return [propertySlugs objectForKey: property];
+}
+
+
+- (NSString *) propertyForSlug: (NSString *) slug {
+    return [[propertySlugs allKeysForObject: slug] objectAtIndex: 0];
+}
 
 @end

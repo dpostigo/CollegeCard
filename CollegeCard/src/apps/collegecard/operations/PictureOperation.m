@@ -7,6 +7,7 @@
 
 #import "PictureOperation.h"
 #import "CCResponse.h"
+#import "CCPhoto.h"
 
 
 @implementation PictureOperation {
@@ -34,6 +35,11 @@
     [super requestDoneWithResponse: response];
 
     if ([response.meta.status isEqualToString: @"ok"]) {
+
+
+        NSArray *users = [response getObjectsOfType:[CCUser class]];
+        CCUser *user = [users objectAtIndex: 0];
+        NSLog(@"user.photo.thumbURL = %@", user.photo.thumbURL);
         [_model notifyDelegates: @selector(pictureOperationSucceeded) object: nil];
         [_model notifyDelegates: @selector(userPictureUpdated) object: nil];
     } else {

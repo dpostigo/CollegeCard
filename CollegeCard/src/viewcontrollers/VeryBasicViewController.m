@@ -101,22 +101,53 @@
 
 
 - (void) animateTextField: (UITextField *) textField up: (BOOL) up {
-    NSLog(@"textField.frame = %@", NSStringFromCGRect(textField.frame));
 
+    const int limit = 100;
     const int movementDistance = 80; // tweak as needed
     const float movementDuration = 0.3f; // tweak as needed
-    if (textField.top > movementDistance) {
 
-        int movement = (up ? -movementDistance: movementDistance);
 
-        [UIView beginAnimations: @"anim" context: nil];
-        [UIView setAnimationBeginsFromCurrentState: YES];
-        [UIView setAnimationDuration: movementDuration];
-        self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-        [UIView commitAnimations];
+    CGFloat topDistance = textField.top;
+
+    if ([textField.superview isKindOfClass: NSClassFromString(@"UITableViewCellContentView")]) {
+        topDistance += textField.superview.top + textField.superview.superview.top;
+    }
+
+    NSLog(@"topDistance = %f", topDistance);
+
+    if (up) {
+        NSLog(@"Animating UP.");
+        if (topDistance > limit) {
+            int movement = (limit - topDistance);
+            CGRect rect = CGRectOffset(self.view.frame, 0, movement);
+
+            [UIView beginAnimations: @"anim" context: nil];
+            [UIView setAnimationBeginsFromCurrentState: YES];
+            [UIView setAnimationDuration: movementDuration];
+            self.view.frame = rect;
+            [UIView commitAnimations];
+        }
+    }
+
+    else {
+        NSLog(@"self.view.frame = %@", NSStringFromCGRect(self.view.frame));
+
+        CGRect statusBarRect = [self statusBarFrameViewRect: self.view];
+        NSLog(@"statusBarRect.size.height = %f", statusBarRect.size.height);
+
+        [UIView animateWithDuration: movementDuration animations: ^{
+            self.view.frame = CGRectMake(0, statusBarRect.size.height, self.view.width, self.view.height);
+        }];
     }
 }
 
+
+- (CGRect) statusBarFrameViewRect: (UIView *) view {
+    CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
+    CGRect statusBarWindowRect = [view.window convertRect: statusBarFrame fromWindow: nil];
+    CGRect statusBarViewRect = [view convertRect: statusBarWindowRect fromView: nil];
+    return statusBarViewRect;
+}
 
 
 #pragma mark TextFields -
@@ -208,7 +239,7 @@
 
 
 - (void) textFieldDidReturn: (UITextField *) aTextField {
-    [self textFieldEndedEditing: aTextField];
+    //    [self textFieldEndedEditing: aTextField];
 }
 
 

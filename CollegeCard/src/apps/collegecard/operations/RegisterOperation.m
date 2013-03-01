@@ -35,6 +35,8 @@
     [paramDict setObject: aPassword forKey: @"password"];
     [paramDict setObject: aPassword forKey: @"password_confirmation"];
 
+
+
     NSMutableDictionary *customFields = [[NSMutableDictionary alloc] init];
     [customFields setObject: NO_COLLEGE_KEY forKey: @"college"];
     [customFields setObject: @"Your graduate date" forKey: @"graduationDate"];

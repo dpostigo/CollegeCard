@@ -13,5 +13,12 @@
 
 
 @synthesize name;
+@synthesize startTime;
+@synthesize endTime;
+
+
+- (NSInteger) duration {
+    return 60 * 60;
+}
 
 @end

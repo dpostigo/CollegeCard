@@ -16,26 +16,24 @@
 
 - (void) prepareDataSource;
 - (void) registerExternalNibs;
+@property(nonatomic) BOOL editingEnabled;
 
 @optional
-
+- (void) shouldDeleteRowAtIndexPath: (NSIndexPath *) indexPath;
+- (void) shouldDeleteRow: (TableRowObject *) rowObject inSection: (TableSection *) tableSection;
 - (NSInteger) numberOfRowsInSection: (NSInteger) section;
 - (NSInteger) numberOfSections;
-
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath;
 - (UIView *) tableView: (UITableView *) tableView viewForFooterInSection: (NSInteger) section;
 - (NSString *) tableView: (UITableView *) tableView titleForHeaderInSection: (NSInteger) section;
 - (CGFloat) heightForFooterInSection: (NSInteger) section;
 - (CGFloat) heightForHeaderInSection: (NSInteger) section;
 - (CGFloat) heightForRowAtIndexPath: (NSIndexPath *) indexPath;
-
 - (UIView *) viewForFooterInSection: (NSInteger) section;
 - (UIView *) viewForHeaderInSection: (NSInteger) section;
-
-
 - (void) didSelectRowAtIndexPath: (NSIndexPath *) indexPath;
 - (void) didSelectRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection;
-    - (UITableViewCell *) cellForRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection;
+- (UITableViewCell *) cellForRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection;
 
 @end
 

@@ -13,11 +13,10 @@
 #import "BasicTextFieldCell.h"
 #import "TempEvent.h"
 #import "CreateEventOperation.h"
+#import "NSDate+JMSimpleDate.h"
+#import "DeleteEventOperation.h"
 
 
-#define NO_DEALS_FOUND @"You don't have any deals. \nTap the + sign on the right to create a limited-time offer."
-
-#define SEARCHING_DEALS_KEY @"Searching for your deals..."
 
 
 @implementation MerchantDealsViewController {
@@ -29,6 +28,7 @@
 
 - (void) loadView {
     self.rowSpacing = 10;
+    self.editingEnabled = YES;
     [super loadView];
 }
 
@@ -36,6 +36,7 @@
 - (void) prepareDataSource {
 
     if (_model.merchantEvents == nil) {
+        NSLog(@"_model.currentUser.placeId = %@", _model.currentUser.placeId);
         [_queue addOperation: [[GetMerchantEventsOperation alloc] initWithPlaceId: _model.currentUser.placeId]];
     }
 
@@ -48,13 +49,19 @@
 - (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
     [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
 
-    BasicTextFieldCell *cell = tableCell;
+
+    //    _model.dateFormatter.dateFormat = @""
+
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
+    cell.textLabel.numberOfLines = 1;
+
+
     if ([rowObject isKindOfClass: [EventRowObject class]]) {
         EventRowObject *eventObject = (EventRowObject *) rowObject;
         CCEvent *event = eventObject.event;
 
         cell.textLabel.text = event.name;
-        //        tableCell.detailTextLabel.text = place.fullAddress;
+        cell.detailTextLabel.text = [_model timeStringForEvent: event];
         cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
         cell.backgroundView = [[BasicWhiteView alloc] initWithFrame: cell.bounds];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
@@ -66,6 +73,7 @@
 
         if ([rowObject.textLabel isEqualToString: NO_DEALS_FOUND]) {
             cell.textLabel.font = [UIFont fontWithName: @"HelveticaNeue-Italic" size: cell.textLabel.font.pointSize];
+            cell.textLabel.numberOfLines = 0;
         }
     }
 }
@@ -74,16 +82,31 @@
 - (void) didSelectRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
     [super didSelectRowObject: rowObject inSection: tableSection];
 
-    if ([tableSection.title isEqualToString: NO_DEALS_FOUND]) {
+    if ([tableSection.title isEqualToString: NO_DEALS_FOUND] || [tableSection.title isEqualToString: SEARCHING_DEALS_KEY]) {
     } else {
 
         EventRowObject *eventObject = (EventRowObject *) rowObject;
-
         _model.currentEvent = eventObject.event;
-
         [self performSegueWithIdentifier: @"EventEditSegue" sender: self];
     }
 }
+
+
+- (void) shouldDeleteRow: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
+    [super shouldDeleteRow: rowObject inSection: tableSection];
+
+    EventRowObject *eventRowObject = (EventRowObject *) rowObject;
+    CCEvent *event = eventRowObject.event;
+
+    if ([event isKindOfClass: [TempEvent class]]) {
+        return;
+    }
+
+    [self deleteRowObject: rowObject inSection: tableSection animation: UITableViewRowAnimationFade];
+    [_queue addOperation: [[DeleteEventOperation alloc] initWithEventId: event.objectId]];
+}
+
+
 
 
 
@@ -93,8 +116,10 @@
 
     newEventsCount++;
     TempEvent *newEvent = [[TempEvent alloc] init];
-
     newEvent.name = @"New Event";
+    newEvent.startTime = [NSDate date];
+    newEvent.endTime = [[NSDate date] dateByAddingHours: 1];
+
     if (newEventsCount > 1) {
         newEvent.name = [NSString stringWithFormat: @"New Event %i", newEventsCount];
     }
@@ -147,4 +172,16 @@
         }
     }
 }
+
+
+- (void) eventDidUpdate: (CCEvent *) event {
+    TableSection *tableSection = [dataSource objectAtIndex: 0];
+    for (EventRowObject *rowObject in tableSection.rows) {
+        if ([rowObject.event.objectId isEqualToString: event.objectId]) {
+            rowObject.event = event;
+        }
+    }
+    [table reloadData];
+}
+
 @end

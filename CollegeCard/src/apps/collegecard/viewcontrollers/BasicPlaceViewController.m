@@ -46,13 +46,10 @@
 #pragma mark UITableView -
 
 
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
 
-
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
-
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-    BasicTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier: @"TableCell" forIndexPath: indexPath];
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
 
     if ([rowObject isKindOfClass: [PlaceRowObject class]]) {
 
@@ -73,8 +70,6 @@
             cell.textField.font = [UIFont fontWithName: @"HelveticaNeue-Italic" size: cell.textLabel.font.pointSize];
         }
     }
-
-    return cell;
 }
 
 

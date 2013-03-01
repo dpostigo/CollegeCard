@@ -24,4 +24,15 @@
     return self;
 }
 
+
+- (id) initWithEvent: (CCEvent *) anEvent cellIdentifier: (NSString *) aCellIdentifier {
+    self = [super init];
+    if (self) {
+        event = anEvent;
+        cellIdentifier = aCellIdentifier;
+    }
+
+    return self;
+}
+
 @end

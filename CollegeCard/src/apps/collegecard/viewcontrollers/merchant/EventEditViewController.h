@@ -9,7 +9,7 @@
 #import "BasicTableViewController.h"
 
 
-@interface EventEditViewController : BasicTableViewController {
+@interface EventEditViewController : BasicTableViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
 
 
 }

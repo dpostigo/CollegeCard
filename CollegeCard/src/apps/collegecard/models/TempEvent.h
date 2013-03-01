@@ -12,9 +12,14 @@
 @interface TempEvent : CCEvent  {
 
     NSString *name;
+    NSDate *startTime;
+    NSDate *endTime;
 }
 
 
 @property(nonatomic, retain) NSString *name;
+@property(nonatomic, strong) NSDate *startTime;
+@property(nonatomic, strong) NSDate *endTime;
+- (NSInteger) duration;
 
 @end

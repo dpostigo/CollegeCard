@@ -63,9 +63,11 @@
 - (NSDate *) dateByAddingMinutes: (NSInteger) minutes;
 - (NSDate *) dateBySubtractingMinutes: (NSInteger) minutes;
 - (NSDate *) dateAtMidnight;
+- (NSDateComponents *) standardComponents;
 - (NSDateComponents *) componentsWithOffsetFromDate: (NSDate *) date;
 
 #pragma mark - Retrieving Intervals
+- (BOOL) hasPassed;
 - (NSInteger) minutesAfterDate: (NSDate *) date;
 - (NSInteger) secondsAfterDate: (NSDate *) date;
 - (NSInteger) minutesBeforeDate: (NSDate *) date;

@@ -18,5 +18,6 @@
 
 @property(nonatomic, strong) CCEvent *event;
 - (id) initWithEvent: (CCEvent *) anEvent;
+- (id) initWithEvent: (CCEvent *) anEvent cellIdentifier: (NSString *) aCellIdentifier;
 
 @end

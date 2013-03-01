@@ -14,6 +14,7 @@
     IBOutlet UILabel *textLabel;
     IBOutlet UILabel *detailTextLabel;
     IBOutlet UIButton *checkinButton;
+    IBOutlet UIButton *saveButton;
 }
 
 

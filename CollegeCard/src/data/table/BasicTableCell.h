@@ -12,6 +12,7 @@
 
     IBOutlet UILabel *__textLabel;
     IBOutlet UILabel *__detailTextLabel;
+    IBOutlet UILabel *captionLabel;
     IBOutlet UIImageView *imageView;
     IBOutlet UIButton *button;
 }
@@ -21,5 +22,6 @@
 @property(nonatomic, strong) UILabel *__detailTextLabel;
 @property(nonatomic, strong) UIImageView *imageView;
 @property(nonatomic, strong) UIButton *button;
+@property(nonatomic, strong) UILabel *captionLabel;
 
 @end

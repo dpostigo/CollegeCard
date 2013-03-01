@@ -16,6 +16,17 @@
 @synthesize __detailTextLabel;
 @synthesize imageView;
 @synthesize button;
+@synthesize captionLabel;
+
+
+- (id) initWithCoder: (NSCoder *) aDecoder {
+    self = [super initWithCoder: aDecoder];
+    if (self) {
+    self.textLabel.highlightedTextColor = [UIColor grayColor];
+    }
+
+    return self;
+}
 
 
 - (UILabel *) detailTextLabel {

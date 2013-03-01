@@ -10,6 +10,8 @@
 #import "UIColor+Utils.h"
 #import "CCPhoto.h"
 #import "BasicTextFieldCell.h"
+#import "UIImage+Utils.h"
+#import "GetCheckinsOperation.h"
 
 
 @implementation HomeViewController {
@@ -40,6 +42,8 @@
     majorLabel.text = _model.currentUser.major;
 
     [self sizeTableToFit];
+
+    [_queue addOperation: [[GetCheckinsOperation alloc] initWithUserId: _model.currentUser.objectId]];
 }
 
 
@@ -83,6 +87,7 @@
 
     if ([rowObject.textLabel isEqualToString: USERVIEW_KEY]) {
 
+        imageView = cell.imageView;
         cell.textLabel.text = _model.currentUser.displayName;
 
         if ([_model.currentUser.college isEqualToString: NO_COLLEGE_KEY]) {
@@ -97,14 +102,12 @@
             cell.detailTextField.text = _model.currentUser.major;
         }
 
-        NSString *string = _model.currentUser.photo.smallURL;
-
-        NSLog(@"string = %@", string);
+        cell.textField.userInteractionEnabled = NO;
+        cell.detailTextField.userInteractionEnabled = NO;
+        NSString *string = _model.currentUser.photo.thumbURL;
         if (string) {
             [cell.imageView setImageWithURL: [NSURL URLWithString: string]];
         }
-
-        return;
     }
 }
 
@@ -113,7 +116,6 @@
     [super didSelectRowObject: rowObject inSection: tableSection];
 
     if ([rowObject.textLabel isEqualToString: USERVIEW_KEY]) {
-
         [self performSegueWithIdentifier: @"ProfileSegue" sender: self];
     }
 }
@@ -126,5 +128,9 @@
     if (string) {
         [imageView setImageWithURL: [NSURL URLWithString: string]];
     }
+}
+
+
+- (void) userDidUpdate {
 }
 @end

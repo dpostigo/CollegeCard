@@ -8,11 +8,14 @@
 #import <Foundation/Foundation.h>
 #import "CCRequest.h"
 #import "Model.h"
+#import "CCResponse.h"
 
 
 @interface BasicCocoafishOperation : CCRequest {
     Model *_model;
 }
 
+
+- (void) requestDoneWithResponse: (CCResponse *) response;
 
 @end

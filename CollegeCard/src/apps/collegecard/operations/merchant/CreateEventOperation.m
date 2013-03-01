@@ -22,7 +22,9 @@
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionaryWithCapacity: 1];
     [paramDict setObject: aTempEvent.name forKey: @"name"];
     [paramDict setObject: _model.currentUser.placeId forKey: @"place_id"];
-    [paramDict setObject: [NSDate date] forKey: @"start_time"];
+    [paramDict setObject: aTempEvent.startTime forKey: @"start_time"];
+    [paramDict setObject: aTempEvent.endTime forKey: @"end_time"];
+    [paramDict setObject: [NSNumber numberWithInteger: aTempEvent.duration] forKey: @"duration"];
     self = [super initWithDelegate: nil httpMethod: @"POST" baseUrl: @"events/create.json" paramDict: paramDict];
     if (self) {
         tempEvent = aTempEvent;

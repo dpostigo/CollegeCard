@@ -12,10 +12,8 @@
 
 @interface SearchPlacesOperation : BasicCocoafishOperation {
 
-CLLocation *location;
-NSString *placeName;
-
-
+    CLLocation *location;
+    NSString *placeName;
 }
 
 

@@ -23,10 +23,14 @@
 
 //#pragma mark No data keys
 
-#define NO_MAJOR_KEY @"Your major"
-#define NO_COLLEGE_KEY @"Your university"
+#define NO_MAJOR_KEY @"No major"
+#define NO_COLLEGE_KEY @"No university"
 
 #define NO_MERCHANTS_FOUND_KEY @"No merchants found nearby."
 #define ENTER_SEARCH_KEY @"Enter a search term to get started."
+
+#define NO_DEALS_FOUND @"You don't have any deals. \nTap the + sign on the right to create a limited-time offer."
+#define SEARCHING_DEALS_KEY @"Searching for your deals..."
+
 
 @end

@@ -1,5 +1,5 @@
 //
-// Created by dpostigo on 2/26/13.
+// Created by dpostigo on 2/28/13.
 //
 // To change the template use AppCode | Preferences | File Templates.
 //
@@ -9,10 +9,10 @@
 #import "BasicTableViewController.h"
 
 
-@interface ProfileViewController : BasicTableViewController <UIActionSheetDelegate, UINavigationControllerDelegate> {
-
+@interface ProfileViewController : BasicTableViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
     IBOutlet UIImageView *imageView;
+    IBOutlet UIButton *button;
 
     IBOutlet UILabel *displayNameLabel;
     IBOutlet UITextField *majorTextField;

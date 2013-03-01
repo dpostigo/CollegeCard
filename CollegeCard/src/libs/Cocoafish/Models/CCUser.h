@@ -8,23 +8,29 @@
 
 #import "CCObjectWithPhoto.h"
 
+
 @interface CCUser : CCObjectWithPhoto {
-	NSString *_firstName;
-	NSString *_lastName;
-	NSString *_email;
-	NSString *_username;
+    NSString *_firstName;
+    NSString *_lastName;
+    NSString *_email;
+    NSString *_username;
     NSString *_role;
     NSArray *_externalAccounts;
+    NSArray *checkins;
 }
 
-@property (nonatomic, retain) NSString *firstName;
-@property (nonatomic, retain) NSString *lastName;
-@property (nonatomic, retain) NSString *email;
-@property (nonatomic, retain) NSString *username;
-@property (nonatomic, retain) NSString *role;
-@property (nonatomic, retain) NSArray *externalAccounts;
-@property (nonatomic, retain) NSDictionary *stats;
+
+@property(nonatomic, retain) NSString *firstName;
+@property(nonatomic, retain) NSString *lastName;
+@property(nonatomic, retain) NSString *email;
+@property(nonatomic, retain) NSString *username;
+@property(nonatomic, retain) NSString *role;
+@property(nonatomic, retain) NSArray *externalAccounts;
+@property(nonatomic, retain) NSDictionary *stats;
+@property(nonatomic, retain) NSArray *checkins;
 - (BOOL) isMerchant;
+- (NSArray *) savedPlaces;
+- (BOOL) isSavedPlace: (NSString *) savedId;
 - (NSString *) displayName;
 - (NSString *) placeId;
 - (NSString *) college;
@@ -32,9 +38,10 @@
 - (NSString *) gender;
 - (NSString *) graduationDate;
 - (NSString *) major;
--(id)initWithId:(NSString *)objectId first:(NSString *)first last:(NSString *)last email:(NSString *)email username:(NSString *)username;
+- (id) initWithId: (NSString *) objectId first: (NSString *) first last: (NSString *) last email: (NSString *) email username: (NSString *) username;
 
 @end
+
 
 @interface CCExternalAccount : CCObject {
 @private
@@ -43,9 +50,10 @@
     NSString *_token;
 }
 
-@property (nonatomic, retain, readonly) NSString *externalId;
-@property (nonatomic, retain, readonly) NSString *externalType;
-@property (nonatomic, retain, readonly) NSString *token;
+
+@property(nonatomic, retain, readonly) NSString *externalId;
+@property(nonatomic, retain, readonly) NSString *externalType;
+@property(nonatomic, retain, readonly) NSString *token;
 @end
 
 

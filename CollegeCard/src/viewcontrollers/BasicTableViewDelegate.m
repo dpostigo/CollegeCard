@@ -94,11 +94,22 @@
 
 
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
 
-    //    [viewController didSelectRowAtIndexPath: indexPath];
-    [viewController didSelectRowObject: rowObject inSection: tableSection];
+    [viewController didSelectRowAtIndexPath: indexPath];
+}
+
+
+- (BOOL) tableView: (UITableView *) tableView canEditRowAtIndexPath: (NSIndexPath *) indexPath {
+    return viewController.editingEnabled;
+}
+
+
+// Override to support editing the table view.
+- (void) tableView: (UITableView *) tableView commitEditingStyle: (UITableViewCellEditingStyle) editingStyle forRowAtIndexPath: (NSIndexPath *) indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+        [viewController shouldDeleteRowAtIndexPath: indexPath];
+    }
 }
 
 @end

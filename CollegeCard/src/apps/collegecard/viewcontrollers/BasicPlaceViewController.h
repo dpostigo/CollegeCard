@@ -6,10 +6,10 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BasicTableViewController.h"
+#import "BasicLocationViewController.h"
 
 
-@interface BasicPlaceViewController : BasicTableViewController {
+@interface BasicPlaceViewController : BasicLocationViewController {
 
 }
 

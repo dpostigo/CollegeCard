@@ -16,6 +16,7 @@
 #import "SVProgressHUD.h"
 #import "RegisterOperation.h"
 #import "UpdateUserOperation.h"
+#import "LogoutOperation.h"
 
 
 #define PHONE_KEY @"Phone Number"
@@ -29,9 +30,16 @@
 }
 
 
+- (void) loadView {
+    self.rowSpacing = 10;
+    [super loadView];
+
+    [self performSegueWithIdentifier: @"MerchantSuccessSegue" sender: self];
+}
+
+
 - (void) viewWillAppear: (BOOL) animated {
     [super viewWillAppear: animated];
-
     [self.navigationController setNavigationBarHidden: NO];
 }
 
@@ -54,17 +62,20 @@
     }
 
     TableSection *tableSection = [dataSource objectAtIndex: 0];
-    [dataSource removeAllObjects];
 
     if (tableSection == accountSection) {
-
         [SVProgressHUD showWithStatus: @"Registering..."];
         [self handleSignup: sender];
     } else if (tableSection == infoSection) {
 
+        [dataSource removeAllObjects];
+        [table deleteSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
+
         [dataSource addObject: optionalSection];
-        [table reloadSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
+        [table insertSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
+
         [self animateButton: submitButton toTitle: @"Send"];
+
     } else if (tableSection == optionalSection) {
 
         [self handleSubmit: sender];
@@ -167,24 +178,6 @@
 }
 
 
-- (NSInteger) numberOfRowsInSection: (NSInteger) section {
-    return [super numberOfRowsInSection: section] * 2;
-}
-
-
-- (NSInteger) numberOfSections {
-    return 1;
-}
-
-
-- (CGFloat) heightForRowAtIndexPath: (NSIndexPath *) indexPath {
-    if (indexPath.row % 2) {
-        return 10;
-    }
-    return [super heightForRowAtIndexPath: indexPath];
-}
-
-
 - (CGFloat) heightForHeaderInSection: (NSInteger) section {
     return table.rowHeight + 10;
 }
@@ -201,34 +194,31 @@
 }
 
 
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
 
-    if (indexPath.row % 2) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"BlankCell" forIndexPath: indexPath];
-        return cell;
-    } else {
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
 
-        TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-        TableRowObject *rowObject = [tableSection.rows objectAtIndex: (indexPath.row / 2)];
-        BasicTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier: @"TableCell" forIndexPath: indexPath];
+    cell.textField.text = nil;
+    cell.textField.placeholder = rowObject.textLabel;
+    cell.backgroundView = [[BasicWhiteView alloc] init];
 
-        cell.textField.placeholder = rowObject.textLabel;
-        cell.backgroundView = [[BasicWhiteView alloc] init];
+    if ([cell.textField isKindOfClass: [TableTextField class]]) {
+        TableTextField *textField = (TableTextField *) cell.textField;
+        textField.rowObject = rowObject;
 
-        if ([cell.textField isKindOfClass: [TableTextField class]]) {
-            TableTextField *textField = (TableTextField *) cell.textField;
-            textField.rowObject = rowObject;
-
-            if ([rowObject.textLabel isEqualToString: EMAIL_KEY]) {
-                textField.mode = TextFieldModeEmail;
-            } else if ([rowObject.textLabel isEqualToString: PASSWORD_KEY]) {
-                textField.secureTextEntry = YES;
-            }
+        if ([rowObject.textLabel isEqualToString: EMAIL_KEY]) {
+            textField.mode = TextFieldModeEmail;
+        } else if ([rowObject.textLabel isEqualToString: PASSWORD_KEY]) {
+            textField.secureTextEntry = YES;
         }
-
-        [self subscribeTextField: cell.textField];
-        return cell;
     }
+
+    if (tableSection == infoSection) {
+        cell.textField.autocapitalizationType = UITextAutocapitalizationTypeWords;
+    }
+
+    [self subscribeTextField: cell.textField];
 }
 
 
@@ -261,8 +251,12 @@
 
 - (void) registerSucceeded {
     [SVProgressHUD showSuccessWithStatus: @"Success!"];
+
+    [dataSource removeAllObjects];
+    [table deleteSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
+
     [dataSource addObject: infoSection];
-    [table reloadSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
+    [table insertSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
     [self animateButton: submitButton toTitle: @"Final Step"];
 }
 
@@ -287,12 +281,18 @@
     [self performSegueWithIdentifier: @"MerchantSuccessSegue" sender: self];
 }
 
+
+- (void) logoutSucceeded {
+    [self dismissModal];
+}
+
 #pragma mark UIAlertViewDelegate
 
 
 - (void) alertView: (UIAlertView *) alertView didDismissWithButtonIndex: (NSInteger) buttonIndex {
     if (buttonIndex != alertView.cancelButtonIndex) {
-        [self dismissModal];
+
+        [_queue addOperation: [[LogoutOperation alloc] initWithDefault]];
     }
 }
 

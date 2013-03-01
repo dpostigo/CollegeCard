@@ -11,10 +11,15 @@
 
 @interface GetMerchantEventsOperation : BasicCocoafishOperation {
     NSString *placeId;
+    CLLocation *location;
+    float distance;
 }
 
 
 @property(nonatomic, retain) NSString *placeId;
+@property(nonatomic, strong) CLLocation *location;
+@property(nonatomic) float distance;
 - (id) initWithPlaceId: (NSString *) aPlaceId;
+- (id) initWithLocation: (CLLocation *) aLocation distance: (float) aDistance;
 
 @end

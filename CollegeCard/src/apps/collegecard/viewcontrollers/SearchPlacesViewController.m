@@ -9,12 +9,17 @@
 #import "SearchPlacesOperation.h"
 
 
-
-
-
 @implementation SearchPlacesViewController {
 }
 
+
+- (void) loadView {
+    self.rowSpacing = 10;
+    [super loadView];
+}
+
+
+#pragma mark UITableView
 
 - (void) prepareDataSource {
     TableSection *tableSection = [[TableSection alloc] initWithTitle: @""];

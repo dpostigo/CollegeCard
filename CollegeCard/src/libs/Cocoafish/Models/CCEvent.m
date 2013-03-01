@@ -10,6 +10,7 @@
 #import "CCUser.h"
 #import "CCPlaceCocoafish.h"
 #import "Cocoafish.h"
+#import "NSDate+JMSimpleDate.h"
 
 
 @interface CCEvent ()
@@ -46,13 +47,22 @@
 @synthesize user = _user;
 @synthesize place = _place;
 @synthesize startTime = _startTime;
-@synthesize endTime = _endTime;
 @synthesize duration = _duration;
 @synthesize recurring = _recurring;
 @synthesize recurringCount = _recurringCount;
 @synthesize numOccurrences = _numOccurrences;
 @synthesize ical = _ical;
 @synthesize recurringUntil = _recurringUntil;
+
+
+- (NSDate *) endTime {
+    NSLog(@"self.duration = %i", self.duration);
+
+    if (self.duration == 0) {
+
+    }
+    return [self.startTime dateByAddingTimeInterval: self.duration];
+}
 
 
 - (id) initWithJsonResponse: (NSDictionary *) jsonResponse {

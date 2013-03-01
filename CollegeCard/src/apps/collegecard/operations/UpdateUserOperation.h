@@ -17,6 +17,6 @@ NSDictionary *paramDict;
 
 
 @property(nonatomic, strong) NSDictionary *paramDict;
-- (id) initWithParamDict: (NSMutableDictionary *) aParamDict;
+- (id) initWithParamDict: (NSDictionary *) aParamDict;
 
 @end

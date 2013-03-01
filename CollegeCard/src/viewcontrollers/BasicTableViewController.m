@@ -11,6 +11,7 @@
 #import "BasicTextFieldCell.h"
 #import "BlankCell.h"
 #import "BasicWhiteView.h"
+#import "TableTextField.h"
 
 
 @implementation BasicTableViewController {
@@ -21,6 +22,7 @@
 @synthesize tableDelegate;
 @synthesize dataSource;
 @synthesize rowSpacing;
+@synthesize editingEnabled;
 
 
 - (id) initWithCoder: (NSCoder *) aDecoder {
@@ -30,6 +32,12 @@
     }
 
     return self;
+}
+
+
+- (void) viewDidAppear: (BOOL) animated {
+    [super viewDidAppear: animated];
+    [table deselectRowAtIndexPath: [table indexPathForSelectedRow] animated: YES];
 }
 
 
@@ -120,9 +128,27 @@
 
 
 - (CGFloat) heightForRowAtIndexPath: (NSIndexPath *) indexPath {
-    if (rowSpacing > 0 && indexPath.row % 2 != 0) {
-        return rowSpacing;
+
+    TableSection *tableSection;
+    TableRowObject *rowObject;
+
+    if (rowSpacing > 0) {
+        if (indexPath.row % 2 != 0) return rowSpacing;
+        else {
+            tableSection = [dataSource objectAtIndex: indexPath.section];
+            rowObject = [tableSection.rows objectAtIndex: indexPath.row / 2];
+        }
     }
+    else {
+        tableSection = [dataSource objectAtIndex: indexPath.section];
+        rowObject = [tableSection.rows objectAtIndex: indexPath.row];
+    }
+
+    return [self heightForTableRow: rowObject inSection: tableSection];
+}
+
+
+- (CGFloat) heightForTableRow: (TableRowObject *) rowObject inSection: (TableSection *) section {
     return table.rowHeight;
 }
 
@@ -133,6 +159,15 @@
 
 
 - (CGFloat) heightForHeaderInSection: (NSInteger) section {
+    TableSection *tableSection = [dataSource objectAtIndex: section];
+    if (tableSection) {
+        return [self heightForHeaderInTableSection: tableSection];
+    }
+    return 0;
+}
+
+
+- (CGFloat) heightForHeaderInTableSection: (TableSection *) tableSection {
     return 0;
 }
 
@@ -143,29 +178,52 @@
 
 
 - (UIView *) viewForHeaderInSection: (NSInteger) section {
+    TableSection *tableSection = [dataSource objectAtIndex: section];
+    if (tableSection) {
+        return [self viewForHeaderInTableSection: tableSection];
+    }
+    return nil;
+}
+
+
+- (UIView *) viewForHeaderInTableSection: (TableSection *) tableSection {
     return nil;
 }
 
 
 - (void) didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-    [self didSelectRowObject: rowObject inSection: tableSection];
+
+    TableSection *tableSection;
+    TableRowObject *rowObject;
+    NSLog(@"indexPath = %@", indexPath);
+
+    if (rowSpacing > 0) {
+        if (indexPath.row % 2 == 0) {
+            tableSection = [dataSource objectAtIndex: indexPath.section];
+            rowObject = [tableSection.rows objectAtIndex: indexPath.row / 2];
+            [self didSelectRowObject: rowObject inSection: tableSection];
+        } else {
+
+            [table deselectRowAtIndexPath: indexPath animated: NO];
+        }
+    }
+    else {
+
+        tableSection = [dataSource objectAtIndex: indexPath.section];
+        rowObject = [tableSection.rows objectAtIndex: indexPath.row];
+        [self didSelectRowObject: rowObject inSection: tableSection];
+    }
 }
 
 
-- (void) didSelectRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
-}
-
-
-- (void) viewDidAppear: (BOOL) animated {
-    [super viewDidAppear: animated];
-    [table deselectRowAtIndexPath: [table indexPathForSelectedRow] animated: YES];
+- (void) didSelectRowObject: (TableRowObject *) rowObject
+                  inSection: (TableSection *) tableSection {
 }
 
 
 // Sample implementation
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
+- (UITableViewCell *) tableView: (UITableView *) tableView
+          cellForRowAtIndexPath: (NSIndexPath *) indexPath {
 
     UITableViewCell *cell;
     BOOL isOdd = (indexPath.row % 2 != 0);
@@ -183,6 +241,7 @@
 
 - (UITableViewCell *) blankCellForIndexPath: (NSIndexPath *) indexPath {
     UITableViewCell *cell = [table dequeueReusableCellWithIdentifier: @"BlankCell" forIndexPath: indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -210,8 +269,100 @@
 }
 
 
-- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+- (void) configureCell: (UITableViewCell *) tableCell
+       forTableSection: (TableSection *) tableSection
+             rowObject: (TableRowObject *) rowObject {
     tableCell.textLabel.text = rowObject.textLabel;
+}
+
+
+#pragma mark Deleting
+
+- (void) shouldDeleteRowAtIndexPath: (NSIndexPath *) indexPath {
+
+    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
+    TableRowObject *rowObject = [self rowObjectForRow: indexPath.row inSection: tableSection];
+
+    if (rowObject != nil) {
+        [self shouldDeleteRow: rowObject inSection: tableSection];
+        [self shouldDeleteAtRow: indexPath.row inSection: indexPath.section];
+    }
+}
+
+
+- (void) shouldDeleteRow: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
+}
+
+
+- (void) shouldDeleteAtRow: (NSInteger) row inSection: (NSInteger) section {
+}
+
+
+- (void) deleteRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection animation: (UITableViewRowAnimation) rowAnimation {
+
+    NSInteger row = [tableSection.rows indexOfObject: rowObject];
+    NSInteger section = [dataSource indexOfObject: tableSection];
+    [tableSection.rows removeObjectAtIndex: row];
+
+    NSArray *indexPaths;
+    if (self.rowSpacing > 0) {
+
+        indexPaths = [NSArray arrayWithObjects: [NSIndexPath indexPathForRow: row inSection: section],
+                                                [NSIndexPath indexPathForRow: row + 1 inSection: section],
+                                                nil];
+    } else {
+        indexPaths = [NSArray arrayWithObject: [NSIndexPath indexPathForRow: row inSection: section]];
+    }
+    [table deleteRowsAtIndexPaths: indexPaths withRowAnimation: rowAnimation];
+}
+
+
+- (TableRowObject *) rowObjectForRow: (NSInteger) row inSection: (TableSection *) tableSection {
+    TableRowObject *rowObject;
+    if (rowSpacing > 0) {
+        if (row % 2 == 0) {
+            rowObject = [tableSection.rows objectAtIndex: row / 2];
+        } else {
+            return nil;
+        }
+    } else {
+        rowObject = [tableSection.rows objectAtIndex: row];
+    }
+    return rowObject;
+}
+
+#pragma mark TextFields
+
+- (void) textFieldEndedEditing: (UITextField *) aTextField {
+    [super textFieldEndedEditing: aTextField];
+
+    if ([aTextField isKindOfClass: [TableTextField class]]) {
+        TableTextField *tableTextField = (TableTextField *) aTextField;
+        [self tableTextFieldEndedEditing: tableTextField];
+    }
+}
+
+
+- (void) tableTextFieldEndedEditing: (TableTextField *) tableTextField {
+}
+
+
+#pragma mark Convenience
+
+- (TableSection *) tableSectionForTitle: (NSString *) title {
+    for (TableSection *tableSection in dataSource) {
+        if ([tableSection.title isEqualToString: title]) {
+            return tableSection;
+        }
+    }
+    return nil;
+}
+
+
+- (NSInteger) indexOfTableSectionWithTitle: (NSString *) title {
+    TableSection *tableSection = [self tableSectionForTitle: title];
+    if (tableSection) return [dataSource indexOfObject: tableSection];
+    return nil;
 }
 
 @end

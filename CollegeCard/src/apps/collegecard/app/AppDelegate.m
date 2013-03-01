@@ -40,7 +40,7 @@
 #endif
 
     [Cocoafish initializeWithOauthConsumerKey: COCOAFISH_OAUTH_CONSUMER_KEY consumerSecret: COCOAFISH_OAUTH_CONSUMER_SECRET customAppIds: nil];
-//    [Cocoafish defaultCocoafish].loggingEnabled = NO;
+    [Cocoafish defaultCocoafish].loggingEnabled = NO;
     [self customizeAppearance];
     return YES;
 }

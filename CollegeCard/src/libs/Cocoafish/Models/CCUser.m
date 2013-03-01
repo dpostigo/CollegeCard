@@ -42,6 +42,7 @@
 @synthesize role = _role;
 @synthesize externalAccounts = _externalAccounts;
 @synthesize stats = _stats;
+@synthesize checkins;
 
 
 - (CCPlaceCocoafish *) merchantPlace {
@@ -60,6 +61,18 @@
 }
 
 
+- (NSArray *) savedPlaces {
+    NSArray *array = [self.customFields objectForKey: @"savedPlaces"];
+    if (array == nil) {
+        return [NSArray array];
+    }
+    return array;
+}
+
+
+- (BOOL) isSavedPlace: (NSString *) savedId {
+    return [self.savedPlaces containsObject: savedId];
+}
 
 
 - (NSString *) displayName {
@@ -173,6 +186,7 @@
     self.role = nil;
     self.stats = nil;
     self.externalAccounts = nil;
+    [checkins release];
     [super dealloc];
 }
 
