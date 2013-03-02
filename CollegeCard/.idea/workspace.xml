@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d61a76-4226-4c98-87cf-a9ce163eb425" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.xcworkspace/xcuserdata/dpostigo.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.xcworkspace/xcuserdata/dpostigo.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/data/table/DateCell.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/data/table/DateCell.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/data/table/DateCell.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/data/table/DateCell.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/Model.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/Model.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDealsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDealsViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/CheckinHistoryViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/CheckinHistoryViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/table/BasicTableCell.h" afterPath="$PROJECT_DIR$/src/data/table/BasicTableCell.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/table/BasicTableCell.m" afterPath="$PROJECT_DIR$/src/data/table/BasicTableCell.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/CBButtons/CBBezier.m" afterPath="$PROJECT_DIR$/src/libs/CBButtons/CBBezier.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.m" afterPath="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/FBConnect/JSON/SBJsonWriter.m" afterPath="$PROJECT_DIR$/src/libs/FBConnect/JSON/SBJsonWriter.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/JMSimpleDate/NSDate+JMSimpleDate.h" afterPath="$PROJECT_DIR$/src/libs/JMSimpleDate/NSDate+JMSimpleDate.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/JMSimpleDate/NSDate+JMSimpleDate.m" afterPath="$PROJECT_DIR$/src/libs/JMSimpleDate/NSDate+JMSimpleDate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.h" afterPath="$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.m" afterPath="$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.xib" afterPath="$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.xib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/TTTTimeIntervalFormatter/TTTTimeIntervalFormatter.m" afterPath="$PROJECT_DIR$/src/libs/TTTTimeIntervalFormatter/TTTTimeIntervalFormatter.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h" afterPath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" afterPath="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xibs/MainStoryboard.storyboard" afterPath="$PROJECT_DIR$/src/xibs/MainStoryboard.storyboard" />
     </list>
     <ignored path="BasicProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -199,7 +166,7 @@
       <file leaf-file-name="ProfileViewController.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="53" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
+            <state line="13" column="30" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,7 +203,7 @@
       <file leaf-file-name="ProfileViewController.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="51" selection-start="8000" selection-end="8000" vertical-scroll-proportion="0.49776787">
+            <state line="207" column="51" selection-start="8097" selection-end="8097" vertical-scroll-proportion="0.59821427">
               <folding>
                 <element signature="n#loadView#0;n#ProfileViewController#0" expanded="true" />
                 <element signature="n#prepareDataSource#0;n#ProfileViewController#0" expanded="true" />
@@ -247,15 +214,18 @@
                 <element signature="n#handleSignout:#0;n#ProfileViewController#0" expanded="true" />
                 <element signature="n#logoutSucceeded#0;n#ProfileViewController#0" expanded="true" />
                 <element signature="n#pictureOperationSucceeded#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="e#5885#5930#0" expanded="true" />
-                <element signature="e#5958#5984#0" expanded="true" />
+                <element signature="e#6018#6063#0" expanded="true" />
+                <element signature="e#6091#6117#0" expanded="true" />
                 <element signature="n#tableTextFieldEndedEditing:#0;n#ProfileViewController#0" expanded="true" />
                 <element signature="n#updatedUserForKey:string:#0;n#ProfileViewController#0" expanded="true" />
+                <element signature="n#setImageButton:#0;n#ProfileViewController#0" expanded="true" />
+                <element signature="n#handleChoosePicture:#0;n#ProfileViewController#0" expanded="true" />
+                <element signature="n#actionSheetForImagePicker#0;n#ProfileViewController#0" expanded="true" />
                 <element signature="n#actionSheet:clickedButtonAtIndex:#0;n#ProfileViewController#0" expanded="true" />
                 <element signature="n#imagePickerController:didFinishPickingImage:editingInfo:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="e#9783#10185#0" expanded="true" />
-                <element signature="e#9840#9893#0" expanded="true" />
-                <element signature="e#9921#10177#0" expanded="true" />
+                <element signature="e#11119#11521#0" expanded="true" />
+                <element signature="e#11176#11229#0" expanded="true" />
+                <element signature="e#11257#11513#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -380,10 +350,10 @@
         <option value="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.h" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" />
       </list>
     </option>
   </component>
@@ -1047,13 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="53" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="837" selection-end="948" vertical-scroll-proportion="0.0">
@@ -1077,9 +1040,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="30" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="51" selection-start="8000" selection-end="8000" vertical-scroll-proportion="0.49776787">
+        <state line="207" column="51" selection-start="8097" selection-end="8097" vertical-scroll-proportion="0.59821427">
           <folding>
             <element signature="n#loadView#0;n#ProfileViewController#0" expanded="true" />
             <element signature="n#prepareDataSource#0;n#ProfileViewController#0" expanded="true" />
@@ -1090,15 +1060,18 @@
             <element signature="n#handleSignout:#0;n#ProfileViewController#0" expanded="true" />
             <element signature="n#logoutSucceeded#0;n#ProfileViewController#0" expanded="true" />
             <element signature="n#pictureOperationSucceeded#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="e#5885#5930#0" expanded="true" />
-            <element signature="e#5958#5984#0" expanded="true" />
+            <element signature="e#6018#6063#0" expanded="true" />
+            <element signature="e#6091#6117#0" expanded="true" />
             <element signature="n#tableTextFieldEndedEditing:#0;n#ProfileViewController#0" expanded="true" />
             <element signature="n#updatedUserForKey:string:#0;n#ProfileViewController#0" expanded="true" />
+            <element signature="n#setImageButton:#0;n#ProfileViewController#0" expanded="true" />
+            <element signature="n#handleChoosePicture:#0;n#ProfileViewController#0" expanded="true" />
+            <element signature="n#actionSheetForImagePicker#0;n#ProfileViewController#0" expanded="true" />
             <element signature="n#actionSheet:clickedButtonAtIndex:#0;n#ProfileViewController#0" expanded="true" />
             <element signature="n#imagePickerController:didFinishPickingImage:editingInfo:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="e#9783#10185#0" expanded="true" />
-            <element signature="e#9840#9893#0" expanded="true" />
-            <element signature="e#9921#10177#0" expanded="true" />
+            <element signature="e#11119#11521#0" expanded="true" />
+            <element signature="e#11176#11229#0" expanded="true" />
+            <element signature="e#11257#11513#0" expanded="true" />
           </folding>
         </state>
       </provider>

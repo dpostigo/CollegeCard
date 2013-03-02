@@ -7,10 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicTableViewController.h"
-#import "BasicImageViewController.h"
 
 
-@interface ProfileViewController : BasicImageViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+@interface ProfileViewController : BasicTableViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
     UIView *containerProgress;
     IBOutlet UIImageView *imageView;
@@ -20,8 +19,10 @@
     IBOutlet UITextField *collegeTextField;
 
 
+    UIButton *imageButton;
 }
 
 
+@property(nonatomic, strong) UIButton *imageButton;
 
 @end

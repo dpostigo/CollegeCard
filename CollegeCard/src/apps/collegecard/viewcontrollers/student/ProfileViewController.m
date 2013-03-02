@@ -20,7 +20,13 @@
 #import "TableSection+Utils.h"
 
 
+#define PHOTO_FROM_LIBRARY @"Add Photo from Library"
+#define PHOTO_FROM_CAMERA @"Take Photo with Camera"
+
+
 @implementation ProfileViewController
+
+@synthesize imageButton;
 
 
 - (void) loadView {
@@ -209,6 +215,31 @@
 
 #pragma mark Image Handling
 
+- (void) setImageButton: (UIButton *) imageButton1 {
+    if (imageButton != nil) {
+        [imageButton removeTarget: self action: @selector(handleChoosePicture:) forControlEvents: UIControlEventTouchUpInside];
+    }
+    imageButton = imageButton1;
+    [imageButton addTarget: self action: @selector(handleChoosePicture:) forControlEvents: UIControlEventTouchUpInside];
+}
+
+
+- (IBAction) handleChoosePicture: (id) sender {
+    UIActionSheet *actionSheet = [self actionSheetForImagePicker];
+    [actionSheet showInView: self.view];
+}
+
+
+- (UIActionSheet *) actionSheetForImagePicker {
+    UIActionSheet *actionSheet;
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+        actionSheet = [[UIActionSheet alloc] initWithTitle: @"" delegate: self cancelButtonTitle: @"Cancel" destructiveButtonTitle: nil otherButtonTitles: PHOTO_FROM_LIBRARY, PHOTO_FROM_CAMERA, nil];
+    } else {
+        actionSheet = [[UIActionSheet alloc] initWithTitle: @"" delegate: self cancelButtonTitle: @"Cancel" destructiveButtonTitle: nil otherButtonTitles: PHOTO_FROM_LIBRARY, nil];
+    }
+    actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
+    return actionSheet;
+}
 
 
 - (void) actionSheet: (UIActionSheet *) actionSheet clickedButtonAtIndex: (NSInteger) buttonIndex {
@@ -234,6 +265,7 @@
 - (void) imagePickerController: (UIImagePickerController *) picker didFinishPickingImage: (UIImage *) image editingInfo: (NSDictionary *) editingInfo {
 
     NSLog(@"%s", __PRETTY_FUNCTION__);
+
     containerProgress = [[UIView alloc] initWithFrame: imageButton.frame];
     containerProgress.backgroundColor = [UIColor blackColor];
     containerProgress.alpha = 0;
