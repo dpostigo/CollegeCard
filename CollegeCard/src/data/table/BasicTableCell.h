@@ -18,8 +18,6 @@
 }
 
 
-@property(nonatomic, strong) UILabel *__textLabel;
-@property(nonatomic, strong) UILabel *__detailTextLabel;
 @property(nonatomic, strong) UIImageView *imageView;
 @property(nonatomic, strong) UIButton *button;
 @property(nonatomic, strong) UILabel *captionLabel;

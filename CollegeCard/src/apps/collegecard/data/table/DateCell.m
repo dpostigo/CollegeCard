@@ -14,6 +14,8 @@
 
 @synthesize startTimeLabel;
 @synthesize endTimeLabel;
+@synthesize dateLabel;
+
 
 
 

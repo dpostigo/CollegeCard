@@ -9,68 +9,75 @@
 
 
 @implementation TDDatePickerController
-@synthesize datePicker, delegate;
 
--(void)viewDidLoad {
+
+@synthesize datePicker, delegate;
+@synthesize date;
+
+
+- (void) viewDidLoad {
     [super viewDidLoad];
 
-	datePicker.date = [NSDate date];
 
-	// we need to set the subview dimensions or it will not always render correctly
-	// http://stackoverflow.com/questions/1088163
-	for (UIView* subview in datePicker.subviews) {
-		subview.frame = datePicker.bounds;
-	}
+    datePicker.date = self.date;
+    // we need to set the subview dimensions or it will not always render correctly
+    // http://stackoverflow.com/questions/1088163
+    for (UIView *subview in datePicker.subviews) {
+        subview.frame = datePicker.bounds;
+    }
 }
 
--(BOOL)shouldAutorotate {
+
+- (BOOL) shouldAutorotate {
     return YES;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+
+- (BOOL) shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation) interfaceOrientation {
     return YES;
 }
 
 #pragma mark -
 #pragma mark Actions
 
--(IBAction)saveDateEdit:(id)sender {
-	if([self.delegate respondsToSelector:@selector(datePickerSetDate:)]) {
-		[self.delegate datePickerSetDate:self];
-	}
+- (IBAction) saveDateEdit: (id) sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    if (delegate && [delegate respondsToSelector: @selector(datePickerSetDate:)]) {
+        [delegate performSelector: @selector(datePickerSetDate:) withObject: self];
+    }
 }
 
--(IBAction)clearDateEdit:(id)sender {
-	if([self.delegate respondsToSelector:@selector(datePickerClearDate:)]) {
-		[self.delegate datePickerClearDate:self];
-	}
+
+- (IBAction) clearDateEdit: (id) sender {
+    if ([delegate respondsToSelector: @selector(datePickerClearDate:)]) {
+        [delegate datePickerClearDate: self];
+    }
 }
 
--(IBAction)cancelDateEdit:(id)sender {
-	if([self.delegate respondsToSelector:@selector(datePickerCancel:)]) {
-		[self.delegate datePickerCancel:self];
-	} else {
-		// just dismiss the view automatically?
-	}
+
+- (IBAction) cancelDateEdit: (id) sender {
+    if ([delegate respondsToSelector: @selector(datePickerCancel:)]) {
+        [delegate datePickerCancel: self];
+    } else {
+        // just dismiss the view automatically?
+    }
 }
 
 #pragma mark -
 #pragma mark Memory Management
 
-- (void)didReceiveMemoryWarning {
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewDidUnload {
-    [self setToolbar:nil];
+
+- (void) viewDidUnload {
+    [self setToolbar: nil];
     [super viewDidUnload];
 
-	self.datePicker = nil;
-	self.delegate = nil;
-
+    self.datePicker = nil;
+    self.delegate = nil;
 }
-
-
 
 @end
 

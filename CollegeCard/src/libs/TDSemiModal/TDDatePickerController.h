@@ -9,23 +9,29 @@
 #import	"TDSemiModal.h"
 
 
-@interface TDDatePickerController : TDSemiModalViewController {
-	id delegate;
-}
+@class TDDatePickerController;
+@protocol TDDatePickerControllerDelegate <NSObject>
 
-@property (nonatomic, strong) IBOutlet id delegate;
-@property (nonatomic, strong) IBOutlet UIDatePicker* datePicker;
-@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
--(IBAction)saveDateEdit:(id)sender;
--(IBAction)clearDateEdit:(id)sender;
--(IBAction)cancelDateEdit:(id)sender;
-
+- (void) datePickerSetDate: (TDDatePickerController *) viewController;
+- (void) datePickerClearDate: (TDDatePickerController *) viewController;
+- (void) datePickerCancel: (TDDatePickerController *) viewController;
 @end
 
-@interface NSObject (TDDatePickerControllerDelegate)
--(void)datePickerSetDate:(TDDatePickerController*)viewController;
--(void)datePickerClearDate:(TDDatePickerController*)viewController;
--(void)datePickerCancel:(TDDatePickerController*)viewController;
+
+@interface TDDatePickerController : TDSemiModalViewController {
+    __unsafe_unretained id <TDDatePickerControllerDelegate> delegate;
+    NSDate *date;
+}
+
+
+@property(nonatomic, assign) id <TDDatePickerControllerDelegate> delegate;
+@property(nonatomic, strong) IBOutlet UIDatePicker *datePicker;
+@property(weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property(nonatomic, strong) NSDate *date;
+- (IBAction) saveDateEdit: (id) sender;
+- (IBAction) clearDateEdit: (id) sender;
+- (IBAction) cancelDateEdit: (id) sender;
+
 @end
 

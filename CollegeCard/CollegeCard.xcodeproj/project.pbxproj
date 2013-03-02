@@ -98,6 +98,7 @@
 		7CA441A12630F76BE11B92DE /* TableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44E3AFBE664B62182F504 /* TableTextField.m */; };
 		7CA442374C32546476DFAD5D /* AccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44C07296BA7C78A040544 /* AccountSettingsViewController.m */; };
 		7CA442384B02FE3099D9EC38 /* BasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F3F461767BDDAE3F94A /* BasicTableViewController.m */; };
+		7CA44260568052AC79B6678A /* BasicImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D8DF75A9D022A3425E9 /* BasicImageViewController.m */; };
 		7CA442AB65302809C195BB62 /* LogoutOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4484BA98EB75D3FE16265 /* LogoutOperation.m */; };
 		7CA442C2A69D51CE9442B367 /* SearchPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA443E731360D439D572421 /* SearchPlacesViewController.m */; };
 		7CA442C89D46C6B63DEF0015 /* WhiteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44974ACEEF53C8B5D6AC0 /* WhiteButton.m */; };
@@ -344,6 +345,7 @@
 		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
 		7CA4429570A9B1989080A3D5 /* DateRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateRowObject.m; path = src/apps/collegecard/models/rowObjects/DateRowObject.m; sourceTree = "<group>"; };
 		7CA442B5F516A426E01C7646 /* SavedPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedPlacesViewController.h; path = src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.h; sourceTree = "<group>"; };
+		7CA442C95E230FEAED82EF44 /* BasicImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicImageViewController.h; path = src/apps/collegecard/viewcontrollers/BasicImageViewController.h; sourceTree = "<group>"; };
 		7CA442CB04399B281A84EE26 /* TDSemiModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDSemiModalViewController.m; path = src/libs/TDSemiModal/TDSemiModalViewController.m; sourceTree = "<group>"; };
 		7CA442CC1BF130BB8F91EDB9 /* BlueButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlueButton.m; path = src/apps/collegecard/controls/BlueButton.m; sourceTree = "<group>"; };
 		7CA442CE323E0019D3AD8335 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = src/apps/collegecard/models/User.h; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		7CA44D711237F1DF0DFF6D4C /* BasicPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicPlaceViewController.m; path = src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m; sourceTree = "<group>"; };
 		7CA44D835A7695116853F8CA /* TableSection+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TableSection+Utils.h"; path = "src/utils/TableSection+Utils.h"; sourceTree = "<group>"; };
 		7CA44D898DFE5CF36B7D805B /* CreateEventOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateEventOperation.m; path = src/apps/collegecard/operations/merchant/CreateEventOperation.m; sourceTree = "<group>"; };
+		7CA44D8DF75A9D022A3425E9 /* BasicImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicImageViewController.m; path = src/apps/collegecard/viewcontrollers/BasicImageViewController.m; sourceTree = "<group>"; };
 		7CA44D8F8408EA95DDA9C41C /* VeryBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VeryBasicViewController.m; path = src/viewcontrollers/VeryBasicViewController.m; sourceTree = "<group>"; };
 		7CA44D9280A6543CEB6971FA /* CBBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBBezier.h; path = src/libs/CBButtons/CBBezier.h; sourceTree = "<group>"; };
 		7CA44D990255FC24C0C26BA4 /* BasicTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTextFieldCell.m; path = src/data/table/BasicTextFieldCell.m; sourceTree = "<group>"; };
@@ -721,6 +724,8 @@
 				7CA44985D90B07F5CE9A610D /* UIViewController+TDSemiModalExtension.h */,
 				7CA44C95C71052052DF8C988 /* UIViewController+TDSemiModalExtension.m */,
 				7CA4467214C4DA6D28F836B0 /* TDDatePickerController.xib */,
+				7CA44D8DF75A9D022A3425E9 /* BasicImageViewController.m */,
+				7CA442C95E230FEAED82EF44 /* BasicImageViewController.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1193,6 +1198,7 @@
 				7CA44434D20C04B3356B64C8 /* TDDatePickerController.m in Sources */,
 				7CA4469A72208FEBAA020E10 /* TDSemiModalViewController.m in Sources */,
 				7CA44EB49C9CB97C36B6BB33 /* UIViewController+TDSemiModalExtension.m in Sources */,
+				7CA44260568052AC79B6678A /* BasicImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

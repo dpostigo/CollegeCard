@@ -7,17 +7,21 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicTableViewController.h"
+#import "BasicImageViewController.h"
 
 
-@interface ProfileViewController : BasicTableViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
+@interface ProfileViewController : BasicImageViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
+    UIView *containerProgress;
     IBOutlet UIImageView *imageView;
-    IBOutlet UIButton *button;
 
     IBOutlet UILabel *displayNameLabel;
     IBOutlet UITextField *majorTextField;
     IBOutlet UITextField *collegeTextField;
+
+
 }
+
 
 
 @end

@@ -11,6 +11,7 @@
 
 @interface DateCell : BasicTableCell {
 
+    IBOutlet UILabel *dateLabel;
     IBOutlet UILabel *startTimeLabel;
     IBOutlet UILabel *endTimeLabel;
 }
@@ -18,5 +19,6 @@
 
 @property(nonatomic, strong) UILabel *startTimeLabel;
 @property(nonatomic, strong) UILabel *endTimeLabel;
+@property(nonatomic, strong) UILabel *dateLabel;
 
 @end

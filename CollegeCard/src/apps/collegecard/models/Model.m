@@ -83,8 +83,6 @@
     formatter.dateFormat = @"h:m a";
 
     NSString *endDayString = [self.timeIntervalFormatter simpleDayString: event.endTime];
-    NSString *endTimeString = [formatter stringFromDate: event.endTime];
-    NSString *endString = [NSString stringWithFormat: @"%@, %@", endDayString, endTimeString];
 
     if (event.endTime.hasPassed) {
         return [NSString stringWithFormat: @"Ended %@", endDayString];
@@ -95,9 +93,8 @@
     }
 
     else {
-        NSString *startDayString = [self.timeIntervalFormatter simpleDayString: event.startTime];
-        //        NSString *startTimeString = [formatter stringFromDate: event.startTime];
 
+        NSString *startDayString = [event.startTime relativeFutureString];
         return [NSString stringWithFormat: @"Starts %@", startDayString];
     }
 }
@@ -106,6 +103,7 @@
 - (TTTTimeIntervalFormatter *) timeIntervalFormatter {
     if (intervalFormatter == nil) {
         intervalFormatter = [[TTTTimeIntervalFormatter alloc] init];
+        intervalFormatter.usesIdiomaticDeicticExpressions = YES;
     }
     return intervalFormatter;
 }

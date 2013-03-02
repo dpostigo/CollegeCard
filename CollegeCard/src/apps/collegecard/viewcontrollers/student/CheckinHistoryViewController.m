@@ -31,6 +31,12 @@
 }
 
 
+- (void) loadView {
+    self.rowSpacing = 10;
+    [super loadView];
+}
+
+
 - (void) prepareDataSource {
 
     TableSection *tableSection = [[TableSection alloc] initWithTitle: @""];
@@ -52,7 +58,7 @@
         cell.textLabel.text = checkin.place.name;
         cell.detailTextLabel.text = checkin.place.fullAddress;
 
-//        cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
+        //        cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
         cell.backgroundView = [[BasicWhiteView alloc] initWithFrame: cell.bounds];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
 
@@ -68,6 +74,14 @@
         }
     }
 }
+
+
+- (void) didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
+    [super didSelectRowAtIndexPath: indexPath];
+    [table deselectRowAtIndexPath: indexPath animated: YES];
+}
+
+
 
 
 #pragma mark UITableView

@@ -18,6 +18,15 @@
 #import "DateCell.h"
 #import "TDSemiModal.h"
 #import "TDDatePickerController.h"
+#import "BasicWhiteView.h"
+#import "NSDate+JMSimpleDate.h"
+
+
+#define START_DATE_KEY @"Starts"
+
+#define END_DATE_KEY @"Ends"
+
+#define EVENT_NAME_KEY @"Name"
 
 
 @implementation EventEditViewController {
@@ -50,9 +59,10 @@
         DateRowObject *dateRowObject = (DateRowObject *) rowObject;
         DateCell *dateCell = (DateCell *) tableCell;
 
-        dateCell.startTimeLabel.text = [self.dateFormatter stringFromDate: dateRowObject.date];
-        dateCell.startTimeLabel.text = [self.dateFormatter stringFromDate: dateRowObject.date];
-        //        dateCell.endTimeLabel.text = [self.dateFormatter stringFromDate: dateRowObject.endTime];
+        //  dateCell.textLabel.text = [rowObject.textLabel uppercaseString];
+        dateCell.backgroundView = [[BasicWhiteView alloc] init];
+        dateCell.dateLabel.text = [self.dateFormatter stringFromDate: dateRowObject.date];
+        //  dateCell.endTimeLabel.text = [self.dateFormatter stringFromDate: dateRowObject.endTime];
 
         return;
     }
@@ -62,6 +72,7 @@
     if ([cell.textField isKindOfClass: [TableTextField class]]) {
         TableTextField *textField = (TableTextField *) cell.textField;
         textField.rowObject = rowObject;
+        textField.rowObject.stringContent = rowObject.detailTextLabel;
     }
     [self subscribeTextField: cell.textField];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -72,16 +83,16 @@
 
 - (void) prepareDataSource {
     TableSection *tableSection = [[TableSection alloc] initWithTitle: @""];
-    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"Name" detailTextLabel: _model.currentEvent.name]];
-    [tableSection.rows addObject: [[DateRowObject alloc] initWithTextLabel: @"Starts" date: _model.currentEvent.startTime cellIdentifier: @"DateCell"]];
-    [tableSection.rows addObject: [[DateRowObject alloc] initWithTextLabel: @"Ends" date: _model.currentEvent.endTime cellIdentifier: @"DateCell"]];
+    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: EVENT_NAME_KEY detailTextLabel: _model.currentEvent.name]];
+    [tableSection.rows addObject: [[DateRowObject alloc] initWithTextLabel: START_DATE_KEY date: _model.currentEvent.startTime cellIdentifier: @"DateCell"]];
+    [tableSection.rows addObject: [[DateRowObject alloc] initWithTextLabel: END_DATE_KEY date: _model.currentEvent.endTime cellIdentifier: @"DateCell"]];
     [dataSource addObject: tableSection];
 }
 
 
 - (CGFloat) heightForTableRow: (TableRowObject *) rowObject inSection: (TableSection *) section {
     if ([rowObject.cellIdentifier isEqualToString: @"DateCell"]) {
-        return 100;
+        return 44;
     }
     return [super heightForTableRow: rowObject inSection: section];
 }
@@ -91,21 +102,37 @@
     [super didSelectRowObject: rowObject inSection: tableSection];
 
     if ([rowObject.cellIdentifier isEqualToString: @"DateCell"]) {
-        [self showDatePicker: nil];
+        DateRowObject *dateRowObject = (DateRowObject *) rowObject;
+        [self showDatePickerWithDate: dateRowObject.date];
     }
 }
 
 
 #pragma mark UIDatePickerView
 
-- (void) showDatePicker: (id) sender {
+- (void) showDatePickerWithDate: (NSDate *) date {
     datePickerView = [[TDDatePickerController alloc] initWithNibName: @"TDDatePickerController" bundle: nil];
     datePickerView.delegate = self;
+    datePickerView.date = date;
     [self presentSemiModalViewController: datePickerView];
 }
 
 
 - (void) datePickerSetDate: (TDDatePickerController *) viewController; {
+
+    NSIndexPath *indexPath = [table indexPathForSelectedRow];
+    TableSection *tableSection = [dataSource objectAtIndex: 0];
+    DateRowObject *rowObject = (DateRowObject *) [self rowObjectForRow: indexPath.row inSection: tableSection];
+    rowObject.date = viewController.datePicker.date;
+
+    if ([rowObject.textLabel isEqualToString: START_DATE_KEY]) {
+        DateRowObject *endsRowObject = (DateRowObject *) [tableSection tableRowObjectForString: END_DATE_KEY];
+        if ([endsRowObject.date isEarlierThanDate: rowObject.date]) {
+            endsRowObject.date = [rowObject.date dateByAddingHours: 1];
+        }
+    }
+    [self updateEventObject];
+    [self dismissSemiModalViewController: viewController];
 }
 
 
@@ -114,14 +141,32 @@
 
 
 - (void) datePickerCancel: (TDDatePickerController *) viewController; {
-    [self dismissSemiModalViewController: datePickerView];
+    [self dismissSemiModalViewController: viewController];
 }
 
 
-- (void) pickerView: (UIPickerView *) pickerView didSelectRow: (NSInteger) row inComponent: (NSInteger) component {
+- (void) tableTextFieldEndedEditing: (TableTextField *) tableTextField {
+    [super tableTextFieldEndedEditing: tableTextField];
+
+    tableTextField.rowObject.stringContent = tableTextField.text;
+    [self updateEventObject];
 }
 
 
+- (void) updateEventObject {
+    TableSection *tableSection = [dataSource objectAtIndex: 0];
+    TableRowObject *rowObject;
+    NSString *eventName = [tableSection tableRowObjectForString: EVENT_NAME_KEY].stringContent;
+    NSLog(@"eventName = %@", eventName);
+    DateRowObject *startRowObject = (DateRowObject *) [tableSection tableRowObjectForString: START_DATE_KEY];
+    DateRowObject *endRowObject = (DateRowObject *) [tableSection tableRowObjectForString: END_DATE_KEY];
+    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
+    [paramDict setObject: _model.currentEvent.objectId forKey: @"event_id"];
+    [paramDict setObject: eventName forKey: @"name"];
+    [paramDict setObject: startRowObject.date forKey: @"start_time"];
+    [paramDict setObject: endRowObject.date forKey: @"end_time"];
+    [_queue addOperation: [[UpdateEventOperation alloc] initWithParamDict: paramDict]];
+}
 
 
 #pragma mark Callbacks
@@ -134,24 +179,8 @@
 
 
 - (void) eventDidUpdate: (CCEvent *) event {
-}
 
-
-- (void) tableTextFieldEndedEditing: (TableTextField *) tableTextField {
-    [super tableTextFieldEndedEditing: tableTextField];
-
-    tableTextField.rowObject.stringContent = tableTextField.text;
-
-    TableSection *tableSection = [dataSource objectAtIndex: 0];
-    TableRowObject *rowObject;
-    NSString *eventName = [tableSection tableRowObjectForString: @"Name"].stringContent;
-    NSDate *startTime = [formatter dateFromString: [tableSection tableRowObjectForString: @"Start Time"].stringContent];
-    NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
-    [paramDict setObject: _model.currentEvent.objectId forKey: @"event_id"];
-    [paramDict setObject: eventName forKey: @"name"];
-    [paramDict setObject: startTime forKey: @"start_time"];
-
-    [_queue addOperation: [[UpdateEventOperation alloc] initWithParamDict: paramDict]];
+    [table reloadSections: [NSIndexSet indexSetWithIndex: 0] withRowAnimation: UITableViewRowAnimationFade];
 }
 
 @end

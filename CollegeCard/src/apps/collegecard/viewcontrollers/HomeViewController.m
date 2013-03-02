@@ -104,10 +104,12 @@
 
         cell.textField.userInteractionEnabled = NO;
         cell.detailTextField.userInteractionEnabled = NO;
-        NSString *string = _model.currentUser.photo.thumbURL;
-        if (string) {
-            [cell.imageView setImageWithURL: [NSURL URLWithString: string]];
-        }
+        [self userPictureUpdated];
+//        NSString *string = _model.currentUser.photo.thumbURL;
+//        if (string) {
+//            NSLog(@"Setting image in HomeViewController");
+//            [cell.imageView setImageWithURL: [NSURL URLWithString: string]];
+//        }
     }
 }
 
@@ -132,5 +134,7 @@
 
 
 - (void) userDidUpdate {
+
+
 }
 @end

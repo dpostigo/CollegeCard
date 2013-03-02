@@ -97,6 +97,7 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 - (NSString *) stringForTimeIntervalFromDate: (NSDate *) startingDate
                                       toDate: (NSDate *) endingDate {
     NSTimeInterval seconds = [startingDate timeIntervalSinceDate: endingDate];
+
     if (fabs(seconds) < self.presentTimeIntervalMargin) {
         return self.presentDeicticExpression;
     }
@@ -187,12 +188,15 @@ static inline NSCalendarUnit NSCalendarUnitFromString(NSString *string) {
 
 - (NSString *) simpleDayString: (NSDate *) date {
 
+
+    NSTimeInterval interval = [date timeIntervalSinceDate: [NSDate date]];
+
     if (date.isToday) {
         return @"Today";
     } else if (date.isYesterday) {
         return @"Yesterday";
     }
-    return [self stringForTimeIntervalFromDate: [NSDate date] toDate: date];
+    return [self stringForTimeInterval: interval];
 }
 
 

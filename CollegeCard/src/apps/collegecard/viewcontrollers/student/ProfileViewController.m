@@ -16,24 +16,16 @@
 #import "DDProgressView.h"
 #import "LogoutOperation.h"
 #import "UpdateUserOperation.h"
-#import "TableTextField.h"
 #import "UserDetailRowObject.h"
 #import "TableSection+Utils.h"
 
 
-#define PHOTO_FROM_LIBRARY @"Add Photo from Library"
-#define PHOTO_FROM_CAMERA @"Take Photo with Camera"
-
-
-@implementation ProfileViewController {
-    UIView *containerProgress;
-}
+@implementation ProfileViewController
 
 
 - (void) loadView {
     self.rowSpacing = 10;
     [super loadView];
-
     table.tableHeaderView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, table.width, 10)];
 }
 
@@ -51,7 +43,6 @@
     [tableSection.rows addObject: [[UserDetailRowObject alloc] initWithTextLabel: [_model slugForProperty: @"major"] detailTextLabel: _model.currentUser.major isCustomField: YES]];
     [tableSection.rows addObject: [[UserDetailRowObject alloc] initWithTextLabel: [_model slugForProperty: @"birthDate"] detailTextLabel: _model.currentUser.birthDate isCustomField: YES]];
     [tableSection.rows addObject: [[UserDetailRowObject alloc] initWithTextLabel: [_model slugForProperty: @"gender"] detailTextLabel: _model.currentUser.gender isCustomField: YES]];
-
     [dataSource addObject: tableSection];
 }
 
@@ -106,7 +97,7 @@
 
     BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
     cell.textLabel.text = _model.currentUser.displayName;
-    button = cell.button;
+    self.imageButton = cell.button;
 
     if ([_model.currentUser.college isEqualToString: NO_COLLEGE_KEY]) {
         cell.textField.placeholder = _model.currentUser.college;
@@ -122,7 +113,7 @@
 
     NSString *string = _model.currentUser.photo.smallURL;
     if (string) {
-        [button setImageWithURL: [NSURL URLWithString: string] forState: UIControlStateNormal];
+        [imageButton setImageWithURL: [NSURL URLWithString: string] forState: UIControlStateNormal];
     }
 }
 
@@ -134,75 +125,6 @@
 }
 
 
-
-
-
-
-#pragma mark Choose picture
-
-
-- (IBAction) handleChoosePicture: (id) sender {
-    UIActionSheet *actionSheet;
-    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
-        actionSheet = [[UIActionSheet alloc] initWithTitle: @"" delegate: self cancelButtonTitle: @"Cancel" destructiveButtonTitle: nil otherButtonTitles: PHOTO_FROM_LIBRARY, PHOTO_FROM_CAMERA, nil];
-    } else {
-        actionSheet = [[UIActionSheet alloc] initWithTitle: @"" delegate: self cancelButtonTitle: @"Cancel" destructiveButtonTitle: nil otherButtonTitles: PHOTO_FROM_LIBRARY, nil];
-    }
-    actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
-    [actionSheet showInView: self.view];
-}
-
-
-- (void) actionSheet: (UIActionSheet *) actionSheet clickedButtonAtIndex: (NSInteger) buttonIndex {
-
-    NSString *buttonTitle = [actionSheet buttonTitleAtIndex: buttonIndex];
-
-    if ([buttonTitle isEqualToString: @"Cancel"]) {
-        [table deselectRowAtIndexPath: [table indexPathForSelectedRow] animated: YES];
-    } else {
-        UIImagePickerController *controller = [[UIImagePickerController alloc] init];
-        controller.delegate = self;
-        if ([buttonTitle isEqualToString: PHOTO_FROM_LIBRARY]) {
-            controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        } else if ([buttonTitle isEqualToString: PHOTO_FROM_CAMERA]) {
-            controller.sourceType = UIImagePickerControllerSourceTypeCamera;
-        }
-
-        [self.navigationController presentViewController: controller animated: YES completion: nil];
-    }
-}
-
-
-- (void) imagePickerController: (UIImagePickerController *) picker didFinishPickingImage: (UIImage *) image editingInfo: (NSDictionary *) editingInfo {
-
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-
-    containerProgress = [[UIView alloc] initWithFrame: button.frame];
-    containerProgress.backgroundColor = [UIColor blackColor];
-    containerProgress.alpha = 0;
-    [[button superview] addSubview: containerProgress];
-
-    DDProgressView *progressView = [[DDProgressView alloc] initWithFrame: button.bounds];
-    [containerProgress addSubview: progressView];
-    progressView.innerColor = [UIColor whiteColor];
-    progressView.outerColor = [UIColor whiteColor];
-    progressView.centerY = containerProgress.height / 2;
-    progressView.width = button.width * 0.75;
-    progressView.left = (button.width - progressView.width) / 2;
-
-    [picker dismissViewControllerAnimated: YES completion: ^{
-
-        [UIView animateWithDuration: 0.5 animations: ^{
-            containerProgress.alpha = 1;
-        }                completion: ^(BOOL completion) {
-
-            NSLog(@"_model.currentUser.photo.smallURL = %@", _model.currentUser.photo.smallURL);
-            [_queue addOperation: [[PictureOperation alloc] initWithImage: image]];
-
-            [progressView startAnimating];
-        }];
-    }];
-}
 
 
 #pragma mark IBActions
@@ -227,7 +149,7 @@
     [[SDWebImageManager sharedManager].imageCache clearMemory];
 
     NSString *string = _model.currentUser.photo.smallURL;
-    [button setImageWithURL: [NSURL URLWithString: string] forState: UIControlStateNormal];
+    [imageButton setImageWithURL: [NSURL URLWithString: string] forState: UIControlStateNormal];
     [UIView animateWithDuration: 1.0 animations: ^{
         containerProgress.alpha = 0;
     }                completion: ^(BOOL completion) {
@@ -272,12 +194,71 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow: row inSection: 0];
     BasicTextFieldCell *cell = (BasicTextFieldCell *) [table cellForRowAtIndexPath: indexPath];
 
-    NSLog(@"cell = %@", cell);
     cell.textField.placeholder = string;
     cell.textField.text = nil;
 
-        NSArray *indexPaths = [NSArray arrayWithObject: [NSIndexPath indexPathForRow: 0 inSection: 0]];
+    NSArray *indexPaths = [NSArray arrayWithObject: [NSIndexPath indexPathForRow: 0 inSection: 0]];
     [table reloadRowsAtIndexPaths: indexPaths withRowAnimation: UITableViewRowAnimationFade];
+}
+
+
+
+
+
+
+
+#pragma mark Image Handling
+
+
+
+- (void) actionSheet: (UIActionSheet *) actionSheet clickedButtonAtIndex: (NSInteger) buttonIndex {
+
+    NSString *buttonTitle = [actionSheet buttonTitleAtIndex: buttonIndex];
+
+    if ([buttonTitle isEqualToString: @"Cancel"]) {
+        [table deselectRowAtIndexPath: [table indexPathForSelectedRow] animated: YES];
+    } else {
+        UIImagePickerController *controller = [[UIImagePickerController alloc] init];
+        controller.delegate = self;
+        if ([buttonTitle isEqualToString: PHOTO_FROM_LIBRARY]) {
+            controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        } else if ([buttonTitle isEqualToString: PHOTO_FROM_CAMERA]) {
+            controller.sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+
+        [self.navigationController presentViewController: controller animated: YES completion: nil];
+    }
+}
+
+
+- (void) imagePickerController: (UIImagePickerController *) picker didFinishPickingImage: (UIImage *) image editingInfo: (NSDictionary *) editingInfo {
+
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    containerProgress = [[UIView alloc] initWithFrame: imageButton.frame];
+    containerProgress.backgroundColor = [UIColor blackColor];
+    containerProgress.alpha = 0;
+    [[imageButton superview] addSubview: containerProgress];
+
+    DDProgressView *progressView = [[DDProgressView alloc] initWithFrame: imageButton.bounds];
+    [containerProgress addSubview: progressView];
+    progressView.innerColor = [UIColor whiteColor];
+    progressView.outerColor = [UIColor whiteColor];
+    progressView.centerY = containerProgress.height / 2;
+    progressView.width = imageButton.width * 0.75;
+    progressView.left = (imageButton.width - progressView.width) / 2;
+
+    [picker dismissViewControllerAnimated: YES completion: ^{
+
+        [UIView animateWithDuration: 0.5 animations: ^{
+            containerProgress.alpha = 1;
+        }                completion: ^(BOOL completion) {
+
+            NSLog(@"_model.currentUser.photo.smallURL = %@", _model.currentUser.photo.smallURL);
+            [_queue addOperation: [[PictureOperation alloc] initWithImage: image]];
+
+            [progressView startAnimating];
+        }];
+    }];
 }
 
 @end

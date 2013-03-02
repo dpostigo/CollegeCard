@@ -50,6 +50,7 @@
 - (void) shouldDeleteRow: (TableRowObject *) rowObject inSection: (TableSection *) tableSection;
 - (void) shouldDeleteAtRow: (NSInteger) row inSection: (NSInteger) section;
 - (void) deleteRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection animation: (UITableViewRowAnimation) rowAnimation;
+- (TableRowObject *) rowObjectForRow: (NSInteger) row inSection: (TableSection *) tableSection;
 - (void) tableTextFieldEndedEditing: (TableTextField *) tableTextField;
 - (TableSection *) tableSectionForTitle: (NSString *) title;
 - (NSInteger) indexOfTableSectionWithTitle: (NSString *) title;

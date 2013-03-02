@@ -130,14 +130,21 @@
     }
 
     else {
+
+        NSLog(@"Animating down.");
         NSLog(@"self.view.frame = %@", NSStringFromCGRect(self.view.frame));
 
         CGRect statusBarRect = [self statusBarFrameViewRect: self.view];
         NSLog(@"statusBarRect.size.height = %f", statusBarRect.size.height);
 
-        [UIView animateWithDuration: movementDuration animations: ^{
-            self.view.frame = CGRectMake(0, statusBarRect.size.height, self.view.width, self.view.height);
-        }];
+
+        [UIView beginAnimations: @"anim" context: nil];
+        [UIView setAnimationBeginsFromCurrentState: YES];
+        [UIView setAnimationDuration: movementDuration];
+        self.view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
+        [UIView commitAnimations];
+
+
     }
 }
 

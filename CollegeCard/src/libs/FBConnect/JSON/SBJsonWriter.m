@@ -202,7 +202,7 @@ static NSMutableCharacterSet *kEscapeChars;
     
     NSRange esc = [fragment rangeOfCharacterFromSet:kEscapeChars];
     if ( !esc.length ) {
-        // No special chars -- can just add the raw string:
+        // No special chars -- can just add the raw relativeFutureString
         [json appendString:fragment];
         
     } else {

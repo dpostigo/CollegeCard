@@ -6,13 +6,15 @@
 
 
 #import <Foundation/Foundation.h>
-#import "BasicTableViewController.h"
+#import "BasicImageViewController.h"
 
 
-@interface MerchantDashboardViewController : BasicTableViewController {
+@interface MerchantDashboardViewController : BasicImageViewController  {
 
     IBOutlet UILabel *displayNameLabel;
     IBOutlet UILabel *addressLabel;
+
+
 }
 
 

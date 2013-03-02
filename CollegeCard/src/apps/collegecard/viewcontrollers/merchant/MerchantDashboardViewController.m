@@ -36,10 +36,23 @@
 }
 
 
+#pragma mark Image Handling -
+
+//- (void) imagePickerSelectedImage: (UIImage *) image {
+//    [super imagePickerSelectedImage: image];
+//
+//}
+
+
+#pragma mark IBActions
+
 - (IBAction) handleSignOut: (id) sender {
     [SVProgressHUD showWithStatus: @"Signing out..."];
     [_queue addOperation: [[LogoutOperation alloc] initWithDefault]];
 }
+
+
+
 
 #pragma mark Callbacks
 

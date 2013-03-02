@@ -56,7 +56,6 @@
 
 
 - (NSDate *) endTime {
-    NSLog(@"self.duration = %i", self.duration);
 
     if (self.duration == 0) {
 

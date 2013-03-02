@@ -61,7 +61,7 @@
     // Set inner glow frame (1pt inset)
     innerGlow.frame = CGRectInset(self.bounds, 1, 1);
 
-    // Set gradient frame (fill the whole button))
+    // Set gradient frame (fill the whole imageButton))
     backgroundLayer.frame = self.bounds;
 
     // Set inverted gradient frame

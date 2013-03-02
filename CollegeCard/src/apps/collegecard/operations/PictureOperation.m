@@ -36,8 +36,7 @@
 
     if ([response.meta.status isEqualToString: @"ok"]) {
 
-
-        NSArray *users = [response getObjectsOfType:[CCUser class]];
+        NSArray *users = [response getObjectsOfType: [CCUser class]];
         CCUser *user = [users objectAtIndex: 0];
         NSLog(@"user.photo.thumbURL = %@", user.photo.thumbURL);
         [_model notifyDelegates: @selector(pictureOperationSucceeded) object: nil];

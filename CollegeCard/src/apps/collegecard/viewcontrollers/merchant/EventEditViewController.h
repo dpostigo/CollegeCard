@@ -7,9 +7,10 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicTableViewController.h"
+#import "TDDatePickerController.h"
 
 
-@interface EventEditViewController : BasicTableViewController <UIPickerViewDelegate, UIPickerViewDataSource> {
+@interface EventEditViewController : BasicTableViewController <UIPickerViewDelegate, UIPickerViewDataSource, TDDatePickerControllerDelegate> {
 
 
 }

@@ -71,10 +71,15 @@
         cell.detailTextLabel.text = [_model timeStringForEvent: event];
         cell.captionLabel.text = event.place.name;
 
-
         cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
         cell.backgroundView = [[BasicWhiteView alloc] initWithFrame: cell.bounds];
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
+
+        return;
+    }
+
+    if ([rowObject.textLabel isEqualToString: NO_NEARBY_DEALS_FOUND])  {
+        cell.textLabel.font = [UIFont fontWithName: @"HelveticaNeue-Italic" size: cell.textLabel.font.pointSize];
     }
 }
 

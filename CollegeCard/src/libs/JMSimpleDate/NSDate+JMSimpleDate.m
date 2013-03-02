@@ -187,6 +187,13 @@
 }
 
 
+- (BOOL) isNextMonth {
+    NSTimeInterval nextMonthInterval = [[NSDate date] timeIntervalSinceReferenceDate] + kMonth;
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate: nextMonthInterval];
+    return [self isInSameMonthAsDate: date];
+}
+
+
 - (BOOL) isThisYear {
     return [self isInSameYearAsDate: [NSDate date]];
 }
@@ -412,4 +419,17 @@
     return components.year;
 }
 
+
+- (NSString *) relativeFutureString {
+
+    if (self.isTomorrow) {
+        return @"tomorrow";
+    } else if (self.isNextWeek) {
+        return @"next week";
+    } else if (self.isNextMonth) {
+        return @"next month";
+    }
+
+    return @"next year";
+}
 @end

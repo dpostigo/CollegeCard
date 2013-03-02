@@ -49,6 +49,7 @@
 - (BOOL) isNextWeek;
 - (BOOL) wasLastWeek;
 - (BOOL) isThisMonth;
+- (BOOL) isNextMonth;
 - (BOOL) isThisYear;
 - (BOOL) isNextYear;
 - (BOOL) isLastYear;
@@ -87,5 +88,6 @@
 - (NSInteger) weekday;
 - (NSInteger) nthWeekday;
 - (NSInteger) year;
+- (NSString *) relativeFutureString;
 
 @end

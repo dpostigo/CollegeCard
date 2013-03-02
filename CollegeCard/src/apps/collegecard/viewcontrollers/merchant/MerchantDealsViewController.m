@@ -17,8 +17,6 @@
 #import "DeleteEventOperation.h"
 
 
-
-
 @implementation MerchantDealsViewController {
     int newEventsCount;
 }
@@ -36,7 +34,6 @@
 - (void) prepareDataSource {
 
     if (_model.merchantEvents == nil) {
-        NSLog(@"_model.currentUser.placeId = %@", _model.currentUser.placeId);
         [_queue addOperation: [[GetMerchantEventsOperation alloc] initWithPlaceId: _model.currentUser.placeId]];
     }
 
@@ -54,7 +51,6 @@
 
     BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
     cell.textLabel.numberOfLines = 1;
-
 
     if ([rowObject isKindOfClass: [EventRowObject class]]) {
         EventRowObject *eventObject = (EventRowObject *) rowObject;

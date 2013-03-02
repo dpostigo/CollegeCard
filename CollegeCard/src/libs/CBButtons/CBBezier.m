@@ -65,7 +65,7 @@
     // Use the bezier as a clipping path
     [roundedRectanglePath addClip];
 
-    // Use one of the two gradients depending on the state of the button
+    // Use one of the two gradients depending on the state of the imageButton
     CGGradientRef background = self.highlighted ? highlightedGradient: gradient;
 
     // Draw gradient within the path
