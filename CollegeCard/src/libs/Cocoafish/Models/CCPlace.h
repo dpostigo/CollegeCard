@@ -1,5 +1,5 @@
 //
-//  CCPlaceCocoafish.h
+//  CCPlace.h
 //  Demo
 //
 //  Created by Wei Kong on 12/15/10.
@@ -10,7 +10,7 @@
 #import "CCObjectWithPhoto.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface CCPlaceCocoafish : CCObjectWithPhoto {
+@interface CCPlace : CCObjectWithPhoto {
 
 @protected
 	NSString *_name;

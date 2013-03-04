@@ -54,5 +54,6 @@
 - (void) tableTextFieldEndedEditing: (TableTextField *) tableTextField;
 - (TableSection *) tableSectionForTitle: (NSString *) title;
 - (NSInteger) indexOfTableSectionWithTitle: (NSString *) title;
+- (void) addTopSpacing;
 
 @end

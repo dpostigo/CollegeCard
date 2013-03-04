@@ -41,7 +41,7 @@
 		036AABEE16DAA2C50047787D /* CCObjectWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABBB16DAA2C50047787D /* CCObjectWithPhoto.m */; };
 		036AABEF16DAA2C50047787D /* CCPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABBD16DAA2C50047787D /* CCPage.m */; };
 		036AABF016DAA2C50047787D /* CCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABBF16DAA2C50047787D /* CCPhoto.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		036AABF116DAA2C50047787D /* CCPlaceCocoafish.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABC116DAA2C50047787D /* CCPlaceCocoafish.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		036AABF116DAA2C50047787D /* CCPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABC116DAA2C50047787D /* CCPlace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		036AABF216DAA2C50047787D /* CCPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABC316DAA2C50047787D /* CCPost.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		036AABF316DAA2C50047787D /* CCReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABC516DAA2C50047787D /* CCReview.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		036AABF416DAA2C50047787D /* CCShareRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 036AABC716DAA2C50047787D /* CCShareRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -88,6 +88,7 @@
 		7CA440580278B1DF75A22BBA /* EventRowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4406EAA03B6D784E3DD86 /* EventRowObject.m */; };
 		7CA440660E0B3D28691F807F /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4496D0B68A0789B5B5A09 /* BasicViewController.m */; };
 		7CA440776EC534B3540FB8EC /* UIColor+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA449AB0EEA64E50D9B7E84 /* UIColor+Utils.m */; };
+		7CA4407A9B43C65E4051197C /* PlacePictureOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4407FC2EAC0DBF56A981C /* PlacePictureOperation.m */; };
 		7CA4408F3901D299F849486E /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D4C1CF09244B7E5C72A /* DDProgressView.m */; };
 		7CA440A28FB73E05CDC829BE /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA448574AF8BE349AF03462 /* Model.m */; };
 		7CA44112A63B57648EF3DFAA /* BasicUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44405FFF55ED8F91C54A1 /* BasicUserView.m */; };
@@ -141,7 +142,9 @@
 		7CA446E3C6889D340B7AB338 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA446F74DC6F0DED51197AA /* NSString+Utils.m */; };
 		7CA446EDC9A98C81FCC8065B /* BasicPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D711237F1DF0DFF6D4C /* BasicPlaceViewController.m */; };
 		7CA44706642EB0E20FBED075 /* BasicTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D990255FC24C0C26BA4 /* BasicTextFieldCell.m */; };
+		7CA4476B9FC4BDCD4B07A10B /* GetPlacesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44251A5B35822160B8D06 /* GetPlacesOperation.m */; };
 		7CA447A5308915D7E620B4A0 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44D9F87CCD8B9679F1F2F /* UIView+Utils.m */; };
+		7CA447A89C20AFD9DDCEA646 /* MerchantProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44AB6426BD65A60E33393 /* MerchantProfileViewController.m */; };
 		7CA447E55072F53631092019 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44242FFA0F445F4795389 /* RegisterViewController.m */; };
 		7CA447EEAE89DF8ECA2D2A60 /* BlueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA442CC1BF130BB8F91EDB9 /* BlueButton.m */; };
 		7CA4480DE9A28D9A4D1041C5 /* NSDate+JMSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44F38F71D47D70BC0A6E9 /* NSDate+JMSimpleDate.m */; };
@@ -164,6 +167,7 @@
 		7CA44C00905D843B480CF68E /* TextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA441A540039FF0F11CEF6F /* TextFieldDelegate.m */; };
 		7CA44C08C6A058B123962636 /* NSDateFormatter+JMSimpleDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44031A328924E59D3FF39 /* NSDateFormatter+JMSimpleDate.m */; };
 		7CA44C59E7B8C2E72B414069 /* UpdateUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA445282C10B7E22EDA83A5 /* UpdateUserOperation.m */; };
+		7CA44C65E31D5DC29DEEC380 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44EC92A4B33F6D2F441B3 /* SwitchCell.m */; };
 		7CA44C6EF4B28A0788831D5D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4404DB9D93B3A1BD4B117 /* LoginViewController.m */; };
 		7CA44C9F33940A9FE7EDCC39 /* EventEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA4469CFCDD6DBFE0DB6678 /* EventEditViewController.m */; };
 		7CA44CB1B6E51F2798A83F69 /* BasicCocoafishOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA44A6D4993EAD2120E2043 /* BasicCocoafishOperation.m */; };
@@ -237,8 +241,8 @@
 		036AABBD16DAA2C50047787D /* CCPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPage.m; sourceTree = "<group>"; };
 		036AABBE16DAA2C50047787D /* CCPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPhoto.h; sourceTree = "<group>"; };
 		036AABBF16DAA2C50047787D /* CCPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPhoto.m; sourceTree = "<group>"; };
-		036AABC016DAA2C50047787D /* CCPlaceCocoafish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlaceCocoafish.h; sourceTree = "<group>"; };
-		036AABC116DAA2C50047787D /* CCPlaceCocoafish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlaceCocoafish.m; sourceTree = "<group>"; };
+		036AABC016DAA2C50047787D /* CCPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPlace.h; sourceTree = "<group>"; };
+		036AABC116DAA2C50047787D /* CCPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPlace.m; sourceTree = "<group>"; };
 		036AABC216DAA2C50047787D /* CCPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPost.h; sourceTree = "<group>"; };
 		036AABC316DAA2C50047787D /* CCPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPost.m; sourceTree = "<group>"; };
 		036AABC416DAA2C50047787D /* CCReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCReview.h; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 		7CA4404DB9D93B3A1BD4B117 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = src/apps/collegecard/viewcontrollers/LoginViewController.m; sourceTree = "<group>"; };
 		7CA4406B019B0BD845E0F8C8 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = src/apps/collegecard/models/User.m; sourceTree = "<group>"; };
 		7CA4406EAA03B6D784E3DD86 /* EventRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventRowObject.m; path = src/apps/collegecard/models/rowObjects/EventRowObject.m; sourceTree = "<group>"; };
+		7CA4407FC2EAC0DBF56A981C /* PlacePictureOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlacePictureOperation.m; path = src/apps/collegecard/operations/merchant/PlacePictureOperation.m; sourceTree = "<group>"; };
 		7CA440D6A6376168A6D49652 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = src/apps/collegecard/viewcontrollers/student/ProfileViewController.h; sourceTree = "<group>"; };
 		7CA440F33E03E57F6331B834 /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceViewController.h; path = src/apps/collegecard/viewcontrollers/PlaceViewController.h; sourceTree = "<group>"; };
 		7CA440FB73B5BCE9A22E9D0E /* CheckinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckinCell.h; path = src/apps/collegecard/data/table/CheckinCell.h; sourceTree = "<group>"; };
@@ -336,12 +341,15 @@
 		7CA4416D63240AE8506089E7 /* TDSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDSemiModal.h; path = src/libs/TDSemiModal/TDSemiModal.h; sourceTree = "<group>"; };
 		7CA4418AFCC8D8513BA562CE /* BasicLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicLocationViewController.m; path = src/apps/collegecard/viewcontrollers/BasicLocationViewController.m; sourceTree = "<group>"; };
 		7CA441950B3952CDD22B1EC8 /* BasicTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableViewDelegate.h; path = src/viewcontrollers/BasicTableViewDelegate.h; sourceTree = "<group>"; };
+		7CA4419CEC58B7EA6988D0AB /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = src/apps/collegecard/data/table/SwitchCell.h; sourceTree = "<group>"; };
 		7CA441A540039FF0F11CEF6F /* TextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextFieldDelegate.m; path = src/controls/TextFieldDelegate.m; sourceTree = "<group>"; };
 		7CA441B2DE76DAC48201AA5B /* JMSimpleDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMSimpleDate.m; path = src/libs/JMSimpleDate/JMSimpleDate.m; sourceTree = "<group>"; };
 		7CA44217E007E5165ECF98E4 /* UIImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Utils.h"; path = "src/utils/UIImage+Utils.h"; sourceTree = "<group>"; };
 		7CA442245856DAC52B447A9C /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceViewController.m; path = src/apps/collegecard/viewcontrollers/PlaceViewController.m; sourceTree = "<group>"; };
 		7CA44226A09BD391F61F0DA9 /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextField.h; path = src/controls/TextField.h; sourceTree = "<group>"; };
 		7CA44242FFA0F445F4795389 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisterViewController.m; path = src/apps/collegecard/viewcontrollers/RegisterViewController.m; sourceTree = "<group>"; };
+		7CA44251A5B35822160B8D06 /* GetPlacesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetPlacesOperation.m; path = src/apps/collegecard/operations/student/GetPlacesOperation.m; sourceTree = "<group>"; };
+		7CA44277BAB5560523236A88 /* GetPlacesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetPlacesOperation.h; path = src/apps/collegecard/operations/student/GetPlacesOperation.h; sourceTree = "<group>"; };
 		7CA442855C5395A5923EE458 /* BasicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicModel.h; path = src/models/BasicModel.h; sourceTree = "<group>"; };
 		7CA4429570A9B1989080A3D5 /* DateRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateRowObject.m; path = src/apps/collegecard/models/rowObjects/DateRowObject.m; sourceTree = "<group>"; };
 		7CA442B5F516A426E01C7646 /* SavedPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedPlacesViewController.h; path = src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.h; sourceTree = "<group>"; };
@@ -382,6 +390,7 @@
 		7CA444921D26C57EC174F760 /* CheckinHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckinHistoryViewController.h; path = src/apps/collegecard/viewcontrollers/student/CheckinHistoryViewController.h; sourceTree = "<group>"; };
 		7CA444BFE04E5E775423E7AB /* UpdateUserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateUserOperation.h; path = src/apps/collegecard/operations/UpdateUserOperation.h; sourceTree = "<group>"; };
 		7CA444C3D731900EC484EA78 /* BasicTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableCell.m; path = src/data/table/BasicTableCell.m; sourceTree = "<group>"; };
+		7CA444C622C5C925B66622BD /* MerchantProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantProfileViewController.h; path = src/apps/collegecard/viewcontrollers/merchant/MerchantProfileViewController.h; sourceTree = "<group>"; };
 		7CA444F722B03D966E4B962B /* EventEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventEditViewController.h; path = src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.h; sourceTree = "<group>"; };
 		7CA444FF41836A7D7A81A87D /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "src/utils/UIView+Utils.h"; sourceTree = "<group>"; };
 		7CA4451A19CA6C9FF89B3982 /* EventRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventRowObject.h; path = src/apps/collegecard/models/rowObjects/EventRowObject.h; sourceTree = "<group>"; };
@@ -410,6 +419,7 @@
 		7CA447074B1C70C66B3CA83E /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = src/apps/collegecard/viewcontrollers/SettingsViewController.h; sourceTree = "<group>"; };
 		7CA4470D750F54B735EB9069 /* PlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlacesViewController.m; path = src/apps/collegecard/viewcontrollers/PlacesViewController.m; sourceTree = "<group>"; };
 		7CA4472EF27BC450D6093BDE /* BasicPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicPlaceViewController.h; path = src/apps/collegecard/viewcontrollers/BasicPlaceViewController.h; sourceTree = "<group>"; };
+		7CA44730ADB706DE308E0043 /* PlacePictureOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlacePictureOperation.h; path = src/apps/collegecard/operations/merchant/PlacePictureOperation.h; sourceTree = "<group>"; };
 		7CA4474098CEE3AD9A992597 /* DeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceUtils.h; path = src/utils/DeviceUtils.h; sourceTree = "<group>"; };
 		7CA4477FDF84E1A108E99C08 /* MerchantDealsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantDealsViewController.m; path = src/apps/collegecard/viewcontrollers/merchant/MerchantDealsViewController.m; sourceTree = "<group>"; };
 		7CA44789A05554BF04587B2A /* MerchantDashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantDashboardViewController.h; path = src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h; sourceTree = "<group>"; };
@@ -446,6 +456,7 @@
 		7CA44A7C50814D3C720CAA29 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterViewController.h; path = src/apps/collegecard/viewcontrollers/RegisterViewController.h; sourceTree = "<group>"; };
 		7CA44AA565C4EAC032D5B676 /* UserSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingsViewController.m; path = src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m; sourceTree = "<group>"; };
 		7CA44AB06595C9F070B46DB8 /* NSDate+JMSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+JMSimpleDate.h"; path = "src/libs/JMSimpleDate/NSDate+JMSimpleDate.h"; sourceTree = "<group>"; };
+		7CA44AB6426BD65A60E33393 /* MerchantProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantProfileViewController.m; path = src/apps/collegecard/viewcontrollers/merchant/MerchantProfileViewController.m; sourceTree = "<group>"; };
 		7CA44B22E92698361AECEC69 /* MerchantSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MerchantSignupViewController.h; path = src/apps/collegecard/viewcontrollers/merchant/MerchantSignupViewController.h; sourceTree = "<group>"; };
 		7CA44B232C384F60B70BE2F4 /* WhiteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhiteButton.h; path = src/controls/buttons/WhiteButton.h; sourceTree = "<group>"; };
 		7CA44B34E8C9A17745E9A1A2 /* PictureOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureOperation.m; path = src/apps/collegecard/operations/PictureOperation.m; sourceTree = "<group>"; };
@@ -489,6 +500,7 @@
 		7CA44EB388E5E4741838A51D /* TableRowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableRowObject.h; path = src/data/table/TableRowObject.h; sourceTree = "<group>"; };
 		7CA44EB689EED3F4D79410A6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = src/xibs/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		7CA44EBA5F61489BCCA793FE /* MerchantSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MerchantSignupViewController.m; path = src/apps/collegecard/viewcontrollers/merchant/MerchantSignupViewController.m; sourceTree = "<group>"; };
+		7CA44EC92A4B33F6D2F441B3 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = src/apps/collegecard/data/table/SwitchCell.m; sourceTree = "<group>"; };
 		7CA44ED42324D67577C142EB /* PlaceRowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceRowObject.m; path = src/apps/collegecard/models/rowObjects/PlaceRowObject.m; sourceTree = "<group>"; };
 		7CA44EFDBC5CF7B3EA8A9C86 /* NSDateFormatter+JMSimpleDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+JMSimpleDate.h"; path = "src/libs/JMSimpleDate/NSDateFormatter+JMSimpleDate.h"; sourceTree = "<group>"; };
 		7CA44F0C1FC3C054379FC4F6 /* UpdateEventOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateEventOperation.h; path = src/apps/collegecard/operations/UpdateEventOperation.h; sourceTree = "<group>"; };
@@ -726,6 +738,14 @@
 				7CA4467214C4DA6D28F836B0 /* TDDatePickerController.xib */,
 				7CA44D8DF75A9D022A3425E9 /* BasicImageViewController.m */,
 				7CA442C95E230FEAED82EF44 /* BasicImageViewController.h */,
+				7CA44AB6426BD65A60E33393 /* MerchantProfileViewController.m */,
+				7CA444C622C5C925B66622BD /* MerchantProfileViewController.h */,
+				7CA4407FC2EAC0DBF56A981C /* PlacePictureOperation.m */,
+				7CA44730ADB706DE308E0043 /* PlacePictureOperation.h */,
+				7CA44251A5B35822160B8D06 /* GetPlacesOperation.m */,
+				7CA44277BAB5560523236A88 /* GetPlacesOperation.h */,
+				7CA44EC92A4B33F6D2F441B3 /* SwitchCell.m */,
+				7CA4419CEC58B7EA6988D0AB /* SwitchCell.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -861,8 +881,8 @@
 				036AABBD16DAA2C50047787D /* CCPage.m */,
 				036AABBE16DAA2C50047787D /* CCPhoto.h */,
 				036AABBF16DAA2C50047787D /* CCPhoto.m */,
-				036AABC016DAA2C50047787D /* CCPlaceCocoafish.h */,
-				036AABC116DAA2C50047787D /* CCPlaceCocoafish.m */,
+				036AABC016DAA2C50047787D /* CCPlace.h */,
+				036AABC116DAA2C50047787D /* CCPlace.m */,
 				036AABC216DAA2C50047787D /* CCPost.h */,
 				036AABC316DAA2C50047787D /* CCPost.m */,
 				036AABC416DAA2C50047787D /* CCReview.h */,
@@ -1110,7 +1130,7 @@
 				036AABEE16DAA2C50047787D /* CCObjectWithPhoto.m in Sources */,
 				036AABEF16DAA2C50047787D /* CCPage.m in Sources */,
 				036AABF016DAA2C50047787D /* CCPhoto.m in Sources */,
-				036AABF116DAA2C50047787D /* CCPlaceCocoafish.m in Sources */,
+				036AABF116DAA2C50047787D /* CCPlace.m in Sources */,
 				036AABF216DAA2C50047787D /* CCPost.m in Sources */,
 				036AABF316DAA2C50047787D /* CCReview.m in Sources */,
 				036AABF416DAA2C50047787D /* CCShareRequest.m in Sources */,
@@ -1199,6 +1219,10 @@
 				7CA4469A72208FEBAA020E10 /* TDSemiModalViewController.m in Sources */,
 				7CA44EB49C9CB97C36B6BB33 /* UIViewController+TDSemiModalExtension.m in Sources */,
 				7CA44260568052AC79B6678A /* BasicImageViewController.m in Sources */,
+				7CA447A89C20AFD9DDCEA646 /* MerchantProfileViewController.m in Sources */,
+				7CA4407A9B43C65E4051197C /* PlacePictureOperation.m in Sources */,
+				7CA4476B9FC4BDCD4B07A10B /* GetPlacesOperation.m in Sources */,
+				7CA44C65E31D5DC29DEEC380 /* SwitchCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1296,8 +1320,8 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = CollegeCard;
-				PROVISIONING_PROFILE = "58CCB235-BB9C-470E-A05E-EC13D7AA3BE0";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "58CCB235-BB9C-470E-A05E-EC13D7AA3BE0";
+				PROVISIONING_PROFILE = "A6067A05-D0A2-4A52-9FC0-5E3AD89C5AF3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A6067A05-D0A2-4A52-9FC0-5E3AD89C5AF3";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1330,8 +1354,8 @@
 					"-lsqlite3.0",
 				);
 				PRODUCT_NAME = CollegeCard;
-				PROVISIONING_PROFILE = "8C7714CB-59B0-4026-A430-5008F69B0B79";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C7714CB-59B0-4026-A430-5008F69B0B79";
+				PROVISIONING_PROFILE = "30416391-96F2-4D95-B015-510F5F656965";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "30416391-96F2-4D95-B015-510F5F656965";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

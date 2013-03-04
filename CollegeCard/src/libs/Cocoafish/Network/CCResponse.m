@@ -129,7 +129,7 @@
         if ([jsonTag caseInsensitiveCompare:CC_JSON_USERS] == NSOrderedSame) {
             class = [CCUser class];
         } else if ([jsonTag caseInsensitiveCompare:CC_JSON_PLACES] == NSOrderedSame) {
-            class = [CCPlaceCocoafish class];
+            class = [CCPlace class];
         } else if ([jsonTag caseInsensitiveCompare:CC_JSON_CHECKINS] == NSOrderedSame) {
             class = [CCCheckin class];
         } else if ([jsonTag caseInsensitiveCompare:CC_JSON_PHOTOS] == NSOrderedSame) {

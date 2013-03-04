@@ -25,6 +25,9 @@
     [paramDict setObject: aTempEvent.startTime forKey: @"start_time"];
     [paramDict setObject: aTempEvent.endTime forKey: @"end_time"];
     [paramDict setObject: [NSNumber numberWithInteger: aTempEvent.duration] forKey: @"duration"];
+
+    NSDictionary *customFields = [NSDictionary dictionaryWithObject: [NSNumber numberWithBool: NO] forKey: @"isPublished"];
+    [paramDict setObject: customFields forKey: @"custom_data_fields"];
     self = [super initWithDelegate: nil httpMethod: @"POST" baseUrl: @"events/create.json" paramDict: paramDict];
     if (self) {
         tempEvent = aTempEvent;

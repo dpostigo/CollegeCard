@@ -12,10 +12,13 @@
 @interface GetPlaceOperation : BasicCocoafishOperation {
 
     NSString *placeId;
+    BOOL setAsCurrentPlace;
 }
 
 
 @property(nonatomic, copy) NSString *placeId;
+@property(nonatomic) BOOL setAsCurrentPlace;
 - (id) initWithPlaceId: (NSString *) aPlaceId;
+- (id) initWithPlaceId: (NSString *) aPlaceId setAsCurrentPlace: (BOOL) aBoolean;
 
 @end

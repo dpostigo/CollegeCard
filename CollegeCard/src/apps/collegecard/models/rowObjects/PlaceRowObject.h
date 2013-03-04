@@ -7,16 +7,16 @@
 
 #import <Foundation/Foundation.h>
 #import "TableRowObject.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 
 
 @interface PlaceRowObject : TableRowObject {
 
-    CCPlaceCocoafish *place;
+    CCPlace *place;
 }
 
 
-@property(nonatomic, strong) CCPlaceCocoafish *place;
-- (id) initWithPlace: (CCPlaceCocoafish *) aPlace;
+@property(nonatomic, strong) CCPlace *place;
+- (id) initWithPlace: (CCPlace *) aPlace;
 
 @end

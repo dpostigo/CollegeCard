@@ -10,7 +10,7 @@
 #import "CCObjectWithPhoto.h"
 
 @class CCUser;
-@class CCPlaceCocoafish;
+@class CCPlace;
 @interface CCEvent : CCObjectWithPhoto {
 @private
     NSString *_name;
@@ -23,13 +23,13 @@
     NSInteger _numOccurrences;
     NSString *_ical;
 	CCUser *_user;
-	CCPlaceCocoafish *_place;
+	CCPlace *_place;
 }
 
 @property (nonatomic, retain, readonly) NSString *name;
 @property (nonatomic, retain, readonly) NSString *details;
 @property (nonatomic, retain, readonly) CCUser *user;
-@property (nonatomic, retain, readonly) CCPlaceCocoafish *place;
+@property (nonatomic, retain, readonly) CCPlace *place;
 @property (nonatomic, retain, readonly) NSDate *startTime;
 @property (nonatomic, retain, readonly) NSDate *endTime;
 @property (nonatomic, readonly) NSInteger duration;
@@ -38,8 +38,7 @@
 @property (nonatomic, retain, readonly) NSDate *recurringUntil;
 @property (nonatomic, readonly) NSInteger numOccurrences;
 @property (nonatomic, retain, readonly) NSString *ical;
-
-
+- (BOOL) isPublished;
 -(id)initWithJsonResponse:(NSDictionary *)jsonResponse;
 @end
 

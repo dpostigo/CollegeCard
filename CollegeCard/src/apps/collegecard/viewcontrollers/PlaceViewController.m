@@ -26,6 +26,8 @@
     self.view.backgroundColor = [UIColor colorWithString: WHITE_STRING];
 
     [self updateSaveButtonState];
+
+    self.imageButton = profileImageButton;
 }
 
 

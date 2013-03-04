@@ -52,7 +52,7 @@ extern NSString * const CC_JSON_USER_LAST;
 extern NSString * const CC_JSON_USER_FACEBOOK_AUTHORIZED;
 extern NSString * const CC_JSON_USER_FACEBOOK_ACCESS_TOKEN;
 
-// CCPlaceCocoafish
+// CCPlace
 extern NSString * const CC_JSON_PLACE;
 extern NSString * const CC_JSON_PLACES;
 extern NSString * const CC_JSON_PLACE_NAME;

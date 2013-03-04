@@ -207,7 +207,7 @@
 
 -(void)ccrequest:(CCRequest *)request didSucceed:(CCResponse *)response
 {
-    NSArray *types = [NSArray arrayWithObjects:NSStringFromClass([CCPhoto class]), NSStringFromClass([CCUser class]), NSStringFromClass([CCCheckin class]), NSStringFromClass([CCStatus class]), NSStringFromClass([CCEvent class]),  NSStringFromClass([CCPlaceCocoafish class]),nil];
+    NSArray *types = [NSArray arrayWithObjects:NSStringFromClass([CCPhoto class]), NSStringFromClass([CCUser class]), NSStringFromClass([CCCheckin class]), NSStringFromClass([CCStatus class]), NSStringFromClass([CCEvent class]),  NSStringFromClass([CCPlace class]),nil];
     
     NSMutableArray *objects = [NSMutableArray arrayWithCapacity:1];
     for (NSString *type in types) {

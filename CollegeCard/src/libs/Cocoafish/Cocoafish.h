@@ -8,7 +8,7 @@
 
 #import "CCUser.h"
 #import "CCCheckin.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 #import "CCStatus.h"
 #import "FBConnect.h"
 #import "CCPhoto.h"

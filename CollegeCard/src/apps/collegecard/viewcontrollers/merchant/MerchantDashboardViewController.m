@@ -6,10 +6,12 @@
 
 
 #import <QuartzCore/QuartzCore.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "MerchantDashboardViewController.h"
 #import "SVProgressHUD.h"
 #import "LogoutOperation.h"
 #import "GetPlaceOperation.h"
+#import "CCPhoto.h"
 
 
 #define DEALS_KEY @"Your Limited Deals"
@@ -25,6 +27,7 @@
 
 - (void) loadView {
     [super loadView];
+
     self.navigationItem.hidesBackButton = YES;
     [_queue addOperation: [[GetPlaceOperation alloc] initWithPlaceId: _model.currentUser.placeId]];
 }
@@ -33,6 +36,12 @@
 - (void) populateMerchantView {
     displayNameLabel.text = _model.currentPlace.name;
     addressLabel.text = _model.currentPlace.fullAddress;
+
+    NSString *string = _model.currentPlace.photo.largeURL;
+    NSLog(@"string = %@", string);
+    if (string) {
+        [profileImageView setImageWithURL: [NSURL URLWithString: string]];
+    }
 }
 
 
@@ -64,6 +73,7 @@
 
 
 - (void) getPlaceOperationSucceeded {
+
     [self populateMerchantView];
 }
 
@@ -101,6 +111,8 @@
     if ([rowObject.textLabel isEqualToString: DEALS_KEY]) {
 
         [self performSegueWithIdentifier: @"MerchantDealsSegue" sender: self];
+    } else if ([rowObject.textLabel isEqualToString: STORE_DETAILS_KEY]) {
+        [self performSegueWithIdentifier: @"MerchantProfileSegue" sender: self];
     }
 }
 

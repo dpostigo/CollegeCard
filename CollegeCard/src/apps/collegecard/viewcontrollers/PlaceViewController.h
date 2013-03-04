@@ -7,14 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import "BasicViewController.h"
+#import "BasicImageViewController.h"
 
 
-@interface PlaceViewController : BasicViewController {
+@interface PlaceViewController : BasicImageViewController {
 
     IBOutlet UILabel *textLabel;
     IBOutlet UILabel *detailTextLabel;
     IBOutlet UIButton *checkinButton;
     IBOutlet UIButton *saveButton;
+
+    IBOutlet UIButton *profileImageButton;
 }
 
 

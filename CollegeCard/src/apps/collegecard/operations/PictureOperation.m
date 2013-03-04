@@ -18,9 +18,6 @@
 
 
 - (id) initWithImage: (UIImage *) anImage {
-
-    //    NSDictionary *paramDict = [NSDictionary dictionaryWithObject: _model.currentUser.objectId forKey: @"id"];
-
     self = [super initWithDelegate: nil httpMethod: @"PUT" baseUrl: @"users/update.json" paramDict: nil];
     if (self) {
         image = anImage;

@@ -53,7 +53,7 @@ NSString * const CC_JSON_USER_LAST = @"last_name";
 NSString * const CC_JSON_USER_FACEBOOK_AUTHORIZED = @"facebook_authorized";
 NSString * const CC_JSON_USER_FACEBOOK_ACCESS_TOKEN = @"facebook_access_token";
 
-// CCPlaceCocoafish
+// CCPlace
 NSString * const CC_JSON_PLACE = @"place";
 NSString * const CC_JSON_PLACES = @"places";
 NSString * const CC_JSON_PLACE_NAME = @"name";

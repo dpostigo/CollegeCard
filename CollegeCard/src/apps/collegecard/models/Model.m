@@ -49,6 +49,12 @@
         [propertySlugs setObject: @"Major" forKey: @"major"];
         [propertySlugs setObject: @"Birth Date" forKey: @"birthDate"];
         [propertySlugs setObject: @"Gender" forKey: @"gender"];
+
+        [propertySlugs setObject: @"Store Name" forKey: @"name"];
+        [propertySlugs setObject: @"Address" forKey: @"address"];
+        [propertySlugs setObject: @"City" forKey: @"city"];
+        [propertySlugs setObject: @"State" forKey: @"state"];
+        [propertySlugs setObject: @"Zip Code" forKey: @"postal_code"];
     }
 
     return self;

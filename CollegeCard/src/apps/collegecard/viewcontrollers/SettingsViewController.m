@@ -23,15 +23,26 @@
 }
 
 
+- (void) loadView {
+    self.rowSpacing = 10;
+    [super loadView];
+
+    [self addTopSpacing];
+}
+
+
+#pragma mark UITableView
+
+
 - (void) prepareDataSource {
 
     TableSection *tableSection;
 
-    tableSection = [[TableSection alloc] initWithTitle: @"Account Info"];
-    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"Places Visited (0)"]];
-    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"Edit Account Info"]];
-    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: LOGOUT_KEY]];
-    [dataSource addObject: tableSection];
+//    tableSection = [[TableSection alloc] initWithTitle: @"Account Info"];
+//    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"Places Visited (0)"]];
+//    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"Edit Account Info"]];
+//    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: LOGOUT_KEY]];
+//    [dataSource addObject: tableSection];
 
     tableSection = [[TableSection alloc] initWithTitle: @"Get Help"];
     [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"How it works"]];
@@ -46,37 +57,28 @@
 }
 
 
-- (NSString *) tableView: (UITableView *) tableView titleForHeaderInSection: (NSInteger) section {
-    TableSection *tableSection = [dataSource objectAtIndex: section];
-    return tableSection.title;
-}
-
-
-- (UIView *) viewForHeaderInSection: (NSInteger) section {
-
-    TableSection *tableSection = [dataSource objectAtIndex: section];
+- (UIView *) viewForHeaderInTableSection: (TableSection *) tableSection {
     BasicTableCell *cell = [table dequeueReusableCellWithIdentifier: @"HeaderCell"];
 
-    [cell.textLabel makeWhiteView];
-    cell.textLabel.backgroundColor = [UIColor colorWithString: @"e7913c"];
-    cell.textLabel.layer.borderColor = [UIColor colorWithString: @"ffa44a"].CGColor;
+    //    [cell.textLabel makeWhiteView];
+    //    cell.textLabel.backgroundColor = [UIColor colorWithString: @"e7913c"];
+    //    cell.textLabel.layer.borderColor = [UIColor colorWithString: @"ffa44a"].CGColor;
 
-    cell.textLabel.text = [NSString stringWithFormat: @"  %@", tableSection.title];
+    cell.textLabel.text = [tableSection.title uppercaseString];
 
     return cell;
 }
 
 
-- (CGFloat) heightForHeaderInSection: (NSInteger) section {
-    return 25;
+- (CGFloat) heightForHeaderInTableSection: (TableSection *) tableSection {
+    return 40;
 }
 
 
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
 
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"SettingsTableCell" forIndexPath: indexPath];
+    UITableViewCell *cell = tableCell;
 
     cell.textLabel.text = rowObject.textLabel;
     cell.backgroundView = [[BasicWhiteView alloc] init];
@@ -84,7 +86,6 @@
     cell.textLabel.textColor = [UIColor blackColor];
 
     cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
-    return cell;
 }
 
 

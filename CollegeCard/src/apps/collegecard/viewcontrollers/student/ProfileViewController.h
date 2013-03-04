@@ -24,5 +24,6 @@
 
 
 @property(nonatomic, strong) UIButton *imageButton;
+- (void) handleUserCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject;
 
 @end

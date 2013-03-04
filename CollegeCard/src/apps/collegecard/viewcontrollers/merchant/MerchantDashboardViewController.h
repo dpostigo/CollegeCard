@@ -14,10 +14,12 @@
     IBOutlet UILabel *displayNameLabel;
     IBOutlet UILabel *addressLabel;
 
+    IBOutlet UIImageView *profileImageView;
+
 
 }
 
 
-
+- (IBAction) handleSignOut: (id) sender;
 
 @end

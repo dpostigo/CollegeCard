@@ -45,7 +45,7 @@
 @synthesize checkins;
 
 
-- (CCPlaceCocoafish *) merchantPlace {
+- (CCPlace *) merchantPlace {
     return [self.customFields objectForKey: @"major"];
 }
 
@@ -66,6 +66,8 @@
     if (array == nil) {
         return [NSArray array];
     }
+
+
     return array;
 }
 

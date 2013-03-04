@@ -14,9 +14,9 @@
 }
 
 
-- (void) prepareDataSource {
+#pragma mark UITableView
 
-    NSLog(@"_model.currentUser.email = %@", _model.currentUser.email);
+- (void) prepareDataSource {
 
     TableSection *tableSection;
 
@@ -39,11 +39,10 @@
 }
 
 
-- (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath: (NSIndexPath *) indexPath {
+- (void) configureCell: (UITableViewCell *) tableCell forTableSection: (TableSection *) tableSection rowObject: (TableRowObject *) rowObject {
+    [super configureCell: tableCell forTableSection: tableSection rowObject: rowObject];
 
-    TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
-    TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row];
-    BasicTextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier: @"TableCell" forIndexPath: indexPath];
+    BasicTextFieldCell *cell = (BasicTextFieldCell *) tableCell;
     cell.textLabel.text = rowObject.textLabel;
     cell.detailTextLabel.text = rowObject.detailTextLabel;
     cell.textField.placeholder = rowObject.detailTextLabel;
@@ -51,19 +50,26 @@
 
     [self subscribeTextField: cell.textField];
 
-    if ([rowObject.textLabel isEqualToString: EMAIL_KEY])  {
+    if ([rowObject.textLabel isEqualToString: EMAIL_KEY]) {
         cell.textField.userInteractionEnabled = NO;
         cell.textField.text = rowObject.detailTextLabel;
     }
-
-    return cell;
 }
 
 
+- (void) didSelectRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
+    [super didSelectRowObject: rowObject inSection: tableSection];
+
+    for (UITextField *textField in self.textFields) {
+        [textField resignFirstResponder];
+    }
+}
+
+
+#pragma mark TextFields
+
 - (void) textFieldEndedEditing: (UITextField *) aTextField {
     [super textFieldEndedEditing: aTextField];
-
-
 
     NSMutableDictionary *paramDict = [[NSMutableDictionary alloc] init];
     [paramDict setObject: _model.currentUser.firstName forKey: @"first_name"];
@@ -80,16 +86,6 @@
     [paramDict setObject: customFields forKey: @"custom_fields"];
 
     [_queue addOperation: [[CCRequest alloc] initWithDelegate: nil httpMethod: @"PUT" baseUrl: @"users/update.json" paramDict: paramDict]];
-}
-
-
-
-- (void) didSelectRowObject: (TableRowObject *) rowObject inSection: (TableSection *) tableSection {
-    [super didSelectRowObject: rowObject inSection: tableSection];
-
-    for (UITextField *textField in self.textFields) {
-        [textField resignFirstResponder];
-    }
 }
 
 @end

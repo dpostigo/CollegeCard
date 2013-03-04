@@ -1,15 +1,15 @@
 //
-//  CCPlaceCocoafish.m
+//  CCPlace.m
 //  Demo
 //
 //  Created by Wei Kong on 12/15/10.
 //  Copyright 2011 Cocoafish Inc. All rights reserved.
 //
 
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 
 
-@interface CCPlaceCocoafish ()
+@interface CCPlace ()
 
 
 @property(nonatomic, retain, readwrite) NSString *name;
@@ -26,7 +26,7 @@
 @end
 
 
-@implementation CCPlaceCocoafish
+@implementation CCPlace
 
 
 @synthesize name = _name;
@@ -74,14 +74,14 @@
 
 
 /*- (NSString *)description {
-    return [NSString stringWithFormat:@"CCPlaceCocoafish:\n\tname: %@\n\taddress: %@\n\tcrossStreet: %@\n\tcity: %@\n\tstate: %@\n\tpostalCode: %@\n\tcountry :%@\n\tphone: %@\n\twebsite: %@\n\ttwitter: %@\n\tlocation: %@\n\t%@",
+    return [NSString stringWithFormat:@"CCPlace:\n\tname: %@\n\taddress: %@\n\tcrossStreet: %@\n\tcity: %@\n\tstate: %@\n\tpostalCode: %@\n\tcountry :%@\n\tphone: %@\n\twebsite: %@\n\ttwitter: %@\n\tlocation: %@\n\t%@",
             self.name, self.address, self.crossStreet, self.city, self.state, self.postalCode,
             self.country, self.phone, self.website, self.twitter, [self.location description], [super description]];
 }
 
 -(id)copyWithZone:(NSZone *)zone  
 {
-    CCPlaceCocoafish *copy = [super copyWithZone:zone];
+    CCPlace *copy = [super copyWithZone:zone];
     copy.name = [_name copy];
     copy.address = [_address copy];
     copy.crossStreet = [_crossStreet copy];

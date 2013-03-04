@@ -31,7 +31,7 @@
     if ([places count] == 0) {
         [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: NO_MERCHANTS_FOUND_KEY]];
     } else {
-        for (CCPlaceCocoafish *place in places) {
+        for (CCPlace *place in places) {
             [tableSection.rows addObject: [[PlaceRowObject alloc] initWithPlace: place]];
         }
     }
@@ -54,7 +54,7 @@
     if ([rowObject isKindOfClass: [PlaceRowObject class]]) {
 
         PlaceRowObject *placeObject = (PlaceRowObject *) rowObject;
-        CCPlaceCocoafish *place = placeObject.place;
+        CCPlace *place = placeObject.place;
         cell.textLabel.text = place.name;
         cell.detailTextLabel.text = place.fullAddress;
         cell.accessoryView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"arrow-right-dark.png"]];
@@ -78,7 +78,7 @@
 
     if ([rowObject isKindOfClass: [PlaceRowObject class]]) {
         PlaceRowObject *placeRowObject = (PlaceRowObject *) rowObject;
-        CCPlaceCocoafish *place = placeRowObject.place;
+        CCPlace *place = placeRowObject.place;
         _model.currentPlace = place;
 
         [self performSegueWithIdentifier: @"PlaceSegue" sender: self];

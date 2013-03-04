@@ -8,7 +8,7 @@
 
 #import "CCEvent.h"
 #import "CCUser.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 #import "Cocoafish.h"
 #import "NSDate+JMSimpleDate.h"
 
@@ -19,7 +19,7 @@
 @property(nonatomic, retain, readwrite) NSString *name;
 @property(nonatomic, retain, readwrite) NSString *details;
 @property(nonatomic, retain, readwrite) CCUser *user;
-@property(nonatomic, retain, readwrite) CCPlaceCocoafish *place;
+@property(nonatomic, retain, readwrite) CCPlace *place;
 @property(nonatomic, retain, readwrite) NSDate *startTime;
 @property(nonatomic, readwrite) NSInteger duration;
 @property(nonatomic, retain, readwrite) NSString *recurring;
@@ -55,6 +55,10 @@
 @synthesize recurringUntil = _recurringUntil;
 
 
+- (BOOL) isPublished {
+    return [[self.customFields objectForKey: @"isPublished"] boolValue];
+}
+
 - (NSDate *) endTime {
 
     if (self.duration == 0) {
@@ -71,7 +75,7 @@
         @try {
             self.name = [jsonResponse objectForKey: CC_JSON_NAME];
             _user = [[CCUser alloc] initWithJsonResponse: [jsonResponse objectForKey: CC_JSON_USER]];
-            _place = [[CCPlaceCocoafish alloc] initWithJsonResponse: [jsonResponse objectForKey: CC_JSON_PLACE]];
+            _place = [[CCPlace alloc] initWithJsonResponse: [jsonResponse objectForKey: CC_JSON_PLACE]];
 
             dateString = [jsonResponse objectForKey: CC_JSON_START_TIME];
             if (dateString) {

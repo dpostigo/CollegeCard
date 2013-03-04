@@ -29,7 +29,7 @@
 - (void) requestDoneWithResponse: (CCResponse *) response {
     [super requestDoneWithResponse: response];
 
-    NSArray *places = [response getObjectsOfType: [CCPlaceCocoafish class]];
+    NSArray *places = [response getObjectsOfType: [CCPlace class]];
     _model.currentPlace = [places objectAtIndex: 0];
 
     if ([response.meta.status isEqualToString: @"ok"]) {

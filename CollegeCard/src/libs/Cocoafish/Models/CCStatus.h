@@ -9,19 +9,19 @@
 #import "CCObjectWithPhoto.h"
 
 @class CCUser;
-@class CCPlaceCocoafish;
+@class CCPlace;
 @class CCEvent;
 @interface CCStatus : CCObjectWithPhoto {
     
 	NSString *_message;
     CCUser *_user;
-    CCPlaceCocoafish *_place;
+    CCPlace *_place;
     CCEvent *_event;
 }
 
 @property (nonatomic, retain, readonly) NSString *message;
 @property (nonatomic, retain, readonly) CCUser *user;
-@property (nonatomic, retain, readonly) CCPlaceCocoafish *place;
+@property (nonatomic, retain, readonly) CCPlace *place;
 @property (nonatomic, retain, readonly) CCEvent *event;
 
 

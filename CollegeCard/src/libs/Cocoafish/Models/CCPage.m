@@ -9,7 +9,7 @@
 #import "CCPage.h"
 #import "CCUser.h"
 #import "CCPhoto.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 #import "CCFeed.h"
 
 
@@ -74,7 +74,7 @@
         }
         NSArray *jsonPlaces = [jsonResponse objectForKey: @"places"];
         if ([jsonPlaces count] > 0) {
-            self.places = [CCPlaceCocoafish arrayWithJsonResponse: jsonResponse class: [CCPlaceCocoafish class]];
+            self.places = [CCPlace arrayWithJsonResponse: jsonResponse class: [CCPlace class]];
         }
         self.page_ids = [jsonResponse objectForKey: @"page_ids"];
         NSArray *jsonFeeds = [jsonResponse objectForKey: @"feeds"];

@@ -2,8 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d61a76-4226-4c98-87cf-a9ce163eb425" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/student/GetPlacesOperation.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/student/GetPlacesOperation.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantProfileViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantProfileViewController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlaceCocoafish.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlace.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlaceCocoafish.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlace.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.xcworkspace/xcuserdata/dpostigo.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.xcworkspace/xcuserdata/dpostigo.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/Model.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/Model.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/Model.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/Model.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/PlaceOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/PlaceOperation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/SearchPlacesOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/SearchPlacesOperation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Cache/CCDownloadManager.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Cache/CCDownloadManager.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Cocoafish.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Cocoafish.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPage.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPage.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCUser.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCUser.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCResponse.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCResponse.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h" afterPath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m" afterPath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xibs/MainStoryboard.storyboard" afterPath="$PROJECT_DIR$/src/xibs/MainStoryboard.storyboard" />
     </list>
     <ignored path="BasicProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,163 +76,116 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_IPHONE_C39HFT1XDT9V" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6.1_1" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TTTTimeIntervalFormatter.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/libs/TTTTimeIntervalFormatter/TTTTimeIntervalFormatter.m">
+      <file leaf-file-name="SwitchCell.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="18" selection-start="5888" selection-end="5888" vertical-scroll-proportion="-11.115385">
+            <state line="20" column="19" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicTableViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="369" column="19" selection-start="10183" selection-end="10183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CCEvent.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="19" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventEditViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="62" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicPlaceViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="9" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchPlacesViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SearchPlacesViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="0" selection-start="338" selection-end="584" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DealsViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="86" column="73" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="25" selection-start="761" selection-end="787" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserSettingsViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="16" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="65" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConstants.h" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="29" selection-start="242" selection-end="248" vertical-scroll-proportion="0.25751072">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicWhiteView.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/BasicWhiteView.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="60" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#NSCalendarUnitFromString#0" expanded="true" />
-                <element signature="n#init#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#stringForTimeInterval:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#localizedStringForNumber:ofCalendarUnit:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#simpleDayString:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#localizedIdiomaticDeicticExpressionForComponents:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#enRelativeDateStringForComponents:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#initWithCoder:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
-                <element signature="n#encodeWithCoder:#0;n#TTTTimeIntervalFormatter#0" expanded="true" />
+                <element signature="n#initWithCoder:#0;n#BasicWhiteView#0" expanded="true" />
+                <element signature="n#initWithFrame:#0;n#BasicWhiteView#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NSDate+JMSimpleDate.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/libs/JMSimpleDate/NSDate+JMSimpleDate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="17" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NSDate+JMSimpleDate.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/libs/JMSimpleDate/NSDate+JMSimpleDate.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="432" column="14" selection-start="13788" selection-end="13788" vertical-scroll-proportion="-11.653846">
-              <folding>
-                <element signature="n#dateInDays:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateInHours:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateInMinutes:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateInSeconds:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#tomorrowsDate#0;n#NSDate#0" expanded="true" />
-                <element signature="n#yesterdaysDate#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isOnSameDate:ignoringTimeOfDay:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isInSameWeekAsDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isInSameMonthAsDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isInSameYearAsDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isEarlierThanDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isLaterThanDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isToday#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isTomorrow#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isYesterday#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isThisWeek#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isNextWeek#0;n#NSDate#0" expanded="true" />
-                <element signature="n#wasLastWeek#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isThisMonth#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isNextMonth#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isThisYear#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isNextYear#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isLastYear#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isWeekend#0;n#NSDate#0" expanded="true" />
-                <element signature="n#isWeekday#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateByAddingDays:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateBySubtractingDays:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateByAddingHours:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateBySubtractingHours:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateByAddingMinutes:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateBySubtractingMinutes:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#dateAtMidnight#0;n#NSDate#0" expanded="true" />
-                <element signature="n#standardComponents#0;n#NSDate#0" expanded="true" />
-                <element signature="n#componentsWithOffsetFromDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#hasPassed#0;n#NSDate#0" expanded="true" />
-                <element signature="n#minutesAfterDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#secondsAfterDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#minutesBeforeDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#hoursAfterDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#hoursBeforeDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#daysAfterDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#daysBeforeDate:#0;n#NSDate#0" expanded="true" />
-                <element signature="n#nearestHour#0;n#NSDate#0" expanded="true" />
-                <element signature="n#hour#0;n#NSDate#0" expanded="true" />
-                <element signature="n#minute#0;n#NSDate#0" expanded="true" />
-                <element signature="n#seconds#0;n#NSDate#0" expanded="true" />
-                <element signature="n#day#0;n#NSDate#0" expanded="true" />
-                <element signature="n#month#0;n#NSDate#0" expanded="true" />
-                <element signature="n#week#0;n#NSDate#0" expanded="true" />
-                <element signature="n#weekday#0;n#NSDate#0" expanded="true" />
-                <element signature="n#nthWeekday#0;n#NSDate#0" expanded="true" />
-                <element signature="n#year#0;n#NSDate#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/Model.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="28" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#sharedModel#0;n#Model#0" expanded="true" />
-                <element signature="n#init#0;n#Model#0" expanded="true" />
-                <element signature="n#isLoggedIn#0;n#Model#0" expanded="true" />
-                <element signature="n#currentUser#0;n#Model#0" expanded="true" />
-                <element signature="n#dateFormatter#0;n#Model#0" expanded="true" />
-                <element signature="n#timeIntervalFormatter#0;n#Model#0" expanded="true" />
-                <element signature="n#nextImageView#0;n#Model#0" expanded="true" />
-                <element signature="n#slugForProperty:#0;n#Model#0" expanded="true" />
-                <element signature="n#propertyForSlug:#0;n#Model#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MerchantDashboardViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="38" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicImageViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="51" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicImageViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="43" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#setImageButton:#0;n#BasicImageViewController#0" expanded="true" />
-                <marker date="1362242809000" expanded="true" signature="985:1096" placeholder="{...}" />
-                <element signature="n#actionSheetForImagePicker#0;n#BasicImageViewController#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="30" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -184,14 +193,14 @@
       <file leaf-file-name="HomeViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="34" selection-start="3260" selection-end="3260" vertical-scroll-proportion="0.0">
+            <state line="32" column="27" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#viewWillAppear:#0;n#HomeViewController#0" expanded="true" />
-                <element signature="n#loadView#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#handleSettingsButton:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#handleCheckin:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#prepareDataSource#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#heightForRowAtIndexPath:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#configureCell:forTableSection:rowObject:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#didSelectRowObject:inSection:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#userPictureUpdated#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#userDidUpdate#0;n#HomeViewController#0" expanded="true" />
@@ -200,45 +209,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProfileViewController.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
+      <file leaf-file-name="CCPhoto.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="51" selection-start="8097" selection-end="8097" vertical-scroll-proportion="0.59821427">
-              <folding>
-                <element signature="n#loadView#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#prepareDataSource#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#heightForRowAtIndexPath:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#configureCell:forTableSection:rowObject:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#handleUserCell:forTableSection:rowObject:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#didSelectRowObject:inSection:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#handleSignout:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#logoutSucceeded#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#pictureOperationSucceeded#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="e#6018#6063#0" expanded="true" />
-                <element signature="e#6091#6117#0" expanded="true" />
-                <element signature="n#tableTextFieldEndedEditing:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#updatedUserForKey:string:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#setImageButton:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#handleChoosePicture:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#actionSheetForImagePicker#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#actionSheet:clickedButtonAtIndex:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="n#imagePickerController:didFinishPickingImage:editingInfo:#0;n#ProfileViewController#0" expanded="true" />
-                <element signature="e#11119#11521#0" expanded="true" />
-                <element signature="e#11176#11229#0" expanded="true" />
-                <element signature="e#11257#11513#0" expanded="true" />
-              </folding>
+            <state line="22" column="4" selection-start="371" selection-end="384" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PictureOperation.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m">
+      <file leaf-file-name="CCPhoto.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#initWithImage:#0;n#PictureOperation#0" expanded="true" />
-                <element signature="n#requestDoneWithResponse:#0;n#PictureOperation#0" expanded="true" />
-              </folding>
+            <state line="79" column="19" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/Model.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="44" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacePictureOperation.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="19" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -246,36 +248,8 @@
       <file leaf-file-name="MerchantDashboardViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="837" selection-end="948" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#loadView#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#populateMerchantView#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#handleSignOut:#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#logoutSucceeded#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#getPlaceOperationSucceeded#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#prepareDataSource#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#tableView:cellForRowAtIndexPath:#0;n#MerchantDashboardViewController#0" expanded="true" />
-                <element signature="n#didSelectRowObject:inSection:#0;n#MerchantDashboardViewController#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DealsViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="5" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#loadView#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#prepareDataSource#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#heightForHeaderInTableSection:#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#viewForHeaderInTableSection:#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#heightForTableRow:inSection:#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#didUpdateLocations:#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#getMerchantEventsSucceededWithEvents:forPlaceId:#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#getMerchantEventsSucceededWithEvents:forLocation:#0;n#DealsViewController#0" expanded="true" />
-                <element signature="n#updateEvents:inSection:#0;n#DealsViewController#0" expanded="true" />
-              </folding>
+            <state line="39" column="57" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -284,33 +258,6 @@
         <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state line="51" column="9" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicTableViewControllerProtocol.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewControllerProtocol.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="63" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteEventOperation.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/merchant/DeleteEventOperation.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="95" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MerchantSignupViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantSignupViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="16" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -338,22 +285,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/student/GetPlacesOperation.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/app/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCUser.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.h" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m" />
+        <option value="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" />
-        <option value="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/CheckinHistoryViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m" />
-        <option value="$PROJECT_DIR$/src/data/table/BasicTableCell.h" />
-        <option value="$PROJECT_DIR$/src/data/table/BasicTableCell.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.h" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m" />
+        <option value="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
       </list>
     </option>
   </component>
@@ -388,6 +335,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="DirectoryView.Xcode" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -622,7 +570,97 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="viewcontrollers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="student" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollegeCard" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collegecard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewcontrollers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="merchant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollegeCard" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collegecard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="operations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CollegeCard" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collegecard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="operations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="student" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -758,7 +796,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -817,13 +854,11 @@
     <frame x="0" y="22" width="1440" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15064563" sideWeight="0.6479663" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15423243" sideWeight="0.6479663" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35203367" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12482066" sideWeight="0.6479663" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35203367" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -831,6 +866,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -892,124 +929,103 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#shouldAutorotate#0;n#TDDatePickerController#0" expanded="true" />
-            <element signature="n#shouldAutorotateToInterfaceOrientation:#0;n#TDDatePickerController#0" expanded="true" />
-            <element signature="n#saveDateEdit:#0;n#TDDatePickerController#0" expanded="true" />
-            <element signature="n#clearDateEdit:#0;n#TDDatePickerController#0" expanded="true" />
-            <element signature="n#cancelDateEdit:#0;n#TDDatePickerController#0" expanded="true" />
-            <element signature="n#didReceiveMemoryWarning#0;n#TDDatePickerController#0" expanded="true" />
-            <element signature="n#viewDidUnload#0;n#TDDatePickerController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/libs/TDSemiModal/TDDatePickerController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/CheckinHistoryViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="20" selection-start="2661" selection-end="2661" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#loadView#0;n#CheckinHistoryViewController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1013" selection-end="1013" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="29" selection-start="4150" selection-end="4150" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#animateTextField:up:#0;n#VeryBasicViewController#0" expanded="true" />
-            <element signature="n#textFieldShouldReturn:#0;n#VeryBasicViewController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#initWithImage:#0;n#PictureOperation#0" expanded="true" />
-            <element signature="n#requestDoneWithResponse:#0;n#PictureOperation#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="16" selection-start="4165" selection-end="4165" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#loadView#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#dateFormatter#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#configureCell:forTableSection:rowObject:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#prepareDataSource#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#heightForTableRow:inSection:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#didSelectRowObject:inSection:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#showDatePickerWithDate:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#datePickerClearDate:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#datePickerCancel:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#tableTextFieldEndedEditing:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#updateEventObject#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#createEventSucceeded:forTempEvent:#0;n#EventEditViewController#0" expanded="true" />
-            <element signature="n#eventDidUpdate:#0;n#EventEditViewController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/libs/TTTTimeIntervalFormatter/TTTTimeIntervalFormatter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="35" selection-start="3500" selection-end="3500" vertical-scroll-proportion="0.0">
+        <state line="84" column="62" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="43" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+        <state line="39" column="113" selection-start="376" selection-end="1024" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="9" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicProject/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="73" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="229" selection-end="229" vertical-scroll-proportion="-0.93973213">
           <folding>
-            <element signature="n#setImageButton:#0;n#BasicImageViewController#0" expanded="true" />
-            <marker date="1362242809000" expanded="true" signature="985:1096" placeholder="{...}" />
-            <element signature="n#actionSheetForImagePicker#0;n#BasicImageViewController#0" expanded="true" />
+            <element signature="n#prepareDataSource#0;n#AccountSettingsViewController#0" expanded="true" />
+            <element signature="n#nilCheck:alternative:#0;n#AccountSettingsViewController#0" expanded="true" />
+            <element signature="n#configureCell:forTableSection:rowObject:#0;n#AccountSettingsViewController#0" expanded="true" />
+            <element signature="n#didSelectRowObject:inSection:#0;n#AccountSettingsViewController#0" expanded="true" />
+            <element signature="n#textFieldEndedEditing:#0;n#AccountSettingsViewController#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="33" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="369" column="19" selection-start="10183" selection-end="10183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="25" selection-start="761" selection-end="787" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="65" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="34" selection-start="3260" selection-end="3260" vertical-scroll-proportion="0.0">
+        <state line="32" column="27" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#viewWillAppear:#0;n#HomeViewController#0" expanded="true" />
-            <element signature="n#loadView#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#handleSettingsButton:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#handleCheckin:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#prepareDataSource#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#heightForRowAtIndexPath:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#configureCell:forTableSection:rowObject:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#didSelectRowObject:inSection:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#userPictureUpdated#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#userDidUpdate#0;n#HomeViewController#0" expanded="true" />
@@ -1017,62 +1033,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="837" selection-end="948" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#loadView#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#populateMerchantView#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#handleSignOut:#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#logoutSucceeded#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#getPlaceOperationSucceeded#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#prepareDataSource#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#tableView:cellForRowAtIndexPath:#0;n#MerchantDashboardViewController#0" expanded="true" />
-            <element signature="n#didSelectRowObject:inSection:#0;n#MerchantDashboardViewController#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="51" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+        <state line="59" column="0" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h">
+    <entry file="file://$PROJECT_DIR$/src/views/BasicWhiteView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="30" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+        <state line="17" column="60" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#initWithCoder:#0;n#BasicWhiteView#0" expanded="true" />
+            <element signature="n#initWithFrame:#0;n#BasicWhiteView#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="70" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="51" selection-start="8097" selection-end="8097" vertical-scroll-proportion="0.59821427">
-          <folding>
-            <element signature="n#loadView#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#prepareDataSource#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#heightForRowAtIndexPath:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#configureCell:forTableSection:rowObject:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#handleUserCell:forTableSection:rowObject:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#didSelectRowObject:inSection:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#handleSignout:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#logoutSucceeded#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#pictureOperationSucceeded#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="e#6018#6063#0" expanded="true" />
-            <element signature="e#6091#6117#0" expanded="true" />
-            <element signature="n#tableTextFieldEndedEditing:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#updatedUserForKey:string:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#setImageButton:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#handleChoosePicture:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#actionSheetForImagePicker#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#actionSheet:clickedButtonAtIndex:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="n#imagePickerController:didFinishPickingImage:editingInfo:#0;n#ProfileViewController#0" expanded="true" />
-            <element signature="e#11119#11521#0" expanded="true" />
-            <element signature="e#11176#11229#0" expanded="true" />
-            <element signature="e#11257#11513#0" expanded="true" />
-          </folding>
+        <state line="12" column="29" selection-start="242" selection-end="248" vertical-scroll-proportion="0.25751072">
+          <folding />
         </state>
       </provider>
     </entry>

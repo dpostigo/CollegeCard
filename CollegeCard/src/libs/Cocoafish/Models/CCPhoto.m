@@ -66,11 +66,19 @@
     return [self getImageUrl: [CCPhoto getPhotoSizeString: CC_SQUARE_75]];
 }
 
+
 - (NSString *) thumbURL {
     return [self getImageUrl: [CCPhoto getPhotoSizeString: CC_THUMB_100]];
 }
+
+
 - (NSString *) smallURL {
     return [self getImageUrl: [CCPhoto getPhotoSizeString: CC_SMALL_240]];
+}
+
+
+- (NSString *) largeURL {
+    return [self getImageUrl: [CCPhoto getPhotoSizeString: CC_LARGE_1024]];
 }
 
 

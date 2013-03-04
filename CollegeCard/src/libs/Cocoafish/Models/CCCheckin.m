@@ -8,7 +8,7 @@
 
 #import "CCCheckin.h"
 #import "CCUser.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 #import "CCEvent.h"
 
 
@@ -16,7 +16,7 @@
 
 
 @property(nonatomic, retain, readwrite) CCUser *user;
-@property(nonatomic, retain, readwrite) CCPlaceCocoafish *place;
+@property(nonatomic, retain, readwrite) CCPlace *place;
 @property(nonatomic, retain, readwrite) NSString *message;
 @property(nonatomic, retain, readwrite) CCEvent *event;
 
@@ -38,7 +38,7 @@
         self.message = [jsonResponse objectForKey: CC_JSON_MESSAGE];
         @try {
             _user = [[CCUser alloc] initWithJsonResponse: [jsonResponse objectForKey: CC_JSON_USER]];
-            _place = [[CCPlaceCocoafish alloc] initWithJsonResponse: [jsonResponse objectForKey: CC_JSON_PLACE]];
+            _place = [[CCPlace alloc] initWithJsonResponse: [jsonResponse objectForKey: CC_JSON_PLACE]];
             _event = [[CCEvent alloc] initWithJsonResponse: [jsonResponse objectForKey: @"event"]];
         }
         @catch (NSException *e) {

@@ -57,6 +57,7 @@ typedef enum PhotoSize {
 - (NSString *) squareURL;
 - (NSString *) thumbURL;
 - (NSString *) smallURL;
+- (NSString *) largeURL;
 - (NSString *) getImageUrl: (NSString *) photoSize;
 - (UIImage *) getImageForPhotoSize: (NSString *) photoSize;
 - (NSString *) localPathForPhotoSize: (NSString *) photoSize;

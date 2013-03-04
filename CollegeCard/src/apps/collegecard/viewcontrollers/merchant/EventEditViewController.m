@@ -20,6 +20,7 @@
 #import "TDDatePickerController.h"
 #import "BasicWhiteView.h"
 #import "NSDate+JMSimpleDate.h"
+#import "SwitchCell.h"
 
 
 #define START_DATE_KEY @"Starts"
@@ -59,11 +60,17 @@
         DateRowObject *dateRowObject = (DateRowObject *) rowObject;
         DateCell *dateCell = (DateCell *) tableCell;
 
-        //  dateCell.textLabel.text = [rowObject.textLabel uppercaseString];
         dateCell.backgroundView = [[BasicWhiteView alloc] init];
         dateCell.dateLabel.text = [self.dateFormatter stringFromDate: dateRowObject.date];
-        //  dateCell.endTimeLabel.text = [self.dateFormatter stringFromDate: dateRowObject.endTime];
 
+        return;
+    }
+
+    if ([rowObject.cellIdentifier isEqualToString: @"SwitchCell"]) {
+        SwitchCell *switchCell = (SwitchCell *) tableCell;
+        switchCell.textLabel.text = rowObject.textLabel;
+        [switchCell.cellSwitch addTarget: self action: @selector(handleSwitch:) forControlEvents: UIControlEventTouchUpInside];
+        switchCell.cellSwitch.on = _model.currentEvent.isPublished;
         return;
     }
 
@@ -86,6 +93,7 @@
     [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: EVENT_NAME_KEY detailTextLabel: _model.currentEvent.name]];
     [tableSection.rows addObject: [[DateRowObject alloc] initWithTextLabel: START_DATE_KEY date: _model.currentEvent.startTime cellIdentifier: @"DateCell"]];
     [tableSection.rows addObject: [[DateRowObject alloc] initWithTextLabel: END_DATE_KEY date: _model.currentEvent.endTime cellIdentifier: @"DateCell"]];
+    [tableSection.rows addObject: [[TableRowObject alloc] initWithTextLabel: @"Published" detailTextLabel: _model.currentEvent.name cellIdentifier: @"SwitchCell"]];
     [dataSource addObject: tableSection];
 }
 
@@ -143,6 +151,14 @@
 - (void) datePickerCancel: (TDDatePickerController *) viewController; {
     [self dismissSemiModalViewController: viewController];
 }
+
+#pragma mark Switch
+
+- (void) handleSwitch: (id) sender {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
+#pragma mark TextFields
 
 
 - (void) tableTextFieldEndedEditing: (TableTextField *) tableTextField {

@@ -16,7 +16,7 @@
 @synthesize place;
 
 
-- (id) initWithPlace: (CCPlaceCocoafish *) aPlace {
+- (id) initWithPlace: (CCPlace *) aPlace {
     NSMutableDictionary *paramDict = [NSMutableDictionary dictionaryWithCapacity: 3];
     [paramDict setObject: aPlace.objectId forKey: @"place_id"]; // or event_id
     self = [super initWithDelegate: nil httpMethod: @"POST" baseUrl: @"checkins/create.json" paramDict: paramDict];

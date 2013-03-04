@@ -12,6 +12,7 @@
 #import "BasicTextFieldCell.h"
 #import "UIImage+Utils.h"
 #import "GetCheckinsOperation.h"
+#import "BasicWhiteView.h"
 
 
 @implementation HomeViewController {
@@ -28,6 +29,7 @@
 - (void) loadView {
     [super loadView];
     [self userPictureUpdated];
+//    [self addTopSpacing];
 
     placesButton.borderColor = [UIColor colorWithWhite: 0.9 alpha: 1.0];
     placesButton.topColor = [UIColor whiteColor];
@@ -68,7 +70,7 @@
 
 
 - (CGFloat) heightForRowAtIndexPath: (NSIndexPath *) indexPath {
-    if (indexPath.row == 0) return 88;
+    if (indexPath.row == 0) return 120;
     return [super heightForRowAtIndexPath: indexPath];
 }
 
@@ -82,6 +84,7 @@
     cell.detailTextLabel.text = rowObject.detailTextLabel;
     cell.textField.placeholder = rowObject.detailTextLabel;
     cell.selectedBackgroundView = [[UIView alloc] init];
+    cell.backgroundView = [[BasicWhiteView alloc] init];
 
     [self subscribeTextField: cell.textField];
 
@@ -128,7 +131,7 @@
 - (void) userPictureUpdated {
     NSString *string = _model.currentUser.photo.smallURL;
     if (string) {
-        [imageView setImageWithURL: [NSURL URLWithString: string]];
+        [imageView setImageWithURL: [NSURL URLWithString: string] placeholderImage: [UIImage newImageFromResource: @"default-user-pic.png"]];
     }
 }
 

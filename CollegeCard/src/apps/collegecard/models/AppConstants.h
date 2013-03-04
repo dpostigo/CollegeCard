@@ -18,6 +18,7 @@
 #define USERVIEW_KEY @"Top View"
 
 //#pragma mark Cell Keys
+#define MERCHANT_EMAIL_KEY @"Merchant Email Contact"
 #define EMAIL_KEY @".edu Email Address"
 #define PASSWORD_KEY @"Password"
 

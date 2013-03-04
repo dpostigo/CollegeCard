@@ -22,5 +22,6 @@
 @property(nonatomic, strong) UIButton *imageButton;
 - (IBAction) handleChoosePicture: (id) sender;
 - (UIActionSheet *) actionSheetForImagePicker;
+- (void) imagePickerSelectedImage: (UIImage *) image;
 
 @end

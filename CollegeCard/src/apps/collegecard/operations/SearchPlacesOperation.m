@@ -8,7 +8,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "SearchPlacesOperation.h"
 #import "CCResponse.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 
 
 @implementation SearchPlacesOperation {
@@ -57,7 +57,7 @@
 - (void) requestDoneWithResponse: (CCResponse *) response {
     [super requestDoneWithResponse: response];
 
-    NSArray *places = [response getObjectsOfType: [CCPlaceCocoafish class]];
+    NSArray *places = [response getObjectsOfType: [CCPlace class]];
     [_model notifyDelegates: @selector(searchSucceededWithPlaces:) object: places];
 }
 

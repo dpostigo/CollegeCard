@@ -11,14 +11,14 @@
 
 @interface CheckinOperation : BasicCocoafishOperation {
 
-    CCPlaceCocoafish *place;
+    CCPlace *place;
 
 
 
 }
 
 
-@property(nonatomic, strong) CCPlaceCocoafish *place;
-- (id) initWithPlace: (CCPlaceCocoafish *) aPlace;
+@property(nonatomic, strong) CCPlace *place;
+- (id) initWithPlace: (CCPlace *) aPlace;
 
 @end

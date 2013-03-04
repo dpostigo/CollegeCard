@@ -15,7 +15,7 @@
 @synthesize place;
 
 
-- (id) initWithPlace: (CCPlaceCocoafish *) aPlace {
+- (id) initWithPlace: (CCPlace *) aPlace {
     self = [super init];
     if (self) {
         place = aPlace;

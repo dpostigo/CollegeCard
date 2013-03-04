@@ -8,20 +8,20 @@
 #import <Foundation/Foundation.h>
 #import "BasicModel.h"
 #import "CCUser.h"
-#import "CCPlaceCocoafish.h"
+#import "CCPlace.h"
 #import "CCEvent.h"
 
 
 @interface Model : BasicModel {
 
     CCEvent *currentEvent;
-    CCPlaceCocoafish *currentPlace;
+    CCPlace *currentPlace;
     NSArray *merchantEvents;
     NSDateFormatter *dateFormatter;
 }
 
 
-@property(nonatomic, strong) CCPlaceCocoafish *currentPlace;
+@property(nonatomic, strong) CCPlace *currentPlace;
 @property(nonatomic, strong) NSArray *merchantEvents;
 @property(nonatomic, strong) CCEvent *currentEvent;
 @property(nonatomic, strong) NSDateFormatter *dateFormatter;

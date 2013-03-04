@@ -365,4 +365,9 @@
     return nil;
 }
 
+
+- (void) addTopSpacing {
+    table.tableHeaderView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, table.width, 10)];
+}
+
 @end

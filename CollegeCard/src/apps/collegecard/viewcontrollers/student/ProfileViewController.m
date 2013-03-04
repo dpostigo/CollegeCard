@@ -26,13 +26,14 @@
 
 @implementation ProfileViewController
 
+
 @synthesize imageButton;
 
 
 - (void) loadView {
     self.rowSpacing = 10;
     [super loadView];
-    table.tableHeaderView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, table.width, 10)];
+    [self addTopSpacing];
 }
 
 
@@ -57,7 +58,6 @@
 
     if (indexPath.row == 0) return 110;
     else if (indexPath.row % 2 == 0) {
-
         TableSection *tableSection = [dataSource objectAtIndex: indexPath.section];
         TableRowObject *rowObject = [tableSection.rows objectAtIndex: indexPath.row / 2];
         if ([rowObject.cellIdentifier isEqualToString: @"NavCell"]) {
@@ -285,12 +285,15 @@
             containerProgress.alpha = 1;
         }                completion: ^(BOOL completion) {
 
-            NSLog(@"_model.currentUser.photo.smallURL = %@", _model.currentUser.photo.smallURL);
-            [_queue addOperation: [[PictureOperation alloc] initWithImage: image]];
-
+            [self imagePickerSelectedImage: image];
             [progressView startAnimating];
         }];
     }];
+}
+
+
+- (void) imagePickerSelectedImage: (UIImage *) image {
+    [_queue addOperation: [[PictureOperation alloc] initWithImage: image]];
 }
 
 @end
