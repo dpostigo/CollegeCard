@@ -26,6 +26,7 @@
 @property(nonatomic, strong) NSMutableArray *delegates;
 @property(nonatomic, strong) NSMutableArray *textFields;
 - (IBAction) dismissModal;
+- (IBAction) popSelf;
 - (void) animateTextField: (UITextField *) textField up: (BOOL) up;
 - (BOOL) allTextFieldsValid;
 - (NSArray *) invalidTextFields;

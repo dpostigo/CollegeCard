@@ -2,63 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5d61a76-4226-4c98-87cf-a9ce163eb425" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/student/GetPlacesOperation.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/student/GetPlacesOperation.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantProfileViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantProfileViewController.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlaceCocoafish.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlace.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlaceCocoafish.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPlace.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Default@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/BasicBlackView.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/BasicBlackView.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/BlueLayerButton.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/BlueLayerButton.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/CustomNavigationBar.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/CustomNavigationBar.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/CustomNavigationController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/CustomNavigationController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/LogoLabelButton.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/LogoLabelButton.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/OrangeButton.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/OrangeButton.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/segues/FakeModalPop.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/segues/FakeModalPop.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/segues/FakeModalPush.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/segues/FakeModalPush.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/_iconography/reserve-card.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/apps/collegecard/controls/BlueButton.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/BlueBezierButton.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/apps/collegecard/controls/BlueButton.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/controls/BlueBezierButton.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.xcworkspace/xcuserdata/dpostigo.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.xcworkspace/xcuserdata/dpostigo.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BasicProject/CollegeCard-Info.plist" afterPath="$PROJECT_DIR$/BasicProject/CollegeCard-Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CollegeCard.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/app/AppDelegate.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/app/AppDelegate.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/Model.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/Model.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/Model.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/Model.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/models/rowObjects/PlaceRowObject.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/CheckinOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/PictureOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/PlaceOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/PlaceOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/SearchPlacesOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/SearchPlacesOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicImageViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/PlaceViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/LoginViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/LoginViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Cache/CCDownloadManager.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Cache/CCDownloadManager.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Cocoafish.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Cocoafish.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCCheckin.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPage.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPage.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCStatus.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCUser.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCUser.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.h" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCConstants.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCResponse.m" afterPath="$PROJECT_DIR$/src/libs/Cocoafish/Network/CCResponse.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h" afterPath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m" afterPath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m" afterPath="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/CBButtons/CBBezier.h" afterPath="$PROJECT_DIR$/src/libs/CBButtons/CBBezier.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/CBButtons/CBBezier.m" afterPath="$PROJECT_DIR$/src/libs/CBButtons/CBBezier.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.h" afterPath="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.m" afterPath="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/NSString+Utils.m" afterPath="$PROJECT_DIR$/src/utils/NSString+Utils.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/UIView+Utils.h" afterPath="$PROJECT_DIR$/src/utils/UIView+Utils.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/UIView+Utils.m" afterPath="$PROJECT_DIR$/src/utils/UIView+Utils.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewDelegate.m" afterPath="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.h" afterPath="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" afterPath="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/xibs/MainStoryboard.storyboard" afterPath="$PROJECT_DIR$/src/xibs/MainStoryboard.storyboard" />
     </list>
     <ignored path="BasicProject.iws" />
@@ -76,115 +65,16 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_6.1_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_UNIVERSAL" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SwitchCell.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.m">
+      <file leaf-file-name="BasicBlackView.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/BasicBlackView.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="19" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicTableViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="369" column="19" selection-start="10183" selection-end="10183" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CCEvent.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="19" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventEditViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="62" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicPlaceViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="9" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchPlacesViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SearchPlacesViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="338" selection-end="584" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DealsViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="73" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfileViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="25" selection-start="761" selection-end="787" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserSettingsViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="16" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingsViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="65" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppConstants.h" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="29" selection-start="242" selection-end="248" vertical-scroll-proportion="0.25751072">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicWhiteView.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/BasicWhiteView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="60" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+            <state line="24" column="32" selection-start="592" selection-end="592" vertical-scroll-proportion="0.7718121">
               <folding>
-                <element signature="n#initWithCoder:#0;n#BasicWhiteView#0" expanded="true" />
-                <element signature="n#initWithFrame:#0;n#BasicWhiteView#0" expanded="true" />
+                <element signature="n#initWithCoder:#0;n#BasicBlackView#0" expanded="true" />
+                <element signature="n#initWithFrame:#0;n#BasicBlackView#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,15 +83,21 @@
       <file leaf-file-name="HomeViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="27" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
+            <state line="149" column="69" selection-start="5362" selection-end="5362" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#viewWillAppear:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#loadView#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#handleSettingsButton:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#handleCheckin:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#handleSwoop:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#handleYourPlaces:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#handleProfileSegue:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#prepareDataSource#0;n#HomeViewController#0" expanded="true" />
-                <element signature="n#heightForRowAtIndexPath:#0;n#HomeViewController#0" expanded="true" />
-                <element signature="n#configureCell:forTableSection:rowObject:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#heightForTableRow:inSection:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#didSelectRowObject:inSection:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#heightForHeaderInTableSection:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#viewForHeaderInTableSection:#0;n#HomeViewController#0" expanded="true" />
+                <element signature="n#handleUserCell:#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#userPictureUpdated#0;n#HomeViewController#0" expanded="true" />
                 <element signature="n#userDidUpdate#0;n#HomeViewController#0" expanded="true" />
               </folding>
@@ -209,64 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CCPhoto.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.h">
+      <file leaf-file-name="AppDelegate.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/app/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="4" selection-start="371" selection-end="384" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CCPhoto.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/libs/Cocoafish/Models/CCPhoto.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="19" selection-start="2125" selection-end="2125" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/Model.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="44" selection-start="1593" selection-end="1593" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlacePictureOperation.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/merchant/PlacePictureOperation.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MerchantDashboardViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/MerchantDashboardViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="57" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicTableViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="9" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterOperation.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/RegisterOperation.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="114" selection-start="1755" selection-end="1856" vertical-scroll-proportion="0.0">
+            <state line="38" column="40" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,29 +127,54 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/student/GetPlacesOperation.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/app/AppDelegate.m" />
-        <option value="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCUser.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.h" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m" />
-        <option value="$PROJECT_DIR$/src/libs/Cocoafish/Models/CCEvent.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m" />
-        <option value="$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m" />
-        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/controls/BlueLayerButton.h" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/controls/LogoLabelButton.h" />
+        <option value="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.h" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/controls/BlueLayerButton.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/controls/OrangeButton.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/LoginViewController.m" />
+        <option value="$PROJECT_DIR$/src/libs/CBButtons/CBLayer.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/controls/LogoLabelButton.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m" />
+        <option value="$PROJECT_DIR$/src/segues/FakeModalSegue.h" />
+        <option value="$PROJECT_DIR$/src/segues/FakeModalSegue.m" />
+        <option value="$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m" />
+        <option value="$PROJECT_DIR$/src/segues/FakeModalPop.h" />
+        <option value="$PROJECT_DIR$/src/segues/FakeModalPush.m" />
         <option value="$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m" />
+        <option value="$PROJECT_DIR$/src/apps/collegecard/controls/BasicBlackView.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="807" />
+    <option name="height" value="803" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Classes</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -335,7 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="DirectoryView.Xcode" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -376,437 +242,24 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="segues" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TTTTimeIntervalFormatter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TDSemiModal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JMSimpleDate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viewcontrollers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viewcontrollers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="viewcontrollers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merchant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="merchant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rowObjects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collegecard" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="table" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CollegeCard" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frameworks" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodePBXReferenceNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="DirectoryView.Xcode" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="fileTemplates" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="CollegeCard" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Application.CollegeCard">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="BasicProject" TARGET_NAME="BasicProject" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="BasicProject" RUN_TARGET_NAME="BasicProject" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -851,23 +304,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="807" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="803" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325811" sideWeight="0.3507891" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.49713057" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15064563" sideWeight="0.6479663" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12482066" sideWeight="0.6479663" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35203367" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32863188" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16642755" sideWeight="0.6502116" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24390244" sideWeight="0.6502116" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34978843" sideWeight="0.7840746" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34978843" sideWeight="0.21090387" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286517" sideWeight="0.49713057" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959327" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -929,138 +382,141 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/merchant/EventEditViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/LoginViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="62" selection-start="2642" selection-end="2642" vertical-scroll-proportion="0.0">
+        <state line="29" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.4362416">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicPlaceViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="113" selection-start="376" selection-end="1024" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/GetPlaceOperation.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BasicProject/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/DealsViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="73" selection-start="3024" selection-end="3024" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/AccountSettingsViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="229" selection-end="229" vertical-scroll-proportion="-0.93973213">
+        <state line="103" column="17" selection-start="2268" selection-end="2268" vertical-scroll-proportion="0.5346756">
           <folding>
-            <element signature="n#prepareDataSource#0;n#AccountSettingsViewController#0" expanded="true" />
-            <element signature="n#nilCheck:alternative:#0;n#AccountSettingsViewController#0" expanded="true" />
-            <element signature="n#configureCell:forTableSection:rowObject:#0;n#AccountSettingsViewController#0" expanded="true" />
-            <element signature="n#didSelectRowObject:inSection:#0;n#AccountSettingsViewController#0" expanded="true" />
-            <element signature="n#textFieldEndedEditing:#0;n#AccountSettingsViewController#0" expanded="true" />
+            <element signature="n#dismissModal#0;n#VeryBasicViewController#0" expanded="true" />
+            <element signature="n#popSelf#0;n#VeryBasicViewController#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/UserSettingsViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/VeryBasicViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="16" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
+        <state line="27" column="20" selection-start="748" selection-end="748" vertical-scroll-proportion="0.36241612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/data/table/SwitchCell.h">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+        <state line="10" column="52" selection-start="239" selection-end="239" vertical-scroll-proportion="0.32608697">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/BasicViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="369" column="19" selection-start="10183" selection-end="10183" vertical-scroll-proportion="0.0">
+        <state line="12" column="16" selection-start="216" selection-end="216" vertical-scroll-proportion="0.16107382">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/ProfileViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/segues/FakeModalPush.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="25" selection-start="761" selection-end="787" vertical-scroll-proportion="0.0">
+        <state line="10" column="44" selection-start="196" selection-end="196" vertical-scroll-proportion="0.32608697">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/SettingsViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/OrangeButton.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="65" selection-start="2144" selection-end="2144" vertical-scroll-proportion="0.0">
+        <state line="14" column="24" selection-start="212" selection-end="212" vertical-scroll-proportion="0.45652175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/OrangeButton.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="58" selection-start="367" selection-end="367" vertical-scroll-proportion="0.51086956">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/BlueBezierButton.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="19" selection-start="192" selection-end="192" vertical-scroll-proportion="0.35869566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/BlueLayerButton.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="215" selection-end="215" vertical-scroll-proportion="0.45652175">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/BlueLayerButton.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="22" selection-start="466" selection-end="466" vertical-scroll-proportion="0.5637584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/BlueBezierButton.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="200" selection-end="200" vertical-scroll-proportion="0.35869566">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/app/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="40" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/viewcontrollers/BasicTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="13" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/HomeViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="27" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
+        <state line="149" column="69" selection-start="5362" selection-end="5362" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#viewWillAppear:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#loadView#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#handleSettingsButton:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#handleCheckin:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#handleSwoop:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#handleYourPlaces:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#handleProfileSegue:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#prepareDataSource#0;n#HomeViewController#0" expanded="true" />
-            <element signature="n#heightForRowAtIndexPath:#0;n#HomeViewController#0" expanded="true" />
-            <element signature="n#configureCell:forTableSection:rowObject:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#heightForTableRow:inSection:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#didSelectRowObject:inSection:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#heightForHeaderInTableSection:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#viewForHeaderInTableSection:#0;n#HomeViewController#0" expanded="true" />
+            <element signature="n#handleUserCell:#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#userPictureUpdated#0;n#HomeViewController#0" expanded="true" />
             <element signature="n#userDidUpdate#0;n#HomeViewController#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/viewcontrollers/student/SavedPlacesViewController.m">
+    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/controls/BasicBlackView.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1633" selection-end="1633" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/BasicWhiteView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="60" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+        <state line="24" column="32" selection-start="592" selection-end="592" vertical-scroll-proportion="0.7718121">
           <folding>
-            <element signature="n#initWithCoder:#0;n#BasicWhiteView#0" expanded="true" />
-            <element signature="n#initWithFrame:#0;n#BasicWhiteView#0" expanded="true" />
+            <element signature="n#initWithCoder:#0;n#BasicBlackView#0" expanded="true" />
+            <element signature="n#initWithFrame:#0;n#BasicBlackView#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/operations/merchant/CreateEventOperation.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="70" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/collegecard/models/AppConstants.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="29" selection-start="242" selection-end="248" vertical-scroll-proportion="0.25751072">
-          <folding />
         </state>
       </provider>
     </entry>

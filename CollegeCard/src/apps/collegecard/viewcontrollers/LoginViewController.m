@@ -23,12 +23,15 @@
 
 
 
+- (void) loadView {
+    self.rowSpacing = 10.0;
+    [super loadView];
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
 
-    signUpButton.backgroundColor = [UIColor blueColor];
 }
+
+
+
 
 
 - (void) viewWillAppear: (BOOL) animated {
@@ -47,23 +50,7 @@
 }
 
 
-- (void) viewDidAppear: (BOOL) animated {
-    [super viewDidAppear: animated];
-}
 
-
-- (void) loadView {
-    self.rowSpacing = 10.0;
-    [super loadView];
-
-    signUpButton.backgroundLayer.colors = (@[
-            (id) [UIColor colorWithString: @"00b0ff"].CGColor,
-            (id) [UIColor colorWithString: @"038cd3"].CGColor
-
-    ]);
-
-    signUpButton.layer.borderColor = [UIColor colorWithString: @"196287"].CGColor;
-}
 
 
 - (IBAction) handleLogin: (id) sender {

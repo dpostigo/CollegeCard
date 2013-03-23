@@ -82,7 +82,7 @@
     else if ([rowObject.textLabel isEqualToString: USERVIEW_KEY]) {
         [self handleUserCell: cell forTableSection: tableSection rowObject: rowObject];
     } else if ([rowObject.cellIdentifier isEqualToString: @"NavCell"]) {
-        cell.accessoryView = _model.nextImageView;
+        cell.accessoryView = _model.defaultAccessoryView;
     }
 }
 

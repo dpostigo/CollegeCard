@@ -115,7 +115,7 @@
 }
 
 
-- (UIImageView *) nextImageView {
+- (UIImageView *) defaultAccessoryView {
     return [[UIImageView alloc] initWithImage: [UIImage newImageFromResource: @"arrow-right-dark.png"]];
 }
 

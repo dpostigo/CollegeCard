@@ -1,14 +1,17 @@
 #import "CBLayer.h"
 
 
-
-
 @implementation CBLayer
 
 
-@synthesize borderColor;
+@synthesize outerBorderColor;
 @synthesize backgroundLayer;
 @synthesize innerGlow;
+@synthesize innerBorderColor;
+@synthesize topColor;
+@synthesize bottomColor;
+
+
 
 
 
@@ -21,52 +24,60 @@
 
 
 - (id) initWithCoder: (NSCoder *) coder {
-    // Call the parent implementation of initWithCoder
     self = [super initWithCoder: coder];
-
-    // Custom drawing methods
     if (self) {
 
-        self.borderColor = [UIColor colorWithRed: 0.77f green: 0.43f blue: 0.00f alpha: 1.00f];
+
+
+        self.titleLabel.layer.shadowColor = [UIColor colorWithWhite: 1.0 alpha: 0.5].CGColor;
+        self.titleLabel.layer.shadowOffset = CGSizeMake(0, 0);
+        self.titleLabel.layer.shadowRadius = 0;
+        self.titleLabel.layer.shadowOpacity = 1;
+
+        self.innerBorderColor = [UIColor colorWithWhite: 1.0 alpha: 0.5];
+        self.outerBorderColor = [UIColor colorWithRed: 0.77f green: 0.43f blue: 0.00f alpha: 1.00f];
+        self.topColor = [UIColor colorWithRed: 0.94f green: 0.82f blue: 0.52f alpha: 1.00f];
+        self.bottomColor = [UIColor colorWithRed: 0.91f green: 0.55f blue: 0.00f alpha: 1.00f];
+
+        self.layer.cornerRadius = 5;
+        self.layer.borderWidth = 1;
+
+        innerGlow = [CALayer layer];
+        innerGlow.cornerRadius = 4;
+        innerGlow.borderWidth = 1;
+        innerGlow.opacity = 1;
+        [self.layer insertSublayer: innerGlow atIndex: 2];
+
+        backgroundLayer = [CAGradientLayer layer];
+        backgroundLayer.locations = (@[@0.0f, @1.0f]);
+        [self.layer insertSublayer: backgroundLayer atIndex: 0];
+
+        _highlightBackgroundLayer = [CAGradientLayer layer];
+        _highlightBackgroundLayer.locations = (@[@0.0f, @1.0f]);
+        [self.layer insertSublayer: _highlightBackgroundLayer atIndex: 1];
 
         [self redraw];
-
     }
-
     return self;
 }
 
 
 - (void) redraw {
 
-    [self drawButton];
-    [self drawInnerGlow];
-    [self drawBackgroundLayer];
-    [self drawHighlightBackgroundLayer];
+    self.layer.borderColor = self.outerBorderColor.CGColor;
+    self.innerGlow.borderColor = self.innerBorderColor.CGColor;
+
+    backgroundLayer.colors = (@[(id) topColor.CGColor, (id) bottomColor.CGColor]);
+    _highlightBackgroundLayer.colors = (@[(id) bottomColor.CGColor, (id) topColor.CGColor]);
+
     _highlightBackgroundLayer.hidden = YES;
-
-
-
-
-}
-
-
-- (void) setBackgroundColor: (UIColor *) backgroundColor {
-    [super setBackgroundColor: backgroundColor];
 }
 
 
 - (void) layoutSubviews {
-
-    // Set inner glow frame (1pt inset)
     innerGlow.frame = CGRectInset(self.bounds, 1, 1);
-
-    // Set gradient frame (fill the whole imageButton))
     backgroundLayer.frame = self.bounds;
-
-    // Set inverted gradient frame
     _highlightBackgroundLayer.frame = self.bounds;
-
     [super layoutSubviews];
 }
 
@@ -92,48 +103,40 @@
     CALayer *layer = self.layer;
     layer.cornerRadius = 5;
     layer.borderWidth = 1;
-    layer.borderColor = self.borderColor.CGColor;
+    layer.borderColor = self.outerBorderColor.CGColor;
 }
 
 
 - (void) drawBackgroundLayer {
-    // Check if the property has been set already
     if (!backgroundLayer) {
-        // Instantiate the gradient layer
         backgroundLayer = [CAGradientLayer layer];
-
-        // Set the colors
-        backgroundLayer.colors = (@[
-                (id) [UIColor colorWithRed: 0.94f green: 0.82f blue: 0.52f alpha: 1.00f].CGColor,
-                (id) [UIColor colorWithRed: 0.91f green: 0.55f blue: 0.00f alpha: 1.00f].CGColor
-
-        ]);
-
-        // Set the stops
-        backgroundLayer.locations = (@[
-                @0.0f,
-                @1.0f
-        ]);
-
-        // Add the gradient to the layer hierarchy
         [self.layer insertSublayer: backgroundLayer atIndex: 0];
     }
+
+    backgroundLayer.colors = (@[
+            (id) [UIColor colorWithRed: 0.94f green: 0.82f blue: 0.52f alpha: 1.00f].CGColor,
+            (id) [UIColor colorWithRed: 0.91f green: 0.55f blue: 0.00f alpha: 1.00f].CGColor
+    ]);
+
+    backgroundLayer.locations = (@[
+            @0.0f,
+            @1.0f
+    ]);
 }
 
 
 - (void) drawHighlightBackgroundLayer {
     if (!_highlightBackgroundLayer) {
         _highlightBackgroundLayer = [CAGradientLayer layer];
-        _highlightBackgroundLayer.colors = (@[
-                (id) [UIColor colorWithRed: 0.91f green: 0.55f blue: 0.00f alpha: 1.00f].CGColor,
-                (id) [UIColor colorWithRed: 0.94f green: 0.82f blue: 0.52f alpha: 1.00f].CGColor
-        ]);
-        _highlightBackgroundLayer.locations = (@[
-                @0.0f,
-                @1.0f
-        ]);
         [self.layer insertSublayer: _highlightBackgroundLayer atIndex: 1];
     }
+
+    NSArray *colors = backgroundLayer.colors;
+    _highlightBackgroundLayer.colors = [[colors reverseObjectEnumerator] allObjects];
+    _highlightBackgroundLayer.locations = (@[
+            @0.0f,
+            @1.0f
+    ]);
 }
 
 

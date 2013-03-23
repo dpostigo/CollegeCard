@@ -29,7 +29,7 @@
 - (BOOL) isLoggedIn;
 - (CCUser *) currentUser;
 - (NSString *) timeStringForEvent: (CCEvent *) event;
-- (UIImageView *) nextImageView;
+- (UIImageView *) defaultAccessoryView;
 - (NSString *) slugForProperty: (NSString *) property;
 - (NSString *) propertyForSlug: (NSString *) slug;
 

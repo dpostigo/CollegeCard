@@ -28,6 +28,8 @@
     [super loadView];
     [self startStandardUpdates];
 
+    [self.navigationController setNavigationBarHidden: NO];
+
     if ([_model.currentUser.savedPlaces count] == 0) {
         TableSection *tableSection = [self tableSectionForTitle: SAVED_STORES_DEALS_KEY];
         NSInteger sectionIndex = [dataSource indexOfObject: tableSection];
@@ -40,6 +42,14 @@
         }
     }
 }
+
+
+- (void) viewWillAppear: (BOOL) animated {
+    [super viewWillAppear: animated];
+    [self.navigationController setNavigationBarHidden: NO animated: YES];
+}
+
+
 
 
 #pragma mark UITableView

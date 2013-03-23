@@ -100,7 +100,10 @@
  * Shortcut for frame.size
  */
 @property (nonatomic) CGSize size;
-- (void) makeWhiteView;
+- (void) prettify;
+- (void) prettifyWithBackgroundColor: (UIColor *) bgColor;
+- (void) prettifyWithBackgroundColor: (UIColor *) bgColor borderColor: (UIColor *) borderColor;
+- (void) prettifyWithBackgroundColor: (UIColor *) aBackgroundColor borderColor: (UIColor *) aBorderColor shadowColor: (UIColor *) aShadowColor;
 /**
  * Removes all subviews.
  */

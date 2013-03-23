@@ -19,10 +19,13 @@
     IBOutlet UILabel *majorLabel;
 
     IBOutlet UIImageView *imageView;
+    IBOutlet UIView *topView;
+    IBOutlet UISearchBar *searchBar;
 
 }
 
 
 - (IBAction) handleSettingsButton: (id) sender;
+- (IBAction) handleYourPlaces: (id) sender;
 
 @end

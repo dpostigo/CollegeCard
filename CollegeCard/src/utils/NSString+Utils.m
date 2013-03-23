@@ -54,6 +54,7 @@
 
         return NO;
     }
+    return YES;
 }
 
 @end

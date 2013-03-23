@@ -5,11 +5,11 @@
 //
 
 
-#import "BlueButton.h"
+#import "BlueBezierButton.h"
 #import "UIColor+Utils.h"
 
 
-@implementation BlueButton {
+@implementation BlueBezierButton {
 }
 
 

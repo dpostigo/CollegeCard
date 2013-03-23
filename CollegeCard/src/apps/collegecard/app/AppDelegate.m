@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Cocoafish.h"
+#import "CustomNavigationBar.h"
+#import "UIImage+Utils.h"
 
 
 #define COCOAFISH_OAUTH_CONSUMER_KEY @"1bvShAd2i4AshRo0fVzbwcio5M9NKCSf"
@@ -30,7 +32,12 @@
     [smallFont setObject: [UIColor whiteColor] forKey: UITextAttributeTextColor];
     [smallFont setObject: [UIFont fontWithName: @"HelveticaNeue-Bold" size: 11.0] forKey: UITextAttributeFont];
     [[UIBarButtonItem appearance] setTitleTextAttributes: smallFont forState: UIControlStateNormal];
+
+
+
+
 }
+
 
 
 - (BOOL) application: (UIApplication *) application didFinishLaunchingWithOptions: (NSDictionary *) launchOptions {

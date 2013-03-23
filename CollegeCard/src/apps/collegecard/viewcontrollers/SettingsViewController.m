@@ -60,9 +60,9 @@
 - (UIView *) viewForHeaderInTableSection: (TableSection *) tableSection {
     BasicTableCell *cell = [table dequeueReusableCellWithIdentifier: @"HeaderCell"];
 
-    //    [cell.textLabel makeWhiteView];
+    //    [cell.textLabel prettify];
     //    cell.textLabel.backgroundColor = [UIColor colorWithString: @"e7913c"];
-    //    cell.textLabel.layer.borderColor = [UIColor colorWithString: @"ffa44a"].CGColor;
+    //    cell.textLabel.layer.outerBorderColor = [UIColor colorWithString: @"ffa44a"].CGColor;
 
     cell.textLabel.text = [tableSection.title uppercaseString];
 

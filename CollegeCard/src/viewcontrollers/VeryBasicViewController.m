@@ -96,7 +96,14 @@
 
 
 - (void) dismissModal {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     [self dismissViewControllerAnimated: YES completion: nil];
+}
+
+
+- (IBAction) popSelf {
+
+    [self.navigationController popViewControllerAnimated: YES];
 }
 
 
@@ -137,14 +144,11 @@
         CGRect statusBarRect = [self statusBarFrameViewRect: self.view];
         NSLog(@"statusBarRect.size.height = %f", statusBarRect.size.height);
 
-
         [UIView beginAnimations: @"anim" context: nil];
         [UIView setAnimationBeginsFromCurrentState: YES];
         [UIView setAnimationDuration: movementDuration];
         self.view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
         [UIView commitAnimations];
-
-
     }
 }
 
